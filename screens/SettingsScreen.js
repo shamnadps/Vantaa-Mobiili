@@ -1,0 +1,156 @@
+import React from 'react';
+import {
+  Image,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import { MonoText } from '../components/StyledText';
+import { Button } from '../components/Button';
+import { strings } from '../locales/i18';
+import { connect } from 'react-redux';
+import { changeLanguage } from '../redux/reducer';
+
+class SettingsScreen extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
+
+  state = {
+    language: this.props.language,
+    feeds: ['FACEBOOK'],
+    pushNotification: 'settings.notificationButtons.never'
+  }
+
+  changeLanguageHandler = (value) => {
+    this.setState({
+      language: value
+    })
+    this.props.changeLanguage(value);
+  }
+
+  changeFeeds = (value) => {
+    let feeds = this.state.feeds;
+    if (!feeds.includes(value)) {
+      feeds.push(value)
+    } else {
+      feeds.pop(value);
+    }
+    this.setState({
+      feeds
+    })
+  }
+
+  changePushNotification = (value) => {
+    this.setState({
+      pushNotification: value
+    })
+  }
+
+  render() {
+    /* Go ahead and delete ExpoConfigView and replace it with your
+     * content, we just wanted to give you a quick view of your config */
+    return (
+      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+
+        <View style={styles.getStartedContainer}>
+
+
+          <Text style={styles.header}>{strings('settings.header')}</Text>
+          <Text style={styles.title}>{strings('settings.languageHeader')}</Text>
+          <View style={styles.feedSection}>
+            <Button type='default'
+              active={this.state.language === 'en'}
+              text={strings('settings.langButtons.en')}
+              clicked={() => this.changeLanguageHandler('en')} />
+            <Button type='default'
+              active={this.state.language === 'fi'}
+              text={strings('settings.langButtons.fi')}
+              clicked={() => this.changeLanguageHandler('fi')} />
+            <Button type='default'
+              active={this.state.language === 'sv'}
+              text={strings('settings.langButtons.sv')}
+              clicked={() => this.changeLanguageHandler('sv')} />
+          </View>
+          <Text style={styles.title}>{strings('settings.feedHeader')}</Text>
+          <View style={styles.feedSection}>
+            <Button type='facebook' active={this.state.feeds.includes('FACEBOOK')} text='FACEBOOK' clicked={() => this.changeFeeds('FACEBOOK')} />
+            <Button type='twitter' active={this.state.feeds.includes('TWITTER')} text='TWITTER' clicked={() => this.changeFeeds('TWITTER')} />
+            <Button type='youtube' active={this.state.feeds.includes('YOUTUBE')} text='YOUTUBE' clicked={() => this.changeFeeds('YOUTUBE')} />
+          </View>
+          <View style={styles.feedSection}>
+            <Button type='instagram' active={this.state.feeds.includes('INSTAGRAM')} text='INSTAGRAM' clicked={() => this.changeFeeds('INSTAGRAM')} />
+            <Button type='vantaa' active={this.state.feeds.includes('VANTAA')} text='VANTAA' clicked={() => this.changeFeeds('VANTAA')} />
+            <Button type='sivitysvantaa' active={this.state.feeds.includes('SIVITYSVANTAA')} text='SIVITYSVANTAA' clicked={() => this.changeFeeds('SIVITYSVANTAA')} />
+          </View>
+          <View style={styles.feedSection}>
+            <Button type='events' active={this.state.feeds.includes('EVENTS')} text='EVENTS' clicked={() => this.changeFeeds('EVENTS')} />
+          </View>
+
+          <Text style={styles.title}>{strings('settings.notificationsHeader')}</Text>
+          <View style={styles.feedSection}>
+            <Button type='default'
+              active={this.state.pushNotification === 'settings.notificationButtons.never'}
+              text={strings('settings.notificationButtons.never')}
+              clicked={() => this.changePushNotification('settings.notificationButtons.never')} />
+            <Button type='default'
+              active={this.state.pushNotification === 'settings.notificationButtons.alerts'}
+              text={strings('settings.notificationButtons.alerts')}
+              clicked={() => this.changePushNotification('settings.notificationButtons.alerts')} />
+            <Button type='default'
+              active={this.state.pushNotification === 'settings.notificationButtons.always'}
+              text={strings('settings.notificationButtons.always')}
+              clicked={() => this.changePushNotification('settings.notificationButtons.always')} />
+          </View>
+        </View>
+
+        <View style={styles.helpContainer}>
+          <TouchableOpacity onPress={this._handleHelpPress} style={styles.helpLink}>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    );
+  }
+}
+
+const mapDispatchToProps = dispatch => ({
+  changeLanguage: (language) => dispatch(changeLanguage(language)),
+});
+
+const mapStateToProps = (state) => ({
+  language: state.language,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SettingsScreen);
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ededed',
+  },
+  header: {
+    flex: 1,
+    color: 'black',
+    marginTop: 30,
+    marginLeft: 10,
+    fontWeight: '900',
+    fontSize: 26
+  },
+  title: {
+    color: 'black',
+    marginTop: 20,
+    marginLeft: 10,
+    fontSize: 14,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  feedSection: {
+    flex: 1,
+    flexDirection: 'row',
+    marginLeft: 10
+  }
+
+});

@@ -1,0 +1,2 @@
+export const CHANGE_LANGUAGE = 'CHANGE_LANGUAGE';
+export const FETCH_FEEDS = 'FETCH_FEEDS';

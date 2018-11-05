@@ -50,7 +50,8 @@ const MaterialTopTabNavigator = createMaterialTopTabNavigator({
     tabBarOptions: {
       style: {
         backgroundColor: '#0042a5',
-        color: '#FFF'
+        color: '#FFF',
+        paddingBottom: 10
       },
       activeTintColor: 'white',
       labelStyle: {
@@ -64,7 +65,7 @@ const MaterialTopTabNavigator = createMaterialTopTabNavigator({
         top: 0,
       }
     },
-    initialRouteName: 'SettingsStack'
+    initialRouteName: 'HomeStack'
   }
 );
 

@@ -20,7 +20,7 @@ export class DateHeader extends React.Component {
 const styles = StyleSheet.create({
     contact: {
         color: '#FFFFFF',
-        marginTop: 30,
+        marginTop: 40,
         marginLeft: 20,
         fontSize: 13,
     },

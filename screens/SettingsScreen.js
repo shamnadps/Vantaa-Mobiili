@@ -12,7 +12,7 @@ import { MonoText } from '../components/StyledText';
 import { Button } from '../components/Button';
 import { strings } from '../locales/i18';
 import { connect } from 'react-redux';
-import { changeLanguage } from '../redux/reducer';
+import { changeLanguage, changeFilter } from '../redux/reducer';
 
 class SettingsScreen extends React.Component {
   static navigationOptions = {
@@ -21,7 +21,7 @@ class SettingsScreen extends React.Component {
 
   state = {
     language: this.props.language,
-    feeds: ['FACEBOOK'],
+    filter: this.props.filter,
     pushNotification: 'settings.notificationButtons.never'
   }
 
@@ -33,15 +33,16 @@ class SettingsScreen extends React.Component {
   }
 
   changeFeeds = (value) => {
-    let feeds = this.state.feeds;
+    let feeds = this.state.filter;
     if (!feeds.includes(value)) {
       feeds.push(value)
     } else {
-      feeds.pop(value);
+      feeds = feeds.filter(item => item !== value);
     }
     this.setState({
-      feeds
+      filter: feeds
     })
+    this.props.changeFilter(feeds);
   }
 
   changePushNotification = (value) => {
@@ -77,17 +78,17 @@ class SettingsScreen extends React.Component {
           </View>
           <Text style={styles.title}>{strings('settings.feedHeader')}</Text>
           <View style={styles.feedSection}>
-            <Button type='facebook' active={this.state.feeds.includes('FACEBOOK')} text='FACEBOOK' clicked={() => this.changeFeeds('FACEBOOK')} />
-            <Button type='twitter' active={this.state.feeds.includes('TWITTER')} text='TWITTER' clicked={() => this.changeFeeds('TWITTER')} />
-            <Button type='youtube' active={this.state.feeds.includes('YOUTUBE')} text='YOUTUBE' clicked={() => this.changeFeeds('YOUTUBE')} />
+            <Button type='facebook' active={this.state.filter.includes('FACEBOOK')} text='FACEBOOK' clicked={() => this.changeFeeds('FACEBOOK')} />
+            <Button type='twitter' active={this.state.filter.includes('TWITTER')} text='TWITTER' clicked={() => this.changeFeeds('TWITTER')} />
+            <Button type='youtube' active={this.state.filter.includes('YOUTUBE')} text='YOUTUBE' clicked={() => this.changeFeeds('YOUTUBE')} />
           </View>
           <View style={styles.feedSection}>
-            <Button type='instagram' active={this.state.feeds.includes('INSTAGRAM')} text='INSTAGRAM' clicked={() => this.changeFeeds('INSTAGRAM')} />
-            <Button type='vantaa' active={this.state.feeds.includes('VANTAA')} text='VANTAA' clicked={() => this.changeFeeds('VANTAA')} />
-            <Button type='sivitysvantaa' active={this.state.feeds.includes('SIVITYSVANTAA')} text='SIVITYSVANTAA' clicked={() => this.changeFeeds('SIVITYSVANTAA')} />
+            <Button type='instagram' active={this.state.filter.includes('INSTAGRAM')} text='INSTAGRAM' clicked={() => this.changeFeeds('INSTAGRAM')} />
+            <Button type='vantaa' active={this.state.filter.includes('VANTAA')} text='VANTAA' clicked={() => this.changeFeeds('VANTAA')} />
+            <Button type='sivitysvantaa' active={this.state.filter.includes('SIVITYSVANTAA')} text='SIVITYSVANTAA' clicked={() => this.changeFeeds('SIVITYSVANTAA')} />
           </View>
           <View style={styles.feedSection}>
-            <Button type='events' active={this.state.feeds.includes('EVENTS')} text='EVENTS' clicked={() => this.changeFeeds('EVENTS')} />
+            <Button type='events' active={this.state.filter.includes('EVENTS')} text='EVENTS' clicked={() => this.changeFeeds('EVENTS')} />
           </View>
 
           <Text style={styles.title}>{strings('settings.notificationsHeader')}</Text>
@@ -118,10 +119,12 @@ class SettingsScreen extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
   changeLanguage: (language) => dispatch(changeLanguage(language)),
+  changeFilter: (filter) => dispatch(changeFilter(filter)),
 });
 
 const mapStateToProps = (state) => ({
   language: state.language,
+  filter: state.filter
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SettingsScreen);
@@ -134,7 +137,7 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     color: 'black',
-    marginTop: 30,
+    marginTop: 40,
     marginLeft: 10,
     fontWeight: '900',
     fontSize: 26

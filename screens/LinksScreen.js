@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
   header: {
     flex: 1,
     color: '#FFFFFF',
-    marginTop: 25,
+    marginTop: 40,
     marginLeft: 10,
     fontWeight: '900',
     fontSize: 26

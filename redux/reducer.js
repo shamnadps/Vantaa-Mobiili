@@ -1,20 +1,29 @@
-import { CHANGE_LANGUAGE, FETCH_FEEDS } from './constants';
+import { CHANGE_LANGUAGE, FETCH_FEEDS, CHANGE_FILTER } from './constants';
 import { setLocale } from '../locales/i18';
 import axios from 'axios';
 
-initialState = {
+const initialState = {
     language: 'fi',
-    advertisements: []
+    feeds: [],
+    filter: ['FACEBOOK',
+        'TWITTER',
+        'INSTAGRAM',
+        'YOUTUBE',
+        'EVENTS',
+        'VANTAA',
+        'SIVITYSVANTAA']
 }
-export default function reducer(state = initialState, action) {
+const mainReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_LANGUAGE:
-            state.language = action.payload;
             setLocale(action.payload);
-            return state;
+            return { ...state, language: action.payload };
+
         case FETCH_FEEDS:
-            state.advertisements = action.payload;
-            return state;
+            return { ...state, feeds: action.payload };
+        case CHANGE_FILTER:
+            return { ...state, filter: action.payload };
+
         default:
             return state;
     }
@@ -34,11 +43,19 @@ export function changeFeeds(feeds) {
     };
 }
 
-export async function getFeeds() {
+export function changeFilter(filter) {
+    return {
+        type: CHANGE_FILTER,
+        payload: filter
+    };
+}
+
+export async function getFeeds(filter) {
     try {
-        const advertisements = await axios.get('https://api-prod.superlaiffi.fi/advertisements');
-        return advertisements.data;
+        const feeds = await axios.get('https://vantaa-black-panther.herokuapp.com/api/feeds?type=' + filter.join(','));
+        return feeds.data;
     } catch (error) {
-        console.log('Failed to get advertisments', error);
+        console.log('Failed to get feeds', error);
     }
 }
+export default mainReducer;

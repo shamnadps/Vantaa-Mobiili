@@ -7,15 +7,17 @@ import {
   Text,
   TouchableOpacity,
   View,
-  ImageBackground
+  ImageBackground,
+  Dimensions
 } from 'react-native';
+import { Header } from 'react-navigation';
 import { strings } from '../locales/i18';
 import { DateHeader } from '../components/DateHeader';
 import { connect } from 'react-redux';
 import { getFeeds } from '../redux/reducer';
-import { changeLanguage, changeFeeds } from '../redux/reducer';
+import { changeLanguage, changeFeeds, changeFilter } from '../redux/reducer';
 import { NewsCard } from '../components/NewsCard';
-
+const { height, width } = Dimensions.get('window');
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -24,6 +26,11 @@ class HomeScreen extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      top: 0,
+      enableScroll: true,
+      viewTop: height
+    }
   }
 
   componentWillMount = async () => {
@@ -31,6 +38,13 @@ class HomeScreen extends React.Component {
     this.props.changeFeeds(feeds);
   }
 
+  handleScroll = (event) => {
+    this.setState({
+      top: event.nativeEvent.contentOffset.y,
+      viewTop: this.state.viewTop - event.nativeEvent.contentOffset.y
+    });
+
+  }
 
 
   render() {
@@ -43,17 +57,23 @@ class HomeScreen extends React.Component {
             require('../assets/images/bg.jpg')
           }
         >
-          <DateHeader />
-          <Text style={styles.header}>{strings('newsfeed.header')}</Text>
-          <ScrollView contentContainerStyle={styles.contentContainer}>
-            <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 100, padding: 10 }}>
-              {
-                this.props.feeds.map((item) => {
-                  return (
-                    <NewsCard key={item.id} item={item} />
-                  );
-                })}
+
+          <ScrollView onScroll={this.handleScroll.bind(this)}>
+
+            <View style={{ flex: 1, height: this.state.viewTop, }}>
+              <DateHeader />
+              <Text style={styles.header}>{strings('newsfeed.header')}</Text>
             </View>
+            <ScrollView contentContainerStyle={styles.contentContainer}>
+              <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: Header.HEIGHT, padding: 10 }}>
+                {
+                  this.props.feeds.map((item) => {
+                    return (
+                      <NewsCard key={item.id} item={item} />
+                    );
+                  })}
+              </View>
+            </ScrollView>
           </ScrollView>
         </ImageBackground>
       </View >
@@ -71,7 +91,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => ({
   changeLanguage: (language) => dispatch(changeLanguage(language)),
-  changeFeeds: (feeds) => dispatch(changeFeeds(feeds))
+  changeFeeds: (feeds) => dispatch(changeFeeds(feeds)),
+  changeFilter: (filter) => dispatch(changeFilter(filter)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
@@ -92,6 +113,7 @@ const styles = StyleSheet.create({
   serviceImage: {
     flexGrow: 1,
     justifyContent: 'space-between',
+    height
   },
   source: {
     alignItems: 'flex-end',

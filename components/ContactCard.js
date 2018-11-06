@@ -31,12 +31,14 @@ const styles = StyleSheet.create({
         flex: 1,
         marginTop: 10,
         backgroundColor: '#FFF',
-        borderWidth: 2,
+
         padding: 10,
         justifyContent: 'center',
         alignItems: 'center',
-        borderColor: '#E5E5E5',
         margin: 5,
+        shadowOpacity: 0.50,
+        shadowRadius: 3,
+        shadowOffset: { height: 0, width: 0 },
     },
     sectionView: {
         flex: 1,

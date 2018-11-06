@@ -43,7 +43,12 @@ export class VantaaCard extends React.Component {
     }
     render() {
         return (
-            <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#FFF', margin: 10 }}>
+            <View style={{
+                flex: 1, shadowOpacity: 0.50,
+                shadowRadius: 3,
+                shadowOffset: { height: 0, width: 0 },
+                borderRadius: 10, flexDirection: 'row', backgroundColor: '#FFF', margin: 10
+            }}>
 
                 {this.getImageForVantaa(this.props.item.image_url)}
 

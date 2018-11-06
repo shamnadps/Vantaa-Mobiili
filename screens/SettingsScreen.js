@@ -12,7 +12,7 @@ import { MonoText } from '../components/StyledText';
 import { Button } from '../components/Button';
 import { strings } from '../locales/i18';
 import { connect } from 'react-redux';
-import { changeLanguage, changeFilter } from '../redux/reducer';
+import { changeLanguage, changeFilter, changeFeeds, getFeeds } from '../redux/reducer';
 
 class SettingsScreen extends React.Component {
   static navigationOptions = {
@@ -32,7 +32,7 @@ class SettingsScreen extends React.Component {
     this.props.changeLanguage(value);
   }
 
-  changeFeeds = (value) => {
+  changeFeeds = async (value) => {
     let feeds = this.state.filter;
     if (!feeds.includes(value)) {
       feeds.push(value)
@@ -43,6 +43,8 @@ class SettingsScreen extends React.Component {
       filter: feeds
     })
     this.props.changeFilter(feeds);
+    const newfeeds = await getFeeds(feeds);
+    this.props.changeFeeds(newfeeds);
   }
 
   changePushNotification = (value) => {
@@ -120,6 +122,7 @@ class SettingsScreen extends React.Component {
 const mapDispatchToProps = dispatch => ({
   changeLanguage: (language) => dispatch(changeLanguage(language)),
   changeFilter: (filter) => dispatch(changeFilter(filter)),
+  changeFeeds: (feeds) => dispatch(changeFeeds(feeds))
 });
 
 const mapStateToProps = (state) => ({

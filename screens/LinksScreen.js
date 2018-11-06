@@ -9,7 +9,8 @@ import {
   View,
   ImageBackground,
   TouchableHighlight,
-  Linking
+  Linking,
+  Dimensions
 } from 'react-native';
 import { MonoText } from '../components/StyledText';
 import { ContactCard } from '../components/ContactCard';
@@ -17,6 +18,7 @@ import { ServiceCard } from '../components/ServiceCard';
 import { strings } from '../locales/i18';
 import { connect } from 'react-redux';
 import { changeLanguage } from '../redux/reducer';
+const { height, width } = Dimensions.get('window');
 
 class LinksScreen extends React.Component {
   static navigationOptions = {
@@ -32,7 +34,7 @@ class LinksScreen extends React.Component {
             source={
               require('../assets/images/background.png')
             }
-            style={{ position: 'absolute' }}
+            style={{ position: 'absolute', height }}
           />
 
           <Text style={styles.header}>{strings('resources.header')}</Text>

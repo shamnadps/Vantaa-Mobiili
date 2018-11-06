@@ -15,7 +15,12 @@ export class EventCard extends React.Component {
 
     render() {
         return (
-            <View style={{ backgroundColor: '#FFF', margin: 10 }}>
+            <View style={{
+                shadowOpacity: 0.50,
+                shadowRadius: 3,
+                shadowOffset: { height: 0, width: 0 },
+                borderRadius: 10, backgroundColor: '#FFF', margin: 10
+            }}>
 
                 <ImageBackground style={{
                     flex: 1, height: 250,

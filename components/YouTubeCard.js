@@ -67,13 +67,14 @@ export class YouTubeCard extends React.Component {
 
                         style={{ alignSelf: 'stretch', height: 300, backgroundColor: 'black', marginVertical: 10 }}
                     />
-                    <View style={{ flex: 1, flexWrap: 'wrap', height: 100, padding: 5, }}>
+                    <View style={{ flex: 1, padding: 10, flexDirection: 'row', flexWrap: 'wrap', padding: 5, }}>
                         <Text style={{ flex: 1, flexWrap: 'wrap', }}>
-                            <Text style={{ fontWeight: 'bold', }}>{this.props.item.author} </Text>
+                            <Text style={{ flex: 1, fontWeight: 'bold', }}>{this.props.item.author} </Text>
                             {this.props.item.description}
                         </Text>
-                        <Text style={{ marginBottom: 5, marginTop: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+
                     </View>
+                    <Text style={{ padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );

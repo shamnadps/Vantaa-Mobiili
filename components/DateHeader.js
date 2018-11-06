@@ -5,6 +5,8 @@ import {
     Text,
     TouchableOpacity,
 } from 'react-native';
+import { format } from 'date-fns';
+
 export class DateHeader extends React.Component {
     constructor(props) {
         super(props);
@@ -12,7 +14,7 @@ export class DateHeader extends React.Component {
 
     render() {
         return (
-            <Text style={styles.contact}>SATURDAY, NOVEMBER 03</Text>
+            <Text style={styles.contact}>{format(new Date(), 'dddd, MMMM DD')}</Text>
         );
     }
 }

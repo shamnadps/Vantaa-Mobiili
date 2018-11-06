@@ -44,13 +44,14 @@ export class InstagramCard extends React.Component {
                         source={{
                             uri: this.props.item.image_url
                         }} />
-                    <View style={{ flex: 1, flexWrap: 'wrap', height: 100, padding: 5, }}>
-                        <Text style={{ flex: 1, flexWrap: 'wrap', }}>
+                    <View style={{ flex: 1, flexDirection: 'row', padding: 10, }}>
+                        <Text style={{ flex: 1, }}>
                             <Text style={{ fontWeight: 'bold', }}>{this.props.item.author} </Text>
                             {this.props.item.description}
                         </Text>
-                        <Text style={{ marginBottom: 5, marginTop: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+
                     </View>
+                    <Text style={{ padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );

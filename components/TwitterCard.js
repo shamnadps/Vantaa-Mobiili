@@ -40,10 +40,11 @@ export class TwitterCard extends React.Component {
 
                 <View style={{ flex: 1, padding: 5, textAlign: 'center' }}>
 
-                    <View style={{ flex: 1, flexWrap: 'wrap', padding: 5, }}>
+                    <View style={{ flex: 1, flexDirection: 'row', padding: 10, flexWrap: 'wrap', padding: 5, }}>
                         <Text style={{ flex: 1, flexWrap: 'wrap', }}>{this.props.item.description}</Text>
-                        <Text style={{ marginBottom: 5, marginTop: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+
                     </View>
+                    <Text style={{ padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );

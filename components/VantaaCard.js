@@ -58,8 +58,8 @@ export class VantaaCard extends React.Component {
                         <Text style={{ textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
                     </View>
                     <View style={{ flex: 1, flexWrap: 'wrap', height: 100, }}>
-                        <Text style={{ flex: 1, flexWrap: 'wrap', }}>{this.props.item.title}</Text>
-                        <Text style={{ marginBottom: 5, marginTop: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                        <Text style={{ flex: 1, padding: 5, flexWrap: 'wrap', }}>{this.props.item.title}</Text>
+                        <Text style={{ padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                     </View>
                 </View>
             </View>

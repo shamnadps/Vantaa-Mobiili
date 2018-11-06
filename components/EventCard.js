@@ -8,6 +8,8 @@ import {
     Linking,
     ImageBackground
 } from 'react-native';
+import { format } from 'date-fns';
+
 export class EventCard extends React.Component {
     constructor(props) {
         super(props);
@@ -41,7 +43,7 @@ export class EventCard extends React.Component {
 
                     <View style={{ flex: 1, flexWrap: 'wrap', padding: 10, }}>
                         <Text style={{ flex: 1, flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.title}</Text>
-                        <Text style={{ flexWrap: 'wrap', }}>{this.props.item.pub_date}</Text>
+                        <Text style={{ marginBottom: 5, marginTop: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                     </View>
                 </View>
             </View>

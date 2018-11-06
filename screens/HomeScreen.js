@@ -65,7 +65,7 @@ class HomeScreen extends React.Component {
               <Text style={styles.header}>{strings('newsfeed.header')}</Text>
             </View>
             <ScrollView contentContainerStyle={styles.contentContainer}>
-              <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: Header.HEIGHT, padding: 10 }}>
+              <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: Header.HEIGHT, paddingTop: 10 }}>
                 {
                   this.props.feeds.map((item) => {
                     return (

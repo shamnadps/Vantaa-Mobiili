@@ -7,6 +7,8 @@ import {
     View,
     Linking
 } from 'react-native';
+import { format } from 'date-fns';
+
 export class InstagramCard extends React.Component {
     constructor(props) {
         super(props);
@@ -47,7 +49,7 @@ export class InstagramCard extends React.Component {
                             <Text style={{ fontWeight: 'bold', }}>{this.props.item.author} </Text>
                             {this.props.item.description}
                         </Text>
-                        <Text style={{ flexWrap: 'wrap', }}>{this.props.item.pub_date}</Text>
+                        <Text style={{ marginBottom: 5, marginTop: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                     </View>
                 </View>
             </View>

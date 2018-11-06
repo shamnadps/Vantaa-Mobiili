@@ -7,6 +7,7 @@ import {
     View,
     Linking
 } from 'react-native';
+import { format } from 'date-fns';
 
 export class VantaaCard extends React.Component {
     constructor(props) {
@@ -58,7 +59,7 @@ export class VantaaCard extends React.Component {
                     </View>
                     <View style={{ flex: 1, flexWrap: 'wrap', height: 100, }}>
                         <Text style={{ flex: 1, flexWrap: 'wrap', }}>{this.props.item.title}</Text>
-                        <Text style={{ flex: 1, flexWrap: 'wrap', }}>{this.props.item.pub_date}</Text>
+                        <Text style={{ marginBottom: 5, marginTop: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                     </View>
                 </View>
             </View>

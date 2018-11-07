@@ -65,14 +65,18 @@ class HomeScreen extends React.Component {
               <Text style={styles.header}>{strings('newsfeed.header')}</Text>
             </View>
             <ScrollView contentContainerStyle={styles.contentContainer}>
-              <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: Header.HEIGHT, paddingTop: 10 }}>
-                {
-                  this.props.feeds.map((item) => {
-                    return (
-                      <NewsCard key={item.id} item={item} />
-                    );
-                  })}
-              </View>
+              {this.props.feeds.length > 0 ?
+                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: Header.HEIGHT, paddingTop: 10 }}>
+                  {
+                    this.props.feeds.map((item) => {
+                      return (
+                        <NewsCard key={item.id} item={item} />
+                      );
+                    })}
+                </View> :
+                <View style={{ flex: 1, height, backgroundColor: 'rgba(237, 237, 237, 1)', padding: 20, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
+                  <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>Loading feeds. Pleasw wait.</Text>
+                </View>}
             </ScrollView>
           </ScrollView>
         </ImageBackground>

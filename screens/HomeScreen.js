@@ -15,7 +15,7 @@ import { strings } from '../locales/i18';
 import { DateHeader } from '../components/DateHeader';
 import { connect } from 'react-redux';
 import { getFeeds } from '../redux/reducer';
-import { changeLanguage, changeFeeds, changeFilter } from '../redux/reducer';
+import { changeLanguage, changeFeeds, changeFilter, getFeedsMoreFeeds } from '../redux/reducer';
 import { NewsCard } from '../components/NewsCard';
 const { height, width } = Dimensions.get('window');
 
@@ -29,7 +29,9 @@ class HomeScreen extends React.Component {
     this.state = {
       top: 0,
       enableScroll: true,
-      viewTop: height
+      viewTop: height,
+      endReached: false,
+      fetchInProgress: false,
     }
   }
 
@@ -38,15 +40,29 @@ class HomeScreen extends React.Component {
     this.props.changeFeeds(feeds);
   }
 
-  handleScroll = (event) => {
+  handleScroll = async (event) => {
     this.setState({
       top: event.nativeEvent.contentOffset.y,
       viewTop: this.state.viewTop - event.nativeEvent.contentOffset.y
     });
-
+    const fetchMore = event.nativeEvent.contentSize.height
+      <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
+    if (this.props.feeds && this.props.feeds.length > 0 && fetchMore && !this.state.fetchInProgress) {
+      this.setState({ fetchInProgress: true });
+      const skip = this.props.feeds[this.props.feeds.length - 1].id;
+      const filter = this.props.filter;
+      const moreFeeds = await getFeedsMoreFeeds(filter, skip);
+      const newFeeds = [...this.props.feeds, ...moreFeeds];
+      this.props.changeFeeds(newFeeds);
+      this.setState({ fetchInProgress: false });
+    }
   }
 
 
+
+  enableSomeButton = () => {
+    this.setState({ endReached: true });
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -58,25 +74,48 @@ class HomeScreen extends React.Component {
           }
         >
 
-          <ScrollView onScroll={this.handleScroll.bind(this)}>
+          <ScrollView onScroll={this.handleScroll.bind(this)} scrollEventThrottle={1}>
 
             <View style={{ flex: 1, height: this.state.viewTop, }}>
               <DateHeader />
               <Text style={styles.header}>{strings('newsfeed.header')}</Text>
             </View>
-            <ScrollView contentContainerStyle={styles.contentContainer}>
+            <ScrollView contentContainerStyle={[styles.contentContainer, { minHeight: height }]}
+
+            >
               {this.props.feeds.length > 0 ?
-                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: Header.HEIGHT, paddingTop: 10 }}>
+                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 55, paddingTop: 10 }}>
                   {
                     this.props.feeds.map((item) => {
                       return (
                         <NewsCard key={item.id} item={item} />
+
                       );
                     })}
+
                 </View> :
                 <View style={{ flex: 1, height, backgroundColor: 'rgba(237, 237, 237, 1)', padding: 20, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-                  <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>Loading feeds. Please wait.</Text>
-                </View>}
+
+                  <ImageBackground
+                    resizeMode='cover'
+                    style={styles.loadingImage}
+                    source={
+                      require('../assets/images/splash.png')
+                    }
+                  >
+                    <Text style={{
+                      flex: 1, height,
+                      marginTop: 200,
+                      fontWeight: 'bold',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      textAlign: 'center'
+                    }}>Loading feeds... Please wait.</Text>
+                  </ImageBackground>
+                </View>
+
+              }
+
             </ScrollView>
           </ScrollView>
         </ImageBackground>
@@ -116,8 +155,12 @@ const styles = StyleSheet.create({
   contentContainer: { flexGrow: 1, },
   serviceImage: {
     flexGrow: 1,
-    justifyContent: 'space-between',
     height
+  },
+  loadingImage: {
+    flexGrow: 1,
+    height,
+    width
   },
   source: {
     alignItems: 'flex-end',

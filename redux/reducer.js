@@ -58,4 +58,13 @@ export async function getFeeds(filter) {
         console.log('Failed to get feeds', error);
     }
 }
+
+export async function getFeedsMoreFeeds(filter, skip) {
+    try {
+        const feeds = await axios.get('https://vantaa-black-panther.herokuapp.com/api/feeds?type=' + filter.join(',') + '&skip=' + skip);
+        return feeds.data;
+    } catch (error) {
+        console.log('Failed to get feeds', error);
+    }
+}
 export default mainReducer;

@@ -75,7 +75,7 @@ class HomeScreen extends React.Component {
                     })}
                 </View> :
                 <View style={{ flex: 1, height, backgroundColor: 'rgba(237, 237, 237, 1)', padding: 20, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>
-                  <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>Loading feeds. Pleasw wait.</Text>
+                  <Text style={{ flex: 1, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>Loading feeds. Please wait.</Text>
                 </View>}
             </ScrollView>
           </ScrollView>

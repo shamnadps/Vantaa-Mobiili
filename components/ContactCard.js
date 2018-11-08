@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.50,
         shadowRadius: 3,
         shadowOffset: { height: 0, width: 0 },
+        elevation: 20
     },
     sectionView: {
         flex: 1,

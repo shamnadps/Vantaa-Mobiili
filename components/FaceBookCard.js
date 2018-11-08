@@ -21,7 +21,7 @@ export class FaceBookCard extends React.Component {
                 shadowOpacity: 0.50,
                 shadowRadius: 3,
                 shadowOffset: { height: 0, width: 0 },
-                borderRadius: 10, backgroundColor: '#FFF', margin: 10
+                borderRadius: 10, backgroundColor: '#FFF', margin: 10, elevation: 10,
             }}>
 
                 <View style={{ paddingTop: 10, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>

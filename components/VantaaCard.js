@@ -20,7 +20,7 @@ export class VantaaCard extends React.Component {
                 shadowOpacity: 0.50,
                 shadowRadius: 3,
                 shadowOffset: { height: 0, width: 0 },
-                borderRadius: 10, backgroundColor: '#FFF', margin: 10
+                borderRadius: 10, backgroundColor: '#FFF', margin: 10, elevation: 10,
             }}>
 
                 <View style={{

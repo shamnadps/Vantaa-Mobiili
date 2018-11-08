@@ -49,9 +49,11 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'space-between',
         margin: 10,
+        backgroundColor: '#EEEEEE',
         shadowOpacity: 0.50,
         shadowRadius: 3,
         shadowOffset: { height: 0, width: 0 },
+        elevation: 10
     },
     serviceImage: {
         flex: 1,

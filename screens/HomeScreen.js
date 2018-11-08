@@ -92,7 +92,7 @@ class HomeScreen extends React.Component {
               contentContainerStyle={[styles.contentContainer, { minHeight: height }]}
 
             >
-              {this.props.feeds.length > 0 ?
+              {this.props.feeds && this.props.feeds.length > 0 ?
                 <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 55, paddingTop: 10 }}>
                   {
                     this.props.feeds.map((item) => {

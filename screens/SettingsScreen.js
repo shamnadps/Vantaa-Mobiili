@@ -7,6 +7,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Alert
 } from 'react-native';
 import { MonoText } from '../components/StyledText';
 import { Button } from '../components/Button';
@@ -26,10 +27,23 @@ class SettingsScreen extends React.Component {
   }
 
   changeLanguageHandler = (value) => {
-    this.setState({
-      language: value
-    })
-    this.props.changeLanguage(value);
+
+    Alert.alert(
+      'Please confirm',
+      'Are you sure that you want to change the language',
+      [
+        { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), },
+        {
+          text: 'OK', onPress: () => {
+            this.setState({
+              language: value
+            })
+            this.props.changeLanguage(value);
+          }
+        },
+      ],
+      { cancelable: true }
+    )
   }
 
   changeFeeds = async (value) => {

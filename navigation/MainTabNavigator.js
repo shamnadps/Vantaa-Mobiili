@@ -8,67 +8,80 @@ import { strings } from '../locales/i18';
 import { connect } from 'react-redux';
 import { changeLanguage } from '../redux/reducer';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen,
-});
+class BottomContainer extends React.Component {
 
-HomeStack.navigationOptions = {
-  tabBarLabel: strings('navigation.news'),
-};
+  static navigationOptions = {
+    header: null,
+  };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
-}, {
-    navigationOptions: {
-      header: null
-    },
-  });
-
-LinksStack.navigationOptions = {
-  tabBarLabel: strings('navigation.links'),
-};
-
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
-}, {
-    navigationOptions: {
-      header: null
-    },
-  });
-
-SettingsStack.navigationOptions = {
-  tabBarLabel: strings('navigation.settings'),
-  header: null
-};
-
-const MaterialTopTabNavigator = createMaterialTopTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
-}, {
-    tabBarPosition: 'bottom',
-    tabBarOptions: {
-      style: {
-        backgroundColor: '#0042a5',
-        color: '#FFF',
-        paddingBottom: 10
-      },
-      activeTintColor: 'white',
-      labelStyle: {
-        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
-        fontSize: 12
-      },
-      indicatorStyle: {
-
-        backgroundColor: 'white', // color of the indicator
-        height: 2,
-        top: 0,
-      }
-    },
-    initialRouteName: 'HomeStack'
+  constructor(props) {
+    super(props);
   }
-);
+
+  TabNav = () => {
+    const HomeStack = createStackNavigator({
+      Home: HomeScreen,
+    });
+
+    const LinksStack = createStackNavigator({
+      Links: LinksScreen,
+
+    });
+
+    const SettingsStack = createStackNavigator({
+      Settings: SettingsScreen,
+
+    });
+    HomeStack.navigationOptions = {
+      tabBarLabel: strings('navigation.news'),
+    };
+
+    LinksStack.navigationOptions = {
+      tabBarLabel: strings('navigation.links'),
+    };
+
+    SettingsStack.navigationOptions = {
+      tabBarLabel: strings('navigation.settings'),
+    };
+    const MaterialTopTabNavigatorMain = createMaterialTopTabNavigator({
+      HomeStack,
+      LinksStack,
+      SettingsStack,
+    }, {
+        tabBarPosition: 'bottom',
+        tabBarOptions: {
+          style: {
+            backgroundColor: '#0042a5',
+            color: '#FFF',
+            paddingBottom: 10
+          },
+          activeTintColor: 'white',
+          labelStyle: {
+            fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+            fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+            fontSize: 12
+          },
+          indicatorStyle: {
+
+            backgroundColor: 'white', // color of the indicator
+            height: 2,
+            top: 0,
+          }
+        },
+        initialRouteName: 'HomeStack'
+      }
+    );
+    return <MaterialTopTabNavigatorMain />;
+  }
+  render() {
+
+    return (
+      <React.Fragment >
+        {this.TabNav()}
+      </React.Fragment>
+    );
+  }
+}
 
 const mapDispatchToProps = dispatch => ({
   changeLanguage: (language) => dispatch(changeLanguage(language)),
@@ -78,15 +91,4 @@ const mapStateToProps = (state) => ({
   language: state.language,
 });
 
-const mergeProps = (state, dispatch, ownProps) => {
-  return ({
-    ...ownProps,
-    screenProps: {
-      ...ownProps.screenProps,
-      ...state,
-      ...dispatch,
-    }
-  })
-}
-
-export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(MaterialTopTabNavigator);
+export default connect(mapStateToProps, mapDispatchToProps)(BottomContainer);

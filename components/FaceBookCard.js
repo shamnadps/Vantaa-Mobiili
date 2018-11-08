@@ -16,7 +16,6 @@ export class FaceBookCard extends React.Component {
     }
 
     render() {
-        console.log(this.props.item.image_url);
         return (
             <View style={{
                 shadowOpacity: 0.50,

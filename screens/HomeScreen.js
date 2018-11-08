@@ -8,7 +8,8 @@ import {
   TouchableOpacity,
   View,
   ImageBackground,
-  Dimensions
+  Dimensions,
+  Animated
 } from 'react-native';
 import { Header } from 'react-navigation';
 import { strings } from '../locales/i18';
@@ -30,6 +31,7 @@ class HomeScreen extends React.Component {
       top: 0,
       enableScroll: true,
       viewTop: height,
+      carouselHeight: height,
       endReached: false,
       fetchInProgress: false,
     }
@@ -41,12 +43,13 @@ class HomeScreen extends React.Component {
   }
 
   handleScroll = async (event) => {
-    this.setState({
-      top: event.nativeEvent.contentOffset.y,
-      viewTop: this.state.viewTop - event.nativeEvent.contentOffset.y
-    });
+
+    Animated.event(
+      [{ nativeEvent: { contentOffset: { y: this.state.scrollY } } }],
+    )(event)
     const fetchMore = event.nativeEvent.contentSize.height
       <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
+
     if (this.props.feeds && this.props.feeds.length > 0 && fetchMore && !this.state.fetchInProgress) {
       this.setState({ fetchInProgress: true });
       const skip = this.props.feeds[this.props.feeds.length - 1].id;
@@ -58,11 +61,13 @@ class HomeScreen extends React.Component {
     }
   }
 
-
-
-  enableSomeButton = () => {
-    this.setState({ endReached: true });
+  hideFeed = () => {
+    this.setState({
+      carouselHeight: height,
+      viewTop: 0
+    });
   }
+
   render() {
     return (
       <View style={styles.container}>
@@ -74,13 +79,17 @@ class HomeScreen extends React.Component {
           }
         >
 
-          <ScrollView onScroll={this.handleScroll.bind(this)} scrollEventThrottle={1}>
-
-            <View style={{ flex: 1, height: this.state.viewTop, }}>
-              <DateHeader />
-              <Text style={styles.header}>{strings('newsfeed.header')}</Text>
-            </View>
-            <ScrollView contentContainerStyle={[styles.contentContainer, { minHeight: height }]}
+          <Animated.ScrollView
+            onScroll={this.handleScroll.bind(this)}
+            scrollEventThrottle={1}>
+            <TouchableOpacity onPress={this.hideFeed}>
+              <View style={{ flex: 1, height: this.state.carouselHeight, }}>
+                <DateHeader />
+                <Text style={styles.header}>{strings('newsfeed.header')}</Text>
+              </View>
+            </TouchableOpacity>
+            <Animated.ScrollView
+              contentContainerStyle={[styles.contentContainer, { minHeight: height }]}
 
             >
               {this.props.feeds.length > 0 ?
@@ -116,8 +125,8 @@ class HomeScreen extends React.Component {
 
               }
 
-            </ScrollView>
-          </ScrollView>
+            </Animated.ScrollView>
+          </Animated.ScrollView>
         </ImageBackground>
       </View >
     );

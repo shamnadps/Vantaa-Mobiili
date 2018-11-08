@@ -32,7 +32,7 @@ export class VantaaCard extends React.Component {
                 }}>
 
                     <View style={[styles.source, styles.activeButton,]}>
-                        <Text style={{ flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
                     </View>
                 </View>
                 <View style={{ paddingTop: 0, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
@@ -50,8 +50,8 @@ export class VantaaCard extends React.Component {
                             } />
                     }
                     <View style={{ flex: 1, padding: 5, paddingLeft: 10 }}>
-                        <Text style={{ flexWrap: 'wrap', opacity: 0.7 }}>Author / page headline</Text>
-                        <Text style={{ flexWrap: 'wrap', }}>{this.props.item.title}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flexWrap: 'wrap', opacity: 0.7 }}>Author / page headline</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flexWrap: 'wrap', }}>{this.props.item.title}</Text>
                     </View>
 
                 </View>
@@ -59,10 +59,10 @@ export class VantaaCard extends React.Component {
                 <View style={{ flex: 1, padding: 5, textAlign: 'center' }}>
 
                     <View style={{ flex: 1, flexDirection: 'row', padding: 10, flexWrap: 'wrap', padding: 5, }}>
-                        <Text style={{ flex: 1, flexWrap: 'wrap', }}>{this.props.item.description}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, flexWrap: 'wrap', }}>{this.props.item.description}</Text>
 
                     </View>
-                    <Text style={{ padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                    <Text style={{ fontFamily: "GT Walsheim", padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );

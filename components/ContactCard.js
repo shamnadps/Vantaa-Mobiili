@@ -15,8 +15,8 @@ export class ContactCard extends React.Component {
         return (
             <TouchableOpacity style={styles.section} onPress={() => Linking.openURL(this.props.link)}>
                 <View style={styles.sectionView}>
-                    <Image source={this.props.imageUrl} />
-                    <Text style={styles.text}>{this.props.text}</Text>
+                    <Image style={{ padding: 5, marginTop: 10, }} source={this.props.imageUrl} />
+                    <Text style={styles.text}>{this.props.text.toUpperCase()}</Text>
                 </View>
             </TouchableOpacity>);
     }
@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
+
+        fontFamily: "GT Walsheim",
     },
     section: {
         flex: 1,
@@ -39,12 +41,14 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.50,
         shadowRadius: 3,
         shadowOffset: { height: 0, width: 0 },
-        elevation: 20
+        elevation: 20,
+        fontFamily: "GT Walsheim",
     },
     sectionView: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        fontFamily: "GT Walsheim",
     },
     text: {
         marginTop: 10,
@@ -52,5 +56,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
+        fontFamily: "GT Walsheim",
+        fontWeight: 'bold',
+        padding: 5,
+
     },
 });

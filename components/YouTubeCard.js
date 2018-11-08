@@ -39,10 +39,10 @@ export class YouTubeCard extends React.Component {
                             uri: this.props.item.author_thumbnail
                         }} />
                     <View style={{ flex: 1, padding: 5, }}>
-                        <Text style={{ flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.author}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.author}</Text>
                     </View>
                     <View style={[styles.source, styles.youtubeActive,]}>
-                        <Text style={{ flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
                     </View>
                 </View>
 
@@ -69,13 +69,13 @@ export class YouTubeCard extends React.Component {
                         style={{ alignSelf: 'stretch', height: 300, backgroundColor: 'black', marginVertical: 10 }}
                     />
                     <View style={{ flex: 1, padding: 10, flexDirection: 'row', flexWrap: 'wrap', padding: 5, }}>
-                        <Text style={{ flex: 1, flexWrap: 'wrap', }}>
-                            <Text style={{ flex: 1, fontWeight: 'bold', }}>{this.props.item.author} </Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, flexWrap: 'wrap', }}>
+                            <Text style={{ fontFamily: "GT Walsheim", flex: 1, fontWeight: 'bold', }}>{this.props.item.author} </Text>
                             {this.props.item.description}
                         </Text>
 
                     </View>
-                    <Text style={{ padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                    <Text style={{ fontFamily: "GT Walsheim", padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );

@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     serviceText: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: "GT Walsheim",
     }
 });

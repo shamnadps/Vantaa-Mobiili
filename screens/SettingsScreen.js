@@ -136,6 +136,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ededed',
+    fontFamily: "GT Walsheim",
   },
   header: {
     flex: 1,
@@ -143,7 +144,9 @@ const styles = StyleSheet.create({
     marginTop: 40,
     marginLeft: 10,
     fontWeight: '900',
-    fontSize: 26
+    fontSize: 26,
+    fontFamily: "GT Walsheim",
+
   },
   title: {
     color: 'black',
@@ -152,11 +155,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: 'bold',
     marginBottom: 10,
+    fontFamily: "GT Walsheim",
+
   },
   feedSection: {
     flex: 1,
     flexDirection: 'row',
-    marginLeft: 10
+    marginLeft: 10,
+    fontFamily: "GT Walsheim",
   }
 
 });

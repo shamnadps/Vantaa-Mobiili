@@ -47,29 +47,35 @@ const styles = StyleSheet.create({
 
     activeButton: {
         backgroundColor: '#3c8fde',
-        color: '#FFF'
+        color: '#FFF',
+        fontFamily: "GT Walsheim",
     },
     instagramActive: {
         backgroundColor: '#43368d',
-        color: '#FFF'
+        color: '#FFF',
+        fontFamily: "GT Walsheim",
     },
     youtubeActive: {
         backgroundColor: '#ff8f1c',
-        color: '#FFF'
+        color: '#FFF',
+        fontFamily: "GT Walsheim",
     },
     facebookActive: {
         backgroundColor: '#ba0d2e',
-        color: '#FFF'
+        color: '#FFF',
+        fontFamily: "GT Walsheim",
     },
     twitterActive: {
         backgroundColor: '#007b5f',
-        color: '#FFF'
+        color: '#FFF',
+        fontFamily: "GT Walsheim",
     },
     source: {
         width: 80,
         margin: 0,
         padding: 4,
         textAlign: 'center',
-        top: -10
+        top: -10,
+        fontFamily: "GT Walsheim",
     }
 });

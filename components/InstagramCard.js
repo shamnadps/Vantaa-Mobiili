@@ -32,11 +32,11 @@ export class InstagramCard extends React.Component {
                             uri: this.props.item.author_thumbnail
                         }} />
                     <View style={{ flex: 1, padding: 5, }}>
-                        <Text style={{ flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.author}</Text>
-                        <Text style={{ flexWrap: 'wrap', }}>@{this.props.item.author}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.author}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flexWrap: 'wrap', }}>@{this.props.item.author}</Text>
                     </View>
                     <View style={[styles.source, styles.instagramActive,]}>
-                        <Text style={{ flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
                     </View>
                 </View>
 
@@ -46,16 +46,16 @@ export class InstagramCard extends React.Component {
                         source={{
                             uri: this.props.item.image_url
                         }} />
-                    <Text style={{ fontWeight: 'bold', padding: 10, }}>{this.props.item.likes} likes </Text>
+                    <Text style={{ fontFamily: "GT Walsheim", fontWeight: 'bold', padding: 10, }}>{this.props.item.likes} likes </Text>
                     <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 10, paddingTop: 10 }}>
-                        <Text style={{ flex: 1, }}>
-                            <Text style={{ fontWeight: 'bold', }}>{this.props.item.author} </Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, }}>
+                            <Text style={{ fontFamily: "GT Walsheim", fontWeight: 'bold', }}>{this.props.item.author} </Text>
                             {this.props.item.description}
                         </Text>
 
                     </View>
 
-                    <Text style={{ padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                    <Text style={{ fontFamily: "GT Walsheim", padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );

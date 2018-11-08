@@ -41,6 +41,32 @@
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		CFCFEB1321AA42D8A7218A52 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 2288FFCF5873496DBED946EB /* YTPlayerView-iframe-player.html */; };
+		71539ACB7597422B91F68E60 /* GT-Walsheim-Black-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3193C465A97F49579125345F /* GT-Walsheim-Black-Oblique.otf */; };
+		81286E6DDC0C49A9B70754DD /* GT-Walsheim-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 648B9A2EB35E41D7B01FA521 /* GT-Walsheim-Black.otf */; };
+		B4B64A4E53574183AF39C147 /* GT-Walsheim-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE22AE55074910A9F5CE6A /* GT-Walsheim-Bold-Oblique.otf */; };
+		FB6C2860393A4A9A8944C85D /* GT-Walsheim-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33C9F616663747AC9067FB5B /* GT-Walsheim-Bold.otf */; };
+		8DC7FFF3B31A4713955B6EC6 /* GT-Walsheim-Light-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51DD3DADEAA74FE5A71F6240 /* GT-Walsheim-Light-Oblique.otf */; };
+		9002E50E56DE46529053F44D /* GT-Walsheim-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA5F213D15044D8C97EFE33F /* GT-Walsheim-Light.otf */; };
+		263BEA739073498286E6E126 /* GT-Walsheim-Medium-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D7DD340A8D849D7A0AC7291 /* GT-Walsheim-Medium-Oblique.otf */; };
+		C070E79A519443CFA0CBB36A /* GT-Walsheim-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DE280BEFEFC4ACF910C7801 /* GT-Walsheim-Medium.otf */; };
+		7AA03D7C062043C3AFD7F59F /* GT-Walsheim-Regular-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DA2E02BFD409F802A162E /* GT-Walsheim-Regular-Oblique.otf */; };
+		FB1C7B89C37F4D2C99AFB798 /* GT-Walsheim-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB930EF510B6496BBFC75812 /* GT-Walsheim-Regular.otf */; };
+		3BCD0E5ACB064ABEB55E4DE9 /* GT-Walsheim-Thin-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFF420A64EF241E3B9668876 /* GT-Walsheim-Thin-Oblique.otf */; };
+		6ED408AE27DC44CD85B3081F /* GT-Walsheim-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F766094FBC1D42FA9D6B48D8 /* GT-Walsheim-Thin.otf */; };
+		4897AE91EFB9407798407B4A /* GT-Walsheim-Ultra-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDCADB03261C4779AC4612FD /* GT-Walsheim-Ultra-Bold-Oblique.otf */; };
+		371A501C4FF34EAFBEDF83C0 /* GT-Walsheim-Ultra-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DF325E488468D93D51F26 /* GT-Walsheim-Ultra-Bold.otf */; };
+		A4DBC9F9B8A7420E96CDACC4 /* GT-Walsheim-Ultra-Light-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5BD552058A04437ACCEC5EB /* GT-Walsheim-Ultra-Light-Oblique.otf */; };
+		02F2B5C8463B4B4388D4F2FB /* GT-Walsheim-Ultra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8AB63B402D24D4983DD364B /* GT-Walsheim-Ultra-Light.otf */; };
+		71EB716A61FC4889A4EADC13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 753B35D684DC4985835339B5 /* OpenSans-Bold.ttf */; };
+		280FA609AFF54F388BCFFC29 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE90A7CB275447B58AC1AB69 /* OpenSans-BoldItalic.ttf */; };
+		D950D838916C4DBDAC8788BE /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75801EF75F464620B0A6B784 /* OpenSans-ExtraBold.ttf */; };
+		8B75876F87914046A99D0685 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7C76184A0D64705BD667780 /* OpenSans-ExtraBoldItalic.ttf */; };
+		D15FE548BC174091BBCCCAF6 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62C85119D8194972B9A49F1D /* OpenSans-Italic.ttf */; };
+		2D6982AC0BA24A51A0EFFD75 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1EACE08473A45E99D81FD36 /* OpenSans-Light.ttf */; };
+		E3D9EA515F5545DB8601FDBE /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90B046460D184CA6BA072EB5 /* OpenSans-LightItalic.ttf */; };
+		D45B4C5674CA44E785E0D1FE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFBED09A74894B0DAF8F4933 /* OpenSans-Regular.ttf */; };
+		9E676755E28041FAB3E98631 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96E4CECAA284639B6CBFBA4 /* OpenSans-SemiBold.ttf */; };
+		D4D49B7F866A4F72B182669F /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 355D93335FA844C39B23EE4A /* OpenSans-SemiBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -373,6 +399,32 @@
 		E4FAFC841D0144EFA9B80751 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
 		ECDDF7E9BB5A4AA692FF0AEE /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
 		2288FFCF5873496DBED946EB /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; name = "YTPlayerView-iframe-player.html"; path = "../node_modules/react-native-youtube/assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3193C465A97F49579125345F /* GT-Walsheim-Black-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Black-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Black-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		648B9A2EB35E41D7B01FA521 /* GT-Walsheim-Black.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Black.otf"; path = "../assets/fonts/GT-Walsheim-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		63FE22AE55074910A9F5CE6A /* GT-Walsheim-Bold-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Bold-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Bold-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		33C9F616663747AC9067FB5B /* GT-Walsheim-Bold.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Bold.otf"; path = "../assets/fonts/GT-Walsheim-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		51DD3DADEAA74FE5A71F6240 /* GT-Walsheim-Light-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Light-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Light-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FA5F213D15044D8C97EFE33F /* GT-Walsheim-Light.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Light.otf"; path = "../assets/fonts/GT-Walsheim-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2D7DD340A8D849D7A0AC7291 /* GT-Walsheim-Medium-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Medium-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Medium-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0DE280BEFEFC4ACF910C7801 /* GT-Walsheim-Medium.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Medium.otf"; path = "../assets/fonts/GT-Walsheim-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5E2DA2E02BFD409F802A162E /* GT-Walsheim-Regular-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Regular-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Regular-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EB930EF510B6496BBFC75812 /* GT-Walsheim-Regular.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Regular.otf"; path = "../assets/fonts/GT-Walsheim-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DFF420A64EF241E3B9668876 /* GT-Walsheim-Thin-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Thin-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Thin-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F766094FBC1D42FA9D6B48D8 /* GT-Walsheim-Thin.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Thin.otf"; path = "../assets/fonts/GT-Walsheim-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DDCADB03261C4779AC4612FD /* GT-Walsheim-Ultra-Bold-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Bold-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Bold-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2F7DF325E488468D93D51F26 /* GT-Walsheim-Ultra-Bold.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Bold.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B5BD552058A04437ACCEC5EB /* GT-Walsheim-Ultra-Light-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Light-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Light-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C8AB63B402D24D4983DD364B /* GT-Walsheim-Ultra-Light.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Light.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		753B35D684DC4985835339B5 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DE90A7CB275447B58AC1AB69 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-BoldItalic.ttf"; path = "../assets/fonts/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		75801EF75F464620B0A6B784 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-ExtraBold.ttf"; path = "../assets/fonts/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D7C76184A0D64705BD667780 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../assets/fonts/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		62C85119D8194972B9A49F1D /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; name = "OpenSans-Italic.ttf"; path = "../assets/fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F1EACE08473A45E99D81FD36 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; name = "OpenSans-Light.ttf"; path = "../assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		90B046460D184CA6BA072EB5 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-LightItalic.ttf"; path = "../assets/fonts/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EFBED09A74894B0DAF8F4933 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B96E4CECAA284639B6CBFBA4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBold.ttf"; path = "../assets/fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		355D93335FA844C39B23EE4A /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBoldItalic.ttf"; path = "../assets/fonts/OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -644,6 +696,32 @@
 			isa = PBXGroup;
 			children = (
 				2288FFCF5873496DBED946EB /* YTPlayerView-iframe-player.html */,
+				3193C465A97F49579125345F /* GT-Walsheim-Black-Oblique.otf */,
+				648B9A2EB35E41D7B01FA521 /* GT-Walsheim-Black.otf */,
+				63FE22AE55074910A9F5CE6A /* GT-Walsheim-Bold-Oblique.otf */,
+				33C9F616663747AC9067FB5B /* GT-Walsheim-Bold.otf */,
+				51DD3DADEAA74FE5A71F6240 /* GT-Walsheim-Light-Oblique.otf */,
+				FA5F213D15044D8C97EFE33F /* GT-Walsheim-Light.otf */,
+				2D7DD340A8D849D7A0AC7291 /* GT-Walsheim-Medium-Oblique.otf */,
+				0DE280BEFEFC4ACF910C7801 /* GT-Walsheim-Medium.otf */,
+				5E2DA2E02BFD409F802A162E /* GT-Walsheim-Regular-Oblique.otf */,
+				EB930EF510B6496BBFC75812 /* GT-Walsheim-Regular.otf */,
+				DFF420A64EF241E3B9668876 /* GT-Walsheim-Thin-Oblique.otf */,
+				F766094FBC1D42FA9D6B48D8 /* GT-Walsheim-Thin.otf */,
+				DDCADB03261C4779AC4612FD /* GT-Walsheim-Ultra-Bold-Oblique.otf */,
+				2F7DF325E488468D93D51F26 /* GT-Walsheim-Ultra-Bold.otf */,
+				B5BD552058A04437ACCEC5EB /* GT-Walsheim-Ultra-Light-Oblique.otf */,
+				C8AB63B402D24D4983DD364B /* GT-Walsheim-Ultra-Light.otf */,
+				753B35D684DC4985835339B5 /* OpenSans-Bold.ttf */,
+				DE90A7CB275447B58AC1AB69 /* OpenSans-BoldItalic.ttf */,
+				75801EF75F464620B0A6B784 /* OpenSans-ExtraBold.ttf */,
+				D7C76184A0D64705BD667780 /* OpenSans-ExtraBoldItalic.ttf */,
+				62C85119D8194972B9A49F1D /* OpenSans-Italic.ttf */,
+				F1EACE08473A45E99D81FD36 /* OpenSans-Light.ttf */,
+				90B046460D184CA6BA072EB5 /* OpenSans-LightItalic.ttf */,
+				EFBED09A74894B0DAF8F4933 /* OpenSans-Regular.ttf */,
+				B96E4CECAA284639B6CBFBA4 /* OpenSans-SemiBold.ttf */,
+				355D93335FA844C39B23EE4A /* OpenSans-SemiBoldItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1151,6 +1229,32 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				CFCFEB1321AA42D8A7218A52 /* YTPlayerView-iframe-player.html in Resources */,
+				71539ACB7597422B91F68E60 /* GT-Walsheim-Black-Oblique.otf in Resources */,
+				81286E6DDC0C49A9B70754DD /* GT-Walsheim-Black.otf in Resources */,
+				B4B64A4E53574183AF39C147 /* GT-Walsheim-Bold-Oblique.otf in Resources */,
+				FB6C2860393A4A9A8944C85D /* GT-Walsheim-Bold.otf in Resources */,
+				8DC7FFF3B31A4713955B6EC6 /* GT-Walsheim-Light-Oblique.otf in Resources */,
+				9002E50E56DE46529053F44D /* GT-Walsheim-Light.otf in Resources */,
+				263BEA739073498286E6E126 /* GT-Walsheim-Medium-Oblique.otf in Resources */,
+				C070E79A519443CFA0CBB36A /* GT-Walsheim-Medium.otf in Resources */,
+				7AA03D7C062043C3AFD7F59F /* GT-Walsheim-Regular-Oblique.otf in Resources */,
+				FB1C7B89C37F4D2C99AFB798 /* GT-Walsheim-Regular.otf in Resources */,
+				3BCD0E5ACB064ABEB55E4DE9 /* GT-Walsheim-Thin-Oblique.otf in Resources */,
+				6ED408AE27DC44CD85B3081F /* GT-Walsheim-Thin.otf in Resources */,
+				4897AE91EFB9407798407B4A /* GT-Walsheim-Ultra-Bold-Oblique.otf in Resources */,
+				371A501C4FF34EAFBEDF83C0 /* GT-Walsheim-Ultra-Bold.otf in Resources */,
+				A4DBC9F9B8A7420E96CDACC4 /* GT-Walsheim-Ultra-Light-Oblique.otf in Resources */,
+				02F2B5C8463B4B4388D4F2FB /* GT-Walsheim-Ultra-Light.otf in Resources */,
+				71EB716A61FC4889A4EADC13 /* OpenSans-Bold.ttf in Resources */,
+				280FA609AFF54F388BCFFC29 /* OpenSans-BoldItalic.ttf in Resources */,
+				D950D838916C4DBDAC8788BE /* OpenSans-ExtraBold.ttf in Resources */,
+				8B75876F87914046A99D0685 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				D15FE548BC174091BBCCCAF6 /* OpenSans-Italic.ttf in Resources */,
+				2D6982AC0BA24A51A0EFFD75 /* OpenSans-Light.ttf in Resources */,
+				E3D9EA515F5545DB8601FDBE /* OpenSans-LightItalic.ttf in Resources */,
+				D45B4C5674CA44E785E0D1FE /* OpenSans-Regular.ttf in Resources */,
+				9E676755E28041FAB3E98631 /* OpenSans-SemiBold.ttf in Resources */,
+				D4D49B7F866A4F72B182669F /* OpenSans-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

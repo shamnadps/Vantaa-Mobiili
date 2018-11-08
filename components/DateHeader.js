@@ -25,5 +25,6 @@ const styles = StyleSheet.create({
         marginTop: 40,
         marginLeft: 20,
         fontSize: 13,
+        fontFamily: "GT Walsheim",
     },
 });

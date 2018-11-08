@@ -35,17 +35,17 @@ export class EventCard extends React.Component {
                     }}
                 >
                     <View style={[styles.source, styles.eventsActive]}>
-                        <Text style={{ flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
                     </View>
                 </ImageBackground>
 
                 <View style={{ flex: 1, padding: 5, textAlign: 'center' }}>
 
                     <View style={{ flex: 1, flexDirection: 'row', padding: 10, }}>
-                        <Text style={{ flex: 1, flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.title}</Text>
+                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.title}</Text>
 
                     </View>
-                    <Text style={{ padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                    <Text style={{ fontFamily: "GT Walsheim", padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );
@@ -56,7 +56,8 @@ const styles = StyleSheet.create({
     eventsActive: {
         backgroundColor: '#3c8fde',
         color: '#FFF',
-        height: 25
+        height: 25,
+        fontFamily: "GT Walsheim",
     },
     source: {
         width: 80,
@@ -64,6 +65,7 @@ const styles = StyleSheet.create({
         padding: 4,
         right: 0,
         textAlign: 'center',
-        top: -10
+        top: -10,
+        fontFamily: "GT Walsheim",
     }
 });

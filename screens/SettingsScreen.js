@@ -136,33 +136,33 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ededed',
-    fontFamily: "GT Walsheim",
+
   },
   header: {
     flex: 1,
     color: 'black',
     marginTop: 40,
     marginLeft: 10,
-    fontWeight: '900',
+    fontWeight: Platform.OS === 'ios' ? "bold" : "100",
     fontSize: 26,
-    fontFamily: "GT Walsheim",
-
+    fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
   },
   title: {
     color: 'black',
     marginTop: 20,
     marginLeft: 10,
     fontSize: 14,
-    fontWeight: 'bold',
+
     marginBottom: 10,
-    fontFamily: "GT Walsheim",
+    fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+    fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
 
   },
   feedSection: {
     flex: 1,
     flexDirection: 'row',
     marginLeft: 10,
-    fontFamily: "GT Walsheim",
+
   }
 
 });

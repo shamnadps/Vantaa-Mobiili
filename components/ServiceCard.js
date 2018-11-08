@@ -6,7 +6,8 @@ import {
     TouchableOpacity,
     View,
     Linking,
-    ImageBackground
+    ImageBackground,
+    Platform
 } from 'react-native';
 export class ServiceCard extends React.Component {
     constructor(props) {
@@ -68,10 +69,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,
-        fontWeight: 'bold'
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
     },
     serviceText: {
-        fontWeight: 'bold',
-        fontFamily: "GT Walsheim",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+    },
+    walsheim: {
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+    },
+    walsheimBold: {
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
     }
 });

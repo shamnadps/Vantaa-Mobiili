@@ -85,7 +85,7 @@ class HomeScreen extends React.Component {
             <TouchableOpacity onPress={this.hideFeed}>
               <View style={{ flex: 1, height: this.state.carouselHeight, }}>
                 <DateHeader />
-                <Text style={styles.header}>{strings('newsfeed.header')}</Text>
+                <Text style={styles.header}>{strings('newsfeed.header').toUpperCase()}</Text>
               </View>
             </TouchableOpacity>
             <Animated.ScrollView
@@ -115,7 +115,8 @@ class HomeScreen extends React.Component {
                     <Text style={{
                       flex: 1, height,
                       marginTop: 200,
-                      fontWeight: 'bold',
+                      fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+                      fontWeight: Platform.OS === 'ios' ? "bold" : "100",
                       justifyContent: 'center',
                       alignItems: 'center',
                       textAlign: 'center'
@@ -158,8 +159,9 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     marginTop: 15,
     marginLeft: 10,
-    fontWeight: '900',
-    fontSize: 26
+    fontSize: 26,
+    fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+    fontWeight: Platform.OS === 'ios' ? "bold" : "100",
   },
   contentContainer: { flexGrow: 1, },
   serviceImage: {

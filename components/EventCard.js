@@ -6,7 +6,8 @@ import {
     TouchableOpacity,
     View,
     Linking,
-    ImageBackground
+    ImageBackground,
+    Platform
 } from 'react-native';
 import { format } from 'date-fns';
 
@@ -35,17 +36,18 @@ export class EventCard extends React.Component {
                     }}
                 >
                     <View style={[styles.source, styles.eventsActive]}>
-                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
+                        <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
                     </View>
                 </ImageBackground>
 
                 <View style={{ flex: 1, padding: 5, textAlign: 'center' }}>
 
                     <View style={{ flex: 1, flexDirection: 'row', padding: 10, }}>
-                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.title}</Text>
+                        <Text style={[styles.walsheim, { flex: 1, flexWrap: 'wrap', fontWeight: 'bold' }]}>{this.props.item.title}</Text>
 
                     </View>
-                    <Text style={{ fontFamily: "GT Walsheim", padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                    <Text style={[styles.walsheim, { padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }]}>
+                        {format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );
@@ -57,7 +59,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#3c8fde',
         color: '#FFF',
         height: 25,
-        fontFamily: "GT Walsheim",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
     },
     source: {
         width: 80,
@@ -66,6 +68,13 @@ const styles = StyleSheet.create({
         right: 0,
         textAlign: 'center',
         top: -10,
-        fontFamily: "GT Walsheim",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+    },
+    walsheim: {
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Regular",
+    },
+    walsheimBold: {
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
     }
 });

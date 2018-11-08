@@ -5,7 +5,8 @@ import {
     Text,
     TouchableOpacity,
     View,
-    Linking
+    Linking,
+    Platform
 } from 'react-native';
 import { format } from 'date-fns';
 import YouTube from 'react-native-youtube'
@@ -39,12 +40,12 @@ export class YouTubeCard extends React.Component {
                             uri: this.props.item.author_thumbnail
                         }} />
                     <View style={{ flex: 1, padding: 5, }}>
-                        <Text style={{ fontFamily: "GT Walsheim", flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.author}</Text>
+                        <Text style={[styles.walsheim, styles.walsheimBold, { flexWrap: 'wrap', }]}>{this.props.item.author}</Text>
                     </View>
                     <View style={[styles.source, styles.youtubeActive,]}>
-                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
+                        <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
                     </View>
-                </View>
+                </View >
 
                 <View style={{ flex: 1, textAlign: 'center' }}>
                     {/* <Image style={{ flex: 1, width: '100%', marginTop: 10, height: 400 }}
@@ -69,15 +70,15 @@ export class YouTubeCard extends React.Component {
                         style={{ alignSelf: 'stretch', height: 300, backgroundColor: 'black', marginVertical: 10 }}
                     />
                     <View style={{ flex: 1, padding: 10, flexDirection: 'row', flexWrap: 'wrap', padding: 5, }}>
-                        <Text style={{ fontFamily: "GT Walsheim", flex: 1, flexWrap: 'wrap', }}>
-                            <Text style={{ fontFamily: "GT Walsheim", flex: 1, fontWeight: 'bold', }}>{this.props.item.author} </Text>
+                        <Text style={[styles.walsheim, { flex: 1, flexWrap: 'wrap', }]}>
+                            <Text style={[styles.walsheim, styles.walsheimBold, { flex: 1, }]}>{this.props.item.author} </Text>
                             {this.props.item.description}
                         </Text>
 
                     </View>
-                    <Text style={{ fontFamily: "GT Walsheim", padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                    <Text style={[styles.walsheim, { padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }]}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
-            </View>
+            </View >
         );
     }
 }
@@ -95,5 +96,12 @@ const styles = StyleSheet.create({
         right: 0,
         textAlign: 'center',
         top: -20
+    },
+    walsheim: {
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Regular",
+    },
+    walsheimBold: {
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
     }
 });

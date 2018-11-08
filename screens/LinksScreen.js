@@ -130,15 +130,18 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     marginTop: 40,
     marginLeft: 10,
-    fontWeight: '900',
-    fontSize: 26
+    fontSize: 26,
+    fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+    fontWeight: Platform.OS === 'ios' ? "bold" : "100",
   },
   contact: {
     color: '#FFFFFF',
     marginTop: 15,
     marginLeft: 10,
     fontSize: 14,
-    fontWeight: 'bold',
+    fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+    fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+
   },
   contactSection: {
     flex: 1,
@@ -149,7 +152,9 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginLeft: 10,
     fontSize: 14,
-    fontWeight: 'bold',
+    fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+    fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+
   },
   serviceSection: {
     flexDirection: 'row',

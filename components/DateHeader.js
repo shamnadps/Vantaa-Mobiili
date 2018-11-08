@@ -4,6 +4,7 @@ import {
     StyleSheet,
     Text,
     TouchableOpacity,
+    Platform,
 } from 'react-native';
 import { format } from 'date-fns';
 
@@ -25,6 +26,6 @@ const styles = StyleSheet.create({
         marginTop: 40,
         marginLeft: 20,
         fontSize: 13,
-        fontFamily: "GT Walsheim",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Regular",
     },
 });

@@ -5,7 +5,8 @@ import {
     Text,
     TouchableOpacity,
     View,
-    Linking
+    Linking,
+    Platform
 } from 'react-native';
 export class ContactCard extends React.Component {
     constructor(props) {
@@ -27,7 +28,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
 
-        fontFamily: "GT Walsheim",
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
     },
     section: {
         flex: 1,
@@ -42,13 +44,15 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         shadowOffset: { height: 0, width: 0 },
         elevation: 20,
-        fontFamily: "GT Walsheim",
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
     },
     sectionView: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        fontFamily: "GT Walsheim",
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
     },
     text: {
         marginTop: 10,
@@ -56,8 +60,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        fontFamily: "GT Walsheim",
-        fontWeight: 'bold',
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
         padding: 5,
 
     },

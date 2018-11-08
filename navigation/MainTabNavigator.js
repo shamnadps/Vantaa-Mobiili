@@ -55,7 +55,8 @@ const MaterialTopTabNavigator = createMaterialTopTabNavigator({
       },
       activeTintColor: 'white',
       labelStyle: {
-        fontWeight: 'bold',
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
         fontSize: 12
       },
       indicatorStyle: {

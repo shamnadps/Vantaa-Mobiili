@@ -4,6 +4,7 @@ import {
     StyleSheet,
     Text,
     TouchableOpacity,
+    Platform
 } from 'react-native';
 export class Button extends React.Component {
     constructor(props) {
@@ -37,34 +38,29 @@ const styles = StyleSheet.create({
         borderColor: '#EEE',
         padding: 10,
         margin: 5,
-        fontWeight: 'bold',
+        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Regular",
         fontSize: 10,
         color: '#3c8fde',
-        fontFamily: "GT Walsheim",
     },
     activeButton: {
         backgroundColor: '#3c8fde',
         color: '#FFF',
-        fontFamily: "GT Walsheim",
     },
     instagramActive: {
         backgroundColor: '#43368d',
         color: '#FFF',
-        fontFamily: "GT Walsheim",
     },
     youtubeActive: {
         backgroundColor: '#ff8f1c',
         color: '#FFF',
-        fontFamily: "GT Walsheim",
     },
     facebookActive: {
         backgroundColor: '#ba0d2e',
         color: '#FFF',
-        fontFamily: "GT Walsheim",
     },
     twitterActive: {
         backgroundColor: '#007b5f',
         color: '#FFF',
-        fontFamily: "GT Walsheim",
     }
 });

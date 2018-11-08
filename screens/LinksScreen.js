@@ -34,7 +34,7 @@ class LinksScreen extends React.Component {
             source={
               require('../assets/images/background.png')
             }
-            style={{ position: 'absolute', height }}
+            style={{ position: 'absolute', width, height: height + 300 }}
           />
 
           <Text style={styles.header}>{strings('resources.header')}</Text>

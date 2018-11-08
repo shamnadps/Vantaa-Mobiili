@@ -54,7 +54,7 @@ export class YouTubeCard extends React.Component {
                         }} /> */}
                     <YouTube
                         ref={(component) => { this._youTubePlayer = component }}
-                        apiKey='AIzaSyA-Bd6OENpoKj490VZJuv65GnOQIlgZjho'
+                        // apiKey='AIzaSyA-Bd6OENpoKj490VZJuv65GnOQIlgZjho'
                         videoId={this.props.item.video_id}           // The YouTube video ID
                         play={false}                     // control playback of video with true/false
                         playsInline={true}              // control whether the video should play full-screen or inline

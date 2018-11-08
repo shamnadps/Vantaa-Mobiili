@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { format } from 'date-fns';
 
-export class InstagramCard extends React.Component {
+export class FaceBookCard extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -32,21 +32,20 @@ export class InstagramCard extends React.Component {
                         }} />
                     <View style={{ flex: 1, padding: 5, }}>
                         <Text style={{ flexWrap: 'wrap', fontWeight: 'bold' }}>{this.props.item.author}</Text>
-                        <Text style={{ flexWrap: 'wrap', }}>@{this.props.item.author}</Text>
                     </View>
-                    <View style={[styles.source, styles.instagramActive,]}>
+                    <View style={[styles.source, styles.facebookActive,]}>
                         <Text style={{ flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
                     </View>
                 </View>
 
                 <View style={{ flex: 1, textAlign: 'center' }}>
-                    <Image style={{ flex: 1, width: '100%', marginTop: 10, height: 400 }}
-                        resizeMode='stretch'
-                        source={{
-                            uri: this.props.item.image_url
-                        }} />
-                    <Text style={{ fontWeight: 'bold', padding: 10, }}>{this.props.item.likes} likes </Text>
-                    <View style={{ flex: 1, flexDirection: 'row', paddingLeft: 10, paddingTop: 10 }}>
+                    {this.props.item.image_url ?
+                        <Image style={{ flex: 1, width: '100%', marginTop: 10, height: 300 }}
+                            resizeMode='contain'
+                            source={{
+                                uri: this.props.item.image_url
+                            }} /> : null}
+                    <View style={{ flex: 1, flexDirection: 'row', padding: 10, }}>
                         <Text style={{ flex: 1, }}>
                             <Text style={{ fontWeight: 'bold', }}>{this.props.item.author} </Text>
                             {this.props.item.description}
@@ -62,7 +61,7 @@ export class InstagramCard extends React.Component {
 }
 const styles = StyleSheet.create({
 
-    instagramActive: {
+    facebookActive: {
         backgroundColor: '#43368d',
         color: '#FFF',
         height: 25

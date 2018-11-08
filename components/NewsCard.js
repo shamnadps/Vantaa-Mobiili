@@ -12,6 +12,7 @@ import { TwitterCard } from './TwitterCard';
 import { InstagramCard } from './InstagramCard';
 import { EventCard } from './EventCard';
 import { YouTubeCard } from './YouTubeCard';
+import { FaceBookCard } from './FaceBookCard';
 
 export class NewsCard extends React.Component {
     constructor(props) {
@@ -30,6 +31,8 @@ export class NewsCard extends React.Component {
                 return <EventCard item={item} />;
             case 'youtube':
                 return <YouTubeCard item={item} />;
+            case 'facebook':
+                return <FaceBookCard item={item} />;
             default:
                 return <VantaaCard item={item} />;
         }

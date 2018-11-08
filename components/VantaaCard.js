@@ -14,53 +14,55 @@ export class VantaaCard extends React.Component {
         super(props);
     }
 
-    getBackgroundColor = (source) => {
-        switch (source) {
-            case 'instagram':
-                return styles.instagramActive;
-            case 'youtube':
-                return styles.youtubeActive;
-            case 'twitter':
-                return styles.twitterActive;
-            case 'facebook':
-                return styles.facebookActive;
-            default:
-                return styles.activeButton;
-        }
-    }
-
-    getImageForVantaa = (image_url) => {
-        return image_url
-            ? <Image style={{ width: 120, }}
-                resizeMode='cover'
-                source={{
-                    uri: this.props.item.source === 'vantaa'
-                        ? 'http://' + image_url
-                        : image_url
-                }} />
-            : <Image style={{ flex: 1, width: 120, height: 130 }}
-                resizeMode='cover'
-                source={require('../assets/images/cutiepie.jpg')} />
-    }
     render() {
         return (
             <View style={{
-                flex: 1, shadowOpacity: 0.50,
+                shadowOpacity: 0.50,
                 shadowRadius: 3,
                 shadowOffset: { height: 0, width: 0 },
-                borderRadius: 10, flexDirection: 'row', backgroundColor: '#FFF', margin: 10
+                borderRadius: 10, backgroundColor: '#FFF', margin: 10
             }}>
 
-                {this.getImageForVantaa(this.props.item.image_url)}
+                <View style={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    textAlign: 'center',
+                    justifyContent: 'flex-end',
+                    alignItems: 'flex-end',
+                }}>
 
-                <View style={{ flex: 1, alignItems: 'flex-end', textAlign: 'center', }}>
-                    <View style={[styles.source, this.getBackgroundColor(this.props.item.source), { color: '#FFF' }]}>
-                        <Text style={{ textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
+                    <View style={[styles.source, styles.activeButton,]}>
+                        <Text style={{ flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }}>{this.props.item.source}</Text>
                     </View>
-                    <View style={{ flex: 1, flexWrap: 'wrap', height: 100, }}>
-                        <Text style={{ flex: 1, padding: 5, flexWrap: 'wrap', }}>{this.props.item.title}</Text>
-                        <Text style={{ padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                </View>
+                <View style={{ paddingTop: 0, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
+
+                    {this.props.item.image_url ?
+                        <Image style={{ width: 100, height: 100, }}
+                            resizeMode='cover'
+                            source={{
+                                uri: 'http://' + this.props.item.image_url
+                            }} /> :
+                        <Image style={{ width: 70, height: 70, }}
+                            resizeMode='cover'
+                            source={
+                                require('../assets/images/icon.png')
+                            } />
+                    }
+                    <View style={{ flex: 1, padding: 5, paddingLeft: 10 }}>
+                        <Text style={{ flexWrap: 'wrap', opacity: 0.7 }}>Author / page headline</Text>
+                        <Text style={{ flexWrap: 'wrap', }}>{this.props.item.title}</Text>
                     </View>
+
+                </View>
+
+                <View style={{ flex: 1, padding: 5, textAlign: 'center' }}>
+
+                    <View style={{ flex: 1, flexDirection: 'row', padding: 10, flexWrap: 'wrap', padding: 5, }}>
+                        <Text style={{ flex: 1, flexWrap: 'wrap', }}>{this.props.item.description}</Text>
+
+                    </View>
+                    <Text style={{ padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>
             </View>
         );
@@ -70,29 +72,15 @@ const styles = StyleSheet.create({
 
     activeButton: {
         backgroundColor: '#3c8fde',
-        color: '#FFF'
+        color: '#FFF',
     },
-    instagramActive: {
-        backgroundColor: '#43368d',
-        color: '#FFF'
-    },
-    youtubeActive: {
-        backgroundColor: '#ff8f1c',
-        color: '#FFF'
-    },
-    facebookActive: {
-        backgroundColor: '#ba0d2e',
-        color: '#FFF'
-    },
-    twitterActive: {
-        backgroundColor: '#007b5f',
-        color: '#FFF'
-    },
+
     source: {
         width: 80,
         margin: 0,
         padding: 4,
+        right: 0,
         textAlign: 'center',
-        top: -10
+        marginTop: -10
     }
 });

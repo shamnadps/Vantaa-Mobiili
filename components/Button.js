@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 5,
         fontWeight: Platform.OS === 'ios' ? "bold" : "100",
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Regular",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
         fontSize: 10,
         color: '#3c8fde',
     },

@@ -49,6 +49,7 @@ class BottomContainer extends React.Component {
       SettingsStack,
     }, {
         tabBarPosition: 'bottom',
+        swipeEnabled: false,
         tabBarOptions: {
           style: {
             backgroundColor: '#0042a5',

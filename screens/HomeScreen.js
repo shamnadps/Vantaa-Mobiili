@@ -20,6 +20,10 @@ import { getFeeds } from '../redux/reducer';
 import { changeLanguage, changeFeeds, changeFilter, getFeedsMoreFeeds } from '../redux/reducer';
 import { NewsCard } from '../components/NewsCard';
 const { height, width } = Dimensions.get('window');
+import SideSwipe from 'react-native-sideswipe';
+import { images, facts } from '../constants/facts';
+import NavBar from '../navigation/MainTabNavigator';
+
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -71,6 +75,7 @@ class HomeScreen extends React.Component {
     });
   }
 
+
   render() {
     return (
       <View style={styles.container}>
@@ -82,15 +87,53 @@ class HomeScreen extends React.Component {
           }
         >
 
+
           <Animated.ScrollView
             onScroll={this.handleScroll.bind(this)}
             scrollEventThrottle={1}>
-            <TouchableOpacity onPress={this.hideFeed}>
-              <View style={{ flex: 1, height: this.state.carouselHeight, }}>
-                <DateHeader />
-                <Text style={styles.header}>{strings('newsfeed.header').toUpperCase()}</Text>
-              </View>
-            </TouchableOpacity>
+
+            <SideSwipe
+              index={this.state.currentIndex}
+              style={{ width }}
+              data={images}
+              onIndexChange={index =>
+                this.setState(() => ({ currentIndex: index }))
+              }
+              renderItem={({ itemIndex, currentIndex, item, animatedValue }) => (
+
+
+                <ImageBackground
+                  resizeMode='cover'
+                  style={{ flex: 1, width, height }}
+                  source={{
+                    uri: item
+                  }}
+                >
+
+                  <View style={{
+                    flex: 1,
+                    justifyContent: 'flex-end',
+                    alignItems: 'center',
+
+                    height: this.state.carouselHeight,
+
+                  }}>
+                    <Text style={styles.facts}>{facts[itemIndex]}</Text>
+                  </View>
+
+                </ImageBackground>
+              )}
+
+            />
+            <View style={{
+
+              padding: 10,
+              position: 'absolute'
+            }}>
+              <DateHeader />
+              <Text style={styles.header}>{strings('newsfeed.header').toUpperCase()}</Text>
+            </View>
+
             <Animated.ScrollView
               contentContainerStyle={[styles.contentContainer, { minHeight: height }]}
 
@@ -169,6 +212,16 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
     fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+  },
+  facts: {
+    color: '#FFFFFF',
+    fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Regular",
+    marginBottom: 60,
+    marginLeft: 10,
+    marginRight: 10,
+    padding: 10,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    textAlign: 'center'
   },
   contentContainer: { flexGrow: 1, },
   serviceImage: {

@@ -6,7 +6,8 @@ import {
     TouchableOpacity,
     View,
     Linking,
-    Platform
+    Platform,
+    AppState, WebView
 } from 'react-native';
 import { format } from 'date-fns';
 import YouTube from 'react-native-youtube'
@@ -23,6 +24,21 @@ export class YouTubeCard extends React.Component {
         setTimeout(() => this.setState({ height: 216 }), 200);
     }
 
+    state = {
+        appState: AppState.currentState
+    }
+
+    componentDidMount() {
+        AppState.addEventListener('change', this._handleAppStateChange);
+    }
+
+    componentWillUnmount() {
+        AppState.removeEventListener('change', this._handleAppStateChange);
+    }
+
+    _handleAppStateChange = (nextAppState) => {
+        this.setState({ appState: nextAppState });
+    }
 
     render() {
         return (
@@ -53,7 +69,13 @@ export class YouTubeCard extends React.Component {
                         source={{
                             uri: this.props.item.image_url
                         }} /> */}
-                    <YouTube
+                    {this.state.appState == 'active' &&
+                        <WebView
+                            style={{ flex: 1, height: 300, }}
+                            javaScriptEnabled={true}
+                            source={{ uri: 'https://www.youtube.com/embed/' + this.props.item.video_id + '?rel=0&autoplay=0&showinfo=0&controls=0' }} />
+                    }
+                    {/* <YouTube
                         ref={(component) => { this._youTubePlayer = component }}
                         apiKey='AIzaSyA-Bd6OENpoKj490VZJuv65GnOQIlgZjho'
                         videoId={this.props.item.video_id}           // The YouTube video ID
@@ -68,7 +90,7 @@ export class YouTubeCard extends React.Component {
                         onProgress={e => this.setState({ currentTime: e.currentTime, duration: e.duration })}
 
                         style={{ alignSelf: 'stretch', height: 300, backgroundColor: 'black', marginVertical: 10 }}
-                    />
+                    /> */}
                     <View style={{ flex: 1, padding: 10, flexDirection: 'row', flexWrap: 'wrap', padding: 5, }}>
                         <Text style={[styles.walsheim, { flex: 1, flexWrap: 'wrap', }]}>
                             <Text style={[styles.walsheim, styles.walsheimBold, { flex: 1, }]}>{this.props.item.author} </Text>

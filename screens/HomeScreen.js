@@ -9,7 +9,8 @@ import {
   View,
   ImageBackground,
   Dimensions,
-  Animated
+  Animated,
+  FlatList
 } from 'react-native';
 import { Header } from 'react-navigation';
 import { strings } from '../locales/i18';
@@ -41,6 +42,8 @@ class HomeScreen extends React.Component {
     const feeds = await getFeeds(this.props.filter);
     this.props.changeFeeds(feeds);
   }
+
+  keyExtractor = (item, index) => item.id.toString();
 
   handleScroll = async (event) => {
 
@@ -93,14 +96,18 @@ class HomeScreen extends React.Component {
 
             >
               {this.props.feeds && this.props.feeds.length > 0 ?
-                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 55, paddingTop: 10 }}>
-                  {
-                    this.props.feeds.map((item) => {
-                      return (
-                        <NewsCard key={item.id} item={item} />
 
-                      );
-                    })}
+                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 55, paddingTop: 10 }}>
+                  <FlatList
+
+                    data={this.props.feeds}
+                    keyExtractor={this.keyExtractor}
+                    renderItem={({ item }) => (
+
+                      <NewsCard key={item.id} item={item} />
+
+                    )}
+                  />
 
                 </View> :
                 <View style={{ flex: 1, height, backgroundColor: 'rgba(237, 237, 237, 1)', padding: 20, justifyContent: 'center', alignItems: 'center', textAlign: 'center' }}>

@@ -19,22 +19,32 @@ export class NewsCard extends React.Component {
         super(props);
     }
 
+    onPressHandler = (url) => {
+        Linking.canOpenURL(url).then(supported => {
+            if (!supported) {
+                console.log('Can\'t handle url: ' + url);
+            } else {
+                return Linking.openURL(url);
+            }
+        }).catch(err => console.error('An error occurred', err));
+    }
+
     getCards = (item) => {
         switch (item.source) {
             case 'vantaa':
-                return <VantaaCard item={item} />;
+                return <TouchableOpacity><VantaaCard item={item} /></TouchableOpacity>;
             case 'twitter':
-                return <TwitterCard item={item} />;
+                return <TouchableOpacity ><TwitterCard item={item} /></TouchableOpacity>;
             case 'instagram':
-                return <InstagramCard item={item} />;
+                return <TouchableOpacity><InstagramCard item={item} /></TouchableOpacity>;
             case 'events':
-                return <EventCard item={item} />;
+                return <TouchableOpacity><EventCard item={item} /></TouchableOpacity>;
             case 'youtube':
                 return <YouTubeCard item={item} />;
             case 'facebook':
-                return <FaceBookCard item={item} />;
+                return <TouchableOpacity ><FaceBookCard item={item} /></TouchableOpacity>;
             default:
-                return <VantaaCard item={item} />;
+                return <TouchableOpacity><VantaaCard item={item} /></TouchableOpacity>;
         }
     }
     render() {

@@ -32,9 +32,9 @@ class SettingsScreen extends React.Component {
       'Please confirm',
       'Are you sure that you want to change the language',
       [
-        { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), },
+        { text: 'NO', onPress: () => console.log('Cancel Pressed'), },
         {
-          text: 'OK', onPress: () => {
+          text: 'YES', onPress: () => {
             this.setState({
               language: value
             })

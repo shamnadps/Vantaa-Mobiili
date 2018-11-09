@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
   facts: {
     color: '#FFFFFF',
     fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Regular",
-    marginBottom: 60,
+    marginBottom: 100,
     marginLeft: 10,
     marginRight: 10,
     padding: 10,

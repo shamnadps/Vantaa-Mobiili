@@ -57,7 +57,7 @@ class HomeScreen extends React.Component {
 
   handleFeedScroll = async (event) => {
     const currentOffset = event.nativeEvent.contentOffset.y;
-    if (currentOffset < 0) {
+    if ((currentOffset < 0 || currentOffset === 0) && this.state.fixScroll && !this.state.fetchInProgress) {
       this.setState({ updateInProgress: true });
       const feeds = await getFeeds(this.props.filter);
       this.props.changeFeeds(feeds);
@@ -126,7 +126,6 @@ class HomeScreen extends React.Component {
             onScroll={this.handleScroll.bind(this)}
             scrollEnabled={this.state.enableScroll}
             contentContainerStyle={[{ height: height * 2 }]}
-            overScrollMode='never'
             scrollEventThrottle={1}
             onScrollEndDrag={this.handleScrollEndDrag.bind(this)}
             ref={c => (this.myRef = c)}>
@@ -176,7 +175,6 @@ class HomeScreen extends React.Component {
 
             <Animated.ScrollView
               scrollEnabled={!this.state.enableScroll}
-              overScrollMode='never'
               onScrollEndDrag={this.handleFeedScroll.bind(this)}
               scrollEventThrottle={1}
               contentContainerStyle={[styles.contentContainer, { minHeight: height, },]}

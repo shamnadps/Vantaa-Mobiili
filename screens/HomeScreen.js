@@ -43,7 +43,8 @@ class HomeScreen extends React.Component {
       offset: 0,
       scrollViewTop: 0,
       randomImages: getRandomImages(),
-      randomFacts: getRandomFacts()
+      randomFacts: getRandomFacts(),
+      updateInProgress: false,
     }
   }
 
@@ -57,8 +58,10 @@ class HomeScreen extends React.Component {
   handleFeedScroll = async (event) => {
     const currentOffset = event.nativeEvent.contentOffset.y;
     if (currentOffset < 0) {
+      this.setState({ updateInProgress: true });
       const feeds = await getFeeds(this.props.filter);
       this.props.changeFeeds(feeds);
+      this.setState({ updateInProgress: false });
     }
 
     const fetchMore = event.nativeEvent.contentSize.height
@@ -181,7 +184,12 @@ class HomeScreen extends React.Component {
             >
               {this.props.feeds && this.props.feeds.length > 0 ?
 
-                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 55, paddingTop: 60 }}>
+                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 55, paddingTop: 40 }}>
+                  {this.state.updateInProgress ? <View
+                    style={{ height: 50, justifyContent: 'center', alignItems: 'center', flex: 1 }}
+                  >
+                    <Text style={{ textAlign: 'center', justifyContent: 'center', alignItems: 'center', }}>Getting updates. Please wait...</Text>
+                  </View> : null}
                   <FlatList
 
                     data={this.props.feeds}

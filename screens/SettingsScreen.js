@@ -107,7 +107,7 @@ class SettingsScreen extends React.Component {
             <Button type='events' active={this.state.filter.includes('EVENTS')} text='EVENTS' clicked={() => this.changeFeeds('EVENTS')} />
           </View>
 
-          <Text style={styles.title}>{strings('settings.notificationsHeader')}</Text>
+          {/* <Text style={styles.title}>{strings('settings.notificationsHeader')}</Text>
           <View style={styles.feedSection}>
             <Button type='default'
               active={this.state.pushNotification === 'settings.notificationButtons.never'}
@@ -121,7 +121,7 @@ class SettingsScreen extends React.Component {
               active={this.state.pushNotification === 'settings.notificationButtons.always'}
               text={strings('settings.notificationButtons.always')}
               clicked={() => this.changePushNotification('settings.notificationButtons.always')} />
-          </View>
+          </View> */}
         </View>
 
         <View style={styles.helpContainer}>

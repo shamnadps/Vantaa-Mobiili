@@ -60,6 +60,19 @@ class HomeScreen extends React.Component {
       const feeds = await getFeeds(this.props.filter);
       this.props.changeFeeds(feeds);
     }
+
+    const fetchMore = event.nativeEvent.contentSize.height
+      <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
+
+    if (this.props.feeds && this.props.feeds.length > 0 && fetchMore && !this.state.fetchInProgress) {
+      this.setState({ fetchInProgress: true });
+      const skip = this.props.feeds[this.props.feeds.length - 1].id;
+      const filter = this.props.filter;
+      const moreFeeds = await getFeedsMoreFeeds(filter, skip);
+      const newFeeds = [...this.props.feeds, ...moreFeeds];
+      this.props.changeFeeds(newFeeds);
+      this.setState({ fetchInProgress: false });
+    }
   }
 
   handleScrollEndDrag = (event) => {
@@ -82,20 +95,8 @@ class HomeScreen extends React.Component {
     const currentOffset = event.nativeEvent.contentOffset.y;
     const direction = currentOffset > this.state.offset ? 'up' : 'down';
 
-
-
     if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
       this.setState({ fixScroll: true, scrollHeight: height, enableScroll: false });
-    }
-
-    if (this.props.feeds && this.props.feeds.length > 0 && fetchMore && !this.state.fetchInProgress) {
-      this.setState({ fetchInProgress: true });
-      const skip = this.props.feeds[this.props.feeds.length - 1].id;
-      const filter = this.props.filter;
-      const moreFeeds = await getFeedsMoreFeeds(filter, skip);
-      const newFeeds = [...this.props.feeds, ...moreFeeds];
-      this.props.changeFeeds(newFeeds);
-      this.setState({ fetchInProgress: false });
     }
   }
 

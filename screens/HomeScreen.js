@@ -39,6 +39,9 @@ class HomeScreen extends React.Component {
       carouselHeight: height,
       endReached: false,
       fetchInProgress: false,
+      fixScroll: false,
+      offset: 0,
+      scrollViewTop: 0
     }
   }
 
@@ -49,13 +52,28 @@ class HomeScreen extends React.Component {
 
   keyExtractor = (item, index) => item.id.toString();
 
+  handleFeedScroll = async (event) => {
+    const currentOffset = event.nativeEvent.contentOffset.y;
+    const direction = currentOffset > this.state.offset ? 'up' : 'down';
+    if (direction === 'down' && currentOffset < 0) {
+      const feeds = await getFeeds(this.props.filter);
+      this.props.changeFeeds(feeds);
+    }
+  }
+
   handleScroll = async (event) => {
 
-    Animated.event(
-      [{ nativeEvent: { contentOffset: { y: this.state.scrollY } } }],
-    )(event)
     const fetchMore = event.nativeEvent.contentSize.height
       <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
+
+    const currentOffset = event.nativeEvent.contentOffset.y;
+    const direction = currentOffset > this.state.offset ? 'up' : 'down';
+
+    this.setState({ offset: currentOffset });
+
+    if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
+      this.setState({ fixScroll: true, scrollHeight: height, enableScroll: false });
+    }
 
     if (this.props.feeds && this.props.feeds.length > 0 && fetchMore && !this.state.fetchInProgress) {
       this.setState({ fetchInProgress: true });
@@ -90,11 +108,16 @@ class HomeScreen extends React.Component {
 
           <Animated.ScrollView
             onScroll={this.handleScroll.bind(this)}
-            scrollEventThrottle={1}>
+            scrollEnabled={this.state.enableScroll}
+            contentContainerStyle={[{ height: height * 2 }]}
+            overScrollMode='never'
+            scrollEventThrottle={1}
+            ref='_scrollView'>
 
             <SideSwipe
               index={this.state.currentIndex}
-              style={{ width }}
+              style={{ width, height: this.state.scrollHeight }}
+              ref="myInput"
               data={images}
               onIndexChange={index =>
                 this.setState(() => ({ currentIndex: index }))
@@ -135,12 +158,16 @@ class HomeScreen extends React.Component {
             </View>
 
             <Animated.ScrollView
-              contentContainerStyle={[styles.contentContainer, { minHeight: height }]}
+              scrollEnabled={!this.state.enableScroll}
+              overScrollMode='never'
+              onScrollEndDrag={this.handleFeedScroll.bind(this)}
+              scrollEventThrottle={1}
+              contentContainerStyle={[styles.contentContainer, { minHeight: height, },]}
 
             >
               {this.props.feeds && this.props.feeds.length > 0 ?
 
-                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 55, paddingTop: 10 }}>
+                <View style={{ flex: 1, backgroundColor: 'rgba(237, 237, 237, 1)', marginBottom: 55, paddingTop: 60 }}>
                   <FlatList
 
                     data={this.props.feeds}

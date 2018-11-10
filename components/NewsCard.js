@@ -32,19 +32,19 @@ export class NewsCard extends React.Component {
     getCards = (item) => {
         switch (item.source) {
             case 'vantaa':
-                return <TouchableOpacity><VantaaCard item={item} /></TouchableOpacity>;
+                return <VantaaCard item={item} />;
             case 'twitter':
-                return <TouchableOpacity ><TwitterCard item={item} /></TouchableOpacity>;
+                return <TwitterCard item={item} />;
             case 'instagram':
-                return <TouchableOpacity><InstagramCard item={item} /></TouchableOpacity>;
+                return <InstagramCard item={item} />;
             case 'events':
-                return <TouchableOpacity><EventCard item={item} /></TouchableOpacity>;
+                return <EventCard item={item} />;
             case 'youtube':
                 return <YouTubeCard item={item} />;
             case 'facebook':
-                return <TouchableOpacity ><FaceBookCard item={item} /></TouchableOpacity>;
+                return <FaceBookCard item={item} />;
             default:
-                return <TouchableOpacity><VantaaCard item={item} /></TouchableOpacity>;
+                return <VantaaCard item={item} />;
         }
     }
     render() {

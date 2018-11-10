@@ -72,7 +72,7 @@ export class VantaaCard extends React.Component {
 const styles = StyleSheet.create({
 
     activeButton: {
-        backgroundColor: '#3c8fde',
+        backgroundColor: 'rgba(0, 66, 165, 1)',
         color: '#FFF',
     },
 

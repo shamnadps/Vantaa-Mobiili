@@ -107,7 +107,7 @@ export class YouTubeCard extends React.Component {
 const styles = StyleSheet.create({
 
     youtubeActive: {
-        backgroundColor: '#ff8f1c',
+        backgroundColor: '#ba0d2e',
         color: '#FFF',
         height: 25
     },

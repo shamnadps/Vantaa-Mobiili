@@ -56,7 +56,7 @@ export class EventCard extends React.Component {
 const styles = StyleSheet.create({
 
     eventsActive: {
-        backgroundColor: '#3c8fde',
+        backgroundColor: '#db3db0',
         color: '#FFF',
         height: 25,
         fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",

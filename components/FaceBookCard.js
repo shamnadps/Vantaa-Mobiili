@@ -62,7 +62,7 @@ export class FaceBookCard extends React.Component {
 const styles = StyleSheet.create({
 
     facebookActive: {
-        backgroundColor: '#43368d',
+        backgroundColor: '#ba0d2e',
         color: '#FFF',
         height: 25
     },

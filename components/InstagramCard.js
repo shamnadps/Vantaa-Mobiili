@@ -64,7 +64,7 @@ export class InstagramCard extends React.Component {
 const styles = StyleSheet.create({
 
     instagramActive: {
-        backgroundColor: '#43368d',
+        backgroundColor: '#450099',
         color: '#FFF',
         height: 25
     },

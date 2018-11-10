@@ -16,15 +16,15 @@ export class ServiceCard extends React.Component {
     render() {
         return (
             <TouchableOpacity style={styles.serviceCard} onPress={() => Linking.openURL(this.props.link)}>
-                <ImageBackground
+                <View
                     resizeMode='cover'
-                    style={styles.serviceImage}
+                    style={[styles.serviceImage, { backgroundColor: this.props.color ? this.props.color : '#F9EB61' }]}
                     source={this.props.imageUrl} >
                     <View style={styles.serviceTextCard}>
                         <Text style={styles.serviceText}>{this.props.text}</Text>
                     </View>
-                </ImageBackground>
-            </TouchableOpacity>);
+                </View>
+            </TouchableOpacity >);
     }
 }
 const styles = StyleSheet.create({
@@ -59,12 +59,13 @@ const styles = StyleSheet.create({
     serviceImage: {
         flex: 1,
         justifyContent: 'space-between',
-        height: 120,
+        height: 80,
+
     },
     serviceTextCard: {
         backgroundColor: 'rgba(255,255,255,0.4)',
         height: 60,
-        marginTop: 60,
+        marginTop: 20,
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',

@@ -21,7 +21,7 @@ import { changeLanguage, changeFeeds, changeFilter, getFeedsMoreFeeds } from '..
 import { NewsCard } from '../components/NewsCard';
 const { height, width } = Dimensions.get('window');
 import SideSwipe from 'react-native-sideswipe';
-import { images, facts } from '../constants/facts';
+import { images, facts, getRandomFacts, getRandomImages } from '../constants/facts';
 import NavBar from '../navigation/MainTabNavigator';
 
 
@@ -41,7 +41,9 @@ class HomeScreen extends React.Component {
       fetchInProgress: false,
       fixScroll: false,
       offset: 0,
-      scrollViewTop: 0
+      scrollViewTop: 0,
+      randomImages: getRandomImages(),
+      randomFacts: getRandomFacts()
     }
   }
 
@@ -54,10 +56,21 @@ class HomeScreen extends React.Component {
 
   handleFeedScroll = async (event) => {
     const currentOffset = event.nativeEvent.contentOffset.y;
-    const direction = currentOffset > this.state.offset ? 'up' : 'down';
-    if (direction === 'down' && currentOffset < 0) {
+    if (currentOffset < 0) {
       const feeds = await getFeeds(this.props.filter);
       this.props.changeFeeds(feeds);
+    }
+  }
+
+  handleScrollEndDrag = (event) => {
+    const currentOffset = event.nativeEvent.contentOffset.y;
+    if (currentOffset > height - height / 3) {
+      this.myRef.getNode().scrollTo({
+        y: height,
+        animated: true,
+      });
+      this.setState({ fixScroll: true, enableScroll: false });
+
     }
   }
 
@@ -69,7 +82,7 @@ class HomeScreen extends React.Component {
     const currentOffset = event.nativeEvent.contentOffset.y;
     const direction = currentOffset > this.state.offset ? 'up' : 'down';
 
-    this.setState({ offset: currentOffset });
+
 
     if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
       this.setState({ fixScroll: true, scrollHeight: height, enableScroll: false });
@@ -97,7 +110,7 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <ImageBackground
+        <View
           resizeMode='stretch'
           style={styles.serviceImage}
           source={
@@ -105,20 +118,20 @@ class HomeScreen extends React.Component {
           }
         >
 
-
           <Animated.ScrollView
             onScroll={this.handleScroll.bind(this)}
             scrollEnabled={this.state.enableScroll}
             contentContainerStyle={[{ height: height * 2 }]}
             overScrollMode='never'
             scrollEventThrottle={1}
-            ref='_scrollView'>
+            onScrollEndDrag={this.handleScrollEndDrag.bind(this)}
+            ref={c => (this.myRef = c)}>
 
             <SideSwipe
               index={this.state.currentIndex}
               style={{ width, height: this.state.scrollHeight }}
               ref="myInput"
-              data={images}
+              data={this.state.randomImages}
               onIndexChange={index =>
                 this.setState(() => ({ currentIndex: index }))
               }
@@ -141,7 +154,7 @@ class HomeScreen extends React.Component {
                     height: this.state.carouselHeight,
 
                   }}>
-                    <Text style={styles.facts}>{facts[itemIndex]}</Text>
+                    <Text style={styles.facts}>{this.state.randomFacts[itemIndex]}</Text>
                   </View>
 
                 </ImageBackground>
@@ -205,7 +218,7 @@ class HomeScreen extends React.Component {
 
             </Animated.ScrollView>
           </Animated.ScrollView>
-        </ImageBackground>
+        </View>
       </View >
     );
   }
@@ -253,7 +266,8 @@ const styles = StyleSheet.create({
   contentContainer: { flexGrow: 1, },
   serviceImage: {
     flexGrow: 1,
-    height
+    height,
+    backgroundColor: '#FFFFFF'
   },
   loadingImage: {
     flexGrow: 1,

@@ -39,3 +39,15 @@ export const images = [
     'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/martinlaakso_MG_7597.png',
     'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/myyrmaki_MG_2778.png',
 ];
+
+export const getRandomFacts = () => {
+    return [facts[Math.floor(Math.random() * (facts.length - 0 + 1) + 0)],
+    facts[Math.floor(Math.random() * (facts.length - 0 + 1) + 0)],
+    facts[Math.floor(Math.random() * (facts.length - 0 + 1) + 0)]];
+}
+
+export const getRandomImages = () => {
+    return [images[Math.floor(Math.random() * (images.length - 0 + 1) + 0)],
+    images[Math.floor(Math.random() * (images.length - 0 + 1) + 0)],
+    images[Math.floor(Math.random() * (images.length - 0 + 1) + 0)]];
+}

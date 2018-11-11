@@ -58,12 +58,10 @@ class LinksScreen extends React.Component {
           <Text style={styles.services}>{strings('resources.serviceHeader')}</Text>
           <View style={styles.serviceSection}>
             <ServiceCard
-              imageUrl={require('../assets/images/cutiepie.jpg')}
               text={strings('resources.services.vantaa')}
               link={'http://www.vantaa.fi'}
             />
             <ServiceCard
-              imageUrl={require('../assets/images/cutiepie.jpg')}
               text={strings('resources.services.palvelukartta')}
               color='#87Dbe8'
               link={'http://kartta.vantaa.fi'}
@@ -71,13 +69,11 @@ class LinksScreen extends React.Component {
           </View>
           <View style={styles.serviceSection}>
             <ServiceCard
-              imageUrl={require('../assets/images/cutiepie.jpg')}
               text={strings('resources.services.sivistysvantaa')}
               color='#f2a6db'
               link={'http://www.sivistysvantaa.fi/sivistysvantaa/index.html'}
             />
             <ServiceCard
-              imageUrl={require('../assets/images/cutiepie.jpg')}
               text={strings('resources.services.jumppaliput')}
               color='#c2a6e3'
               link={'https://jumppaliput.vantaa.fi/app/'}
@@ -85,26 +81,22 @@ class LinksScreen extends React.Component {
           </View>
           <View style={styles.serviceSection}>
             <ServiceCard
-              imageUrl={require('../assets/images/cutiepie.jpg')}
               text={strings('resources.services.lasten')}
               color='#d9d9d6'
               link={'https://kulttuuriliput.vantaa.fi/app/consumer'}
             />
             <ServiceCard
-              imageUrl={require('../assets/images/cutiepie.jpg')}
               text={strings('resources.services.tapahtumat')}
               link={'http://www.vantaa.fi/tapahtumienvantaa'}
             />
           </View>
           <View style={styles.serviceSection}>
             <ServiceCard
-              imageUrl={require('../assets/images/cutiepie.jpg')}
               text={strings('resources.services.matkailu')}
               color='#84ccf8'
               link={'https://www.visitvantaa.fi'}
             />
             <ServiceCard
-              imageUrl={require('../assets/images/cutiepie.jpg')}
               text={strings('resources.services.asiointi')}
               color='#ffa3b5'
               link={'http://www.vantaa.fi/asioi_verkossa'}

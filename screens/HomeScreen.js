@@ -24,7 +24,6 @@ import SideSwipe from 'react-native-sideswipe';
 import { images, facts, getRandomFacts, getRandomImages } from '../constants/facts';
 import NavBar from '../navigation/MainTabNavigator';
 
-
 class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null,
@@ -45,6 +44,7 @@ class HomeScreen extends React.Component {
       randomImages: getRandomImages(),
       randomFacts: getRandomFacts(),
       updateInProgress: false,
+
     }
   }
 
@@ -117,9 +117,6 @@ class HomeScreen extends React.Component {
         <View
           resizeMode='stretch'
           style={styles.serviceImage}
-          source={
-            require('../assets/images/bg.jpg')
-          }
         >
 
           <Animated.ScrollView
@@ -144,9 +141,7 @@ class HomeScreen extends React.Component {
                 <ImageBackground
                   resizeMode='cover'
                   style={{ flex: 1, width, height }}
-                  source={{
-                    uri: item
-                  }}
+                  source={item}
                 >
 
                   <View style={{

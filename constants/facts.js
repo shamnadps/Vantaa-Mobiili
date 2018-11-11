@@ -20,34 +20,36 @@ export const facts = [
 ];
 
 export const images = [
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/AG_Tikkurilan_kirjasto4.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/AG_lukukoira9.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/AHa_Hakunilan Skeittipuisto-9164.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/AHa_tiksiblockparty-9491.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/FS_Pitkakoski-18.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/Lentokenttakallio-8842.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SLI-4500.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SLi-0418.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SLi-9655.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SM-Vantaa_kuvia-6003.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SMa_Hakunila-7701.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SMa_Kuusijarvi-1274.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SMa_Lentokone-0079.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SMa_Robolukio-9968.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SMa_Rockfest-6295.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/SMa_Tikkurilan_tori_semmarit-6262.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/martinlaakso_MG_7597.png',
-    'https://s3-eu-west-1.amazonaws.com/vantaa-mobiili-carousel/myyrmaki_MG_2778.png',
+    require('../assets/images/carousel/AG_Tikkurilan_kirjasto4.png'),
+    require('../assets/images/carousel/AG_lukukoira9.png'),
+    require('../assets/images/carousel/AHa_Hakunilan_Skeittipuisto-9164.png'),
+    require('../assets/images/carousel/AHa_tiksiblockparty-9491.png'),
+    require('../assets/images/carousel/FS_Pitkakoski-18.png'),
+    require('../assets/images/carousel/Lentokenttakallio-8842.png'),
+    require('../assets/images/carousel/SLI-4500.png'),
+    require('../assets/images/carousel/SLi-0418.png'),
+    require('../assets/images/carousel/SLi-9655.png'),
+    require('../assets/images/carousel/SM-Vantaa_kuvia-6003.png'),
+    require('../assets/images/carousel/SMa_Hakunila-7701.png'),
+    require('../assets/images/carousel/SMa_Kuusijarvi-1274.png'),
+    require('../assets/images/carousel/SMa_Lentokone-0079.png'),
+    require('../assets/images/carousel/SMa_Robolukio-9968.png'),
+    require('../assets/images/carousel/SMa_Rockfest-6295.png'),
+    require('../assets/images/carousel/SMa_Tikkurilan_tori_semmarit-6262.png'),
+    require('../assets/images/carousel/martinlaakso_MG_7597.png'),
+    require('../assets/images/carousel/myyrmaki_MG_2778.png'),
 ];
 
 export const getRandomFacts = () => {
-    return [facts[Math.floor(Math.random() * (facts.length - 0 + 1) + 0)],
-    facts[Math.floor(Math.random() * (facts.length - 0 + 1) + 0)],
-    facts[Math.floor(Math.random() * (facts.length - 0 + 1) + 0)]];
+    const first = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    const second = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    const third = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    return [facts[first], facts[second], facts[third]];
 }
 
 export const getRandomImages = () => {
-    return [images[Math.floor(Math.random() * (images.length - 0 + 1) + 0)],
-    images[Math.floor(Math.random() * (images.length - 0 + 1) + 0)],
-    images[Math.floor(Math.random() * (images.length - 0 + 1) + 0)]];
+    const first = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    const second = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    const third = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    return [images[first], images[second], images[third]];
 }

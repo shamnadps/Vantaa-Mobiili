@@ -19,7 +19,7 @@ export class ServiceCard extends React.Component {
                 <View
                     resizeMode='cover'
                     style={[styles.serviceImage, { backgroundColor: this.props.color ? this.props.color : '#F9EB61' }]}
-                    source={this.props.imageUrl} >
+                >
                     <View style={styles.serviceTextCard}>
                         <Text style={styles.serviceText}>{this.props.text}</Text>
                     </View>

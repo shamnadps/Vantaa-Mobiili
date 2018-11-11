@@ -11,7 +11,7 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		00E356F31AD99517003FC87E /* mobiiliTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* mobiiliTests.m */; };
+		00E356F31AD99517003FC87E /* VantaaMobiiliTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VantaaMobiiliTests.m */; };
 		11D1A2F320CAFA9E000508D9 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
@@ -33,40 +33,39 @@
 		2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E941DF850E9000B6D8A /* libRCTText-tvOS.a */; };
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
-		2DCD954D1E0B4F2C00145EB5 /* mobiiliTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* mobiiliTests.m */; };
+		2DCD954D1E0B4F2C00145EB5 /* VantaaMobiiliTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VantaaMobiiliTests.m */; };
 		2DF0FFEE2056DD460020B375 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
-		5B48D99092FC4C338D496C30 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDDF7E9BB5A4AA692FF0AEE /* libRNI18n.a */; };
-		6F479CEFD978412688B30DD0 /* libRCTYouTube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF87430809EA48C9867D7582 /* libRCTYouTube.a */; };
-		70972C2186744639B6FAEBE8 /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFC3D34C7DD4BD0B63FF668 /* libRNI18n-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		CFCFEB1321AA42D8A7218A52 /* YTPlayerView-iframe-player.html in Resources */ = {isa = PBXBuildFile; fileRef = 2288FFCF5873496DBED946EB /* YTPlayerView-iframe-player.html */; };
-		71539ACB7597422B91F68E60 /* GT-Walsheim-Black-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3193C465A97F49579125345F /* GT-Walsheim-Black-Oblique.otf */; };
-		81286E6DDC0C49A9B70754DD /* GT-Walsheim-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 648B9A2EB35E41D7B01FA521 /* GT-Walsheim-Black.otf */; };
-		B4B64A4E53574183AF39C147 /* GT-Walsheim-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 63FE22AE55074910A9F5CE6A /* GT-Walsheim-Bold-Oblique.otf */; };
-		FB6C2860393A4A9A8944C85D /* GT-Walsheim-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 33C9F616663747AC9067FB5B /* GT-Walsheim-Bold.otf */; };
-		8DC7FFF3B31A4713955B6EC6 /* GT-Walsheim-Light-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 51DD3DADEAA74FE5A71F6240 /* GT-Walsheim-Light-Oblique.otf */; };
-		9002E50E56DE46529053F44D /* GT-Walsheim-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FA5F213D15044D8C97EFE33F /* GT-Walsheim-Light.otf */; };
-		263BEA739073498286E6E126 /* GT-Walsheim-Medium-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2D7DD340A8D849D7A0AC7291 /* GT-Walsheim-Medium-Oblique.otf */; };
-		C070E79A519443CFA0CBB36A /* GT-Walsheim-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0DE280BEFEFC4ACF910C7801 /* GT-Walsheim-Medium.otf */; };
-		7AA03D7C062043C3AFD7F59F /* GT-Walsheim-Regular-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5E2DA2E02BFD409F802A162E /* GT-Walsheim-Regular-Oblique.otf */; };
-		FB1C7B89C37F4D2C99AFB798 /* GT-Walsheim-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EB930EF510B6496BBFC75812 /* GT-Walsheim-Regular.otf */; };
-		3BCD0E5ACB064ABEB55E4DE9 /* GT-Walsheim-Thin-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFF420A64EF241E3B9668876 /* GT-Walsheim-Thin-Oblique.otf */; };
-		6ED408AE27DC44CD85B3081F /* GT-Walsheim-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F766094FBC1D42FA9D6B48D8 /* GT-Walsheim-Thin.otf */; };
-		4897AE91EFB9407798407B4A /* GT-Walsheim-Ultra-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDCADB03261C4779AC4612FD /* GT-Walsheim-Ultra-Bold-Oblique.otf */; };
-		371A501C4FF34EAFBEDF83C0 /* GT-Walsheim-Ultra-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7DF325E488468D93D51F26 /* GT-Walsheim-Ultra-Bold.otf */; };
-		A4DBC9F9B8A7420E96CDACC4 /* GT-Walsheim-Ultra-Light-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = B5BD552058A04437ACCEC5EB /* GT-Walsheim-Ultra-Light-Oblique.otf */; };
-		02F2B5C8463B4B4388D4F2FB /* GT-Walsheim-Ultra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C8AB63B402D24D4983DD364B /* GT-Walsheim-Ultra-Light.otf */; };
-		71EB716A61FC4889A4EADC13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 753B35D684DC4985835339B5 /* OpenSans-Bold.ttf */; };
-		280FA609AFF54F388BCFFC29 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE90A7CB275447B58AC1AB69 /* OpenSans-BoldItalic.ttf */; };
-		D950D838916C4DBDAC8788BE /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75801EF75F464620B0A6B784 /* OpenSans-ExtraBold.ttf */; };
-		8B75876F87914046A99D0685 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7C76184A0D64705BD667780 /* OpenSans-ExtraBoldItalic.ttf */; };
-		D15FE548BC174091BBCCCAF6 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62C85119D8194972B9A49F1D /* OpenSans-Italic.ttf */; };
-		2D6982AC0BA24A51A0EFFD75 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1EACE08473A45E99D81FD36 /* OpenSans-Light.ttf */; };
-		E3D9EA515F5545DB8601FDBE /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 90B046460D184CA6BA072EB5 /* OpenSans-LightItalic.ttf */; };
-		D45B4C5674CA44E785E0D1FE /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EFBED09A74894B0DAF8F4933 /* OpenSans-Regular.ttf */; };
-		9E676755E28041FAB3E98631 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B96E4CECAA284639B6CBFBA4 /* OpenSans-SemiBold.ttf */; };
-		D4D49B7F866A4F72B182669F /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 355D93335FA844C39B23EE4A /* OpenSans-SemiBoldItalic.ttf */; };
+		E7FD05BEA11B49C2AE46C0A6 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC474C7F3E14482B71FF46A /* libRNI18n.a */; };
+		8C9F432D7F7543E0BF40A212 /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE360B2AF0B2429893193F69 /* libRNI18n-tvOS.a */; };
+		7064E88402BC41A292618EF3 /* libRCTYouTube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F978F3C809814E0FA4D72503 /* libRCTYouTube.a */; };
+		D957C675DF9C4E16B8F77A64 /* GT-Walsheim-Black-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = A1AC9594715143BAA9067A60 /* GT-Walsheim-Black-Oblique.otf */; };
+		7C025FB70F6A4E5A84095912 /* GT-Walsheim-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 906FC07C221A41A78A320691 /* GT-Walsheim-Black.otf */; };
+		065A5129EAA54D75AD88EC3C /* GT-Walsheim-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = F714EB14406146F49FFA8BA3 /* GT-Walsheim-Bold-Oblique.otf */; };
+		E573FB0977A64826BDD6FBDD /* GT-Walsheim-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB24B819648A4F69ABF76B8E /* GT-Walsheim-Bold.otf */; };
+		1E2FCACBD86B434C9C396228 /* GT-Walsheim-Light-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3907E80180FF41108F192928 /* GT-Walsheim-Light-Oblique.otf */; };
+		41AF77FF0EA94553B6235911 /* GT-Walsheim-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E255A4780F7744CEAD3204B4 /* GT-Walsheim-Light.otf */; };
+		7C41174F8CA842C78D24B9B5 /* GT-Walsheim-Medium-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 468E34B3149242C59619592D /* GT-Walsheim-Medium-Oblique.otf */; };
+		F8DFB59A28014623B4A2DBDF /* GT-Walsheim-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B013A583DE649B1A003736D /* GT-Walsheim-Medium.otf */; };
+		73E73E65B0424528B2F8DBF7 /* GT-Walsheim-Regular-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06FE1F5B7DAF4C4490579087 /* GT-Walsheim-Regular-Oblique.otf */; };
+		64433C72BAF04006888354CA /* GT-Walsheim-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFB128A1ABA64E2BB4292583 /* GT-Walsheim-Regular.otf */; };
+		04CB42B0A72E4DF5B46BD87D /* GT-Walsheim-Thin-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0BA3F18DA46446DA8B418449 /* GT-Walsheim-Thin-Oblique.otf */; };
+		7A7B46502CAB4D2C93B0AE27 /* GT-Walsheim-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45C2711C0C924DCFB9814925 /* GT-Walsheim-Thin.otf */; };
+		531F410E54A74D48AD7EAF1D /* GT-Walsheim-Ultra-Bold-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6641E63B34414CCFB2554B27 /* GT-Walsheim-Ultra-Bold-Oblique.otf */; };
+		4CC14686638D4942931C02DB /* GT-Walsheim-Ultra-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6E7CE1E707A453FBDC71780 /* GT-Walsheim-Ultra-Bold.otf */; };
+		728365CFF30B4BEF8AE5F3DD /* GT-Walsheim-Ultra-Light-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC96DEF6F54B4BD0AB69DF00 /* GT-Walsheim-Ultra-Light-Oblique.otf */; };
+		730A6597EC8149E6958E03F3 /* GT-Walsheim-Ultra-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9BAFED283FA1476588151BBC /* GT-Walsheim-Ultra-Light.otf */; };
+		5C6374E32F05489DA405FD6B /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87A016EBE7FB4510B461C345 /* OpenSans-Bold.ttf */; };
+		D76A237C81C84B8C8D7A9384 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6417B13CCD35499E9C11979C /* OpenSans-BoldItalic.ttf */; };
+		BFE4CD858A3949C6990715F9 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBDE5A56BAAC4A7D9EA2B148 /* OpenSans-ExtraBold.ttf */; };
+		6EC16EF3D0B3486AA2669281 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6126E71E75A2434FA9A3268F /* OpenSans-ExtraBoldItalic.ttf */; };
+		62DE40A11BC94E4D9A6F8224 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B57811404D3240D3975E6818 /* OpenSans-Italic.ttf */; };
+		06B736D936714FD5B2494002 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 992BC5361947481EB389DE60 /* OpenSans-Light.ttf */; };
+		9B6D723551994DFAA78C0386 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7086AF73BA1485284DB3393 /* OpenSans-LightItalic.ttf */; };
+		114805187F3E4AACAC12081B /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C196302F8C8433E909D7B65 /* OpenSans-Regular.ttf */; };
+		B3AE4D5AEC9B40B79D20500E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B17F480101E4E5A90B84303 /* OpenSans-SemiBold.ttf */; };
+		0579294453514B1FB9F3F986 /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E5B42426E13F4F9FB95E228F /* OpenSans-SemiBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,7 +109,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = mobiili;
+			remoteInfo = VantaaMobiili;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -138,7 +137,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "mobiili-tvOS";
+			remoteInfo = "VantaaMobiili-tvOS";
 		};
 		2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -343,27 +342,6 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
-		EA8D1DBC2193654A004A809B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E4FAFC841D0144EFA9B80751 /* RCTYouTube.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8BDB9BC91B4289AE00EF9FEF;
-			remoteInfo = RCTYouTube;
-		};
-		EA8D1DC02193654A004A809B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B10D8C774074B7F9D476F54 /* RNI18n.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNI18n;
-		};
-		EA8D1DC22193654A004A809B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5B10D8C774074B7F9D476F54 /* RNI18n.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6476C4051EEAA69700B10F51;
-			remoteInfo = "RNI18n-tvOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -373,58 +351,57 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* mobiiliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mobiiliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* VantaaMobiiliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VantaaMobiiliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* mobiiliTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mobiiliTests.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* VantaaMobiiliTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VantaaMobiiliTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* mobiili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobiili.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = mobiili/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = mobiili/AppDelegate.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* VantaaMobiili.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VantaaMobiili.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = VantaaMobiili/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = VantaaMobiili/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = mobiili/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = mobiili/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = mobiili/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = VantaaMobiili/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = VantaaMobiili/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = VantaaMobiili/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* mobiili-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mobiili-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* mobiili-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mobiili-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E47B1E0B4A5D006451C7 /* VantaaMobiili-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VantaaMobiili-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* VantaaMobiili-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VantaaMobiili-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B10D8C774074B7F9D476F54 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		AF87430809EA48C9867D7582 /* libRCTYouTube.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTYouTube.a; sourceTree = "<group>"; };
-		BBFC3D34C7DD4BD0B63FF668 /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; };
-		E4FAFC841D0144EFA9B80751 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
-		ECDDF7E9BB5A4AA692FF0AEE /* libRNI18n.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNI18n.a; sourceTree = "<group>"; };
-		2288FFCF5873496DBED946EB /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; name = "YTPlayerView-iframe-player.html"; path = "../node_modules/react-native-youtube/assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		3193C465A97F49579125345F /* GT-Walsheim-Black-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Black-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Black-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		648B9A2EB35E41D7B01FA521 /* GT-Walsheim-Black.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Black.otf"; path = "../assets/fonts/GT-Walsheim-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		63FE22AE55074910A9F5CE6A /* GT-Walsheim-Bold-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Bold-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Bold-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		33C9F616663747AC9067FB5B /* GT-Walsheim-Bold.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Bold.otf"; path = "../assets/fonts/GT-Walsheim-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		51DD3DADEAA74FE5A71F6240 /* GT-Walsheim-Light-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Light-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Light-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FA5F213D15044D8C97EFE33F /* GT-Walsheim-Light.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Light.otf"; path = "../assets/fonts/GT-Walsheim-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2D7DD340A8D849D7A0AC7291 /* GT-Walsheim-Medium-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Medium-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Medium-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0DE280BEFEFC4ACF910C7801 /* GT-Walsheim-Medium.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Medium.otf"; path = "../assets/fonts/GT-Walsheim-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5E2DA2E02BFD409F802A162E /* GT-Walsheim-Regular-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Regular-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Regular-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EB930EF510B6496BBFC75812 /* GT-Walsheim-Regular.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Regular.otf"; path = "../assets/fonts/GT-Walsheim-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DFF420A64EF241E3B9668876 /* GT-Walsheim-Thin-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Thin-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Thin-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F766094FBC1D42FA9D6B48D8 /* GT-Walsheim-Thin.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Thin.otf"; path = "../assets/fonts/GT-Walsheim-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DDCADB03261C4779AC4612FD /* GT-Walsheim-Ultra-Bold-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Bold-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Bold-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2F7DF325E488468D93D51F26 /* GT-Walsheim-Ultra-Bold.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Bold.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B5BD552058A04437ACCEC5EB /* GT-Walsheim-Ultra-Light-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Light-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Light-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C8AB63B402D24D4983DD364B /* GT-Walsheim-Ultra-Light.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Light.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		753B35D684DC4985835339B5 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		DE90A7CB275447B58AC1AB69 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-BoldItalic.ttf"; path = "../assets/fonts/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		75801EF75F464620B0A6B784 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-ExtraBold.ttf"; path = "../assets/fonts/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D7C76184A0D64705BD667780 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../assets/fonts/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		62C85119D8194972B9A49F1D /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; name = "OpenSans-Italic.ttf"; path = "../assets/fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F1EACE08473A45E99D81FD36 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; name = "OpenSans-Light.ttf"; path = "../assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		90B046460D184CA6BA072EB5 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-LightItalic.ttf"; path = "../assets/fonts/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EFBED09A74894B0DAF8F4933 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B96E4CECAA284639B6CBFBA4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBold.ttf"; path = "../assets/fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		355D93335FA844C39B23EE4A /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBoldItalic.ttf"; path = "../assets/fonts/OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9DCD05A364E04E4C8DCA3806 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; name = "RNI18n.xcodeproj"; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		2BC474C7F3E14482B71FF46A /* libRNI18n.a */ = {isa = PBXFileReference; name = "libRNI18n.a"; path = "libRNI18n.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CE360B2AF0B2429893193F69 /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; name = "libRNI18n-tvOS.a"; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		F5F13D72076E4AE786CF0884 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; name = "RCTYouTube.xcodeproj"; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		F978F3C809814E0FA4D72503 /* libRCTYouTube.a */ = {isa = PBXFileReference; name = "libRCTYouTube.a"; path = "libRCTYouTube.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		A1AC9594715143BAA9067A60 /* GT-Walsheim-Black-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Black-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Black-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		906FC07C221A41A78A320691 /* GT-Walsheim-Black.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Black.otf"; path = "../assets/fonts/GT-Walsheim-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F714EB14406146F49FFA8BA3 /* GT-Walsheim-Bold-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Bold-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Bold-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DB24B819648A4F69ABF76B8E /* GT-Walsheim-Bold.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Bold.otf"; path = "../assets/fonts/GT-Walsheim-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3907E80180FF41108F192928 /* GT-Walsheim-Light-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Light-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Light-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E255A4780F7744CEAD3204B4 /* GT-Walsheim-Light.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Light.otf"; path = "../assets/fonts/GT-Walsheim-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		468E34B3149242C59619592D /* GT-Walsheim-Medium-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Medium-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Medium-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7B013A583DE649B1A003736D /* GT-Walsheim-Medium.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Medium.otf"; path = "../assets/fonts/GT-Walsheim-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		06FE1F5B7DAF4C4490579087 /* GT-Walsheim-Regular-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Regular-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Regular-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DFB128A1ABA64E2BB4292583 /* GT-Walsheim-Regular.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Regular.otf"; path = "../assets/fonts/GT-Walsheim-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0BA3F18DA46446DA8B418449 /* GT-Walsheim-Thin-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Thin-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Thin-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		45C2711C0C924DCFB9814925 /* GT-Walsheim-Thin.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Thin.otf"; path = "../assets/fonts/GT-Walsheim-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6641E63B34414CCFB2554B27 /* GT-Walsheim-Ultra-Bold-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Bold-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Bold-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E6E7CE1E707A453FBDC71780 /* GT-Walsheim-Ultra-Bold.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Bold.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DC96DEF6F54B4BD0AB69DF00 /* GT-Walsheim-Ultra-Light-Oblique.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Light-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Light-Oblique.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BAFED283FA1476588151BBC /* GT-Walsheim-Ultra-Light.otf */ = {isa = PBXFileReference; name = "GT-Walsheim-Ultra-Light.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		87A016EBE7FB4510B461C345 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6417B13CCD35499E9C11979C /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-BoldItalic.ttf"; path = "../assets/fonts/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BBDE5A56BAAC4A7D9EA2B148 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-ExtraBold.ttf"; path = "../assets/fonts/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6126E71E75A2434FA9A3268F /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-ExtraBoldItalic.ttf"; path = "../assets/fonts/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B57811404D3240D3975E6818 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; name = "OpenSans-Italic.ttf"; path = "../assets/fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		992BC5361947481EB389DE60 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; name = "OpenSans-Light.ttf"; path = "../assets/fonts/OpenSans-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7086AF73BA1485284DB3393 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-LightItalic.ttf"; path = "../assets/fonts/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0C196302F8C8433E909D7B65 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9B17F480101E4E5A90B84303 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBold.ttf"; path = "../assets/fonts/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E5B42426E13F4F9FB95E228F /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "OpenSans-SemiBoldItalic.ttf"; path = "../assets/fonts/OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -452,8 +429,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				5B48D99092FC4C338D496C30 /* libRNI18n.a in Frameworks */,
-				6F479CEFD978412688B30DD0 /* libRCTYouTube.a in Frameworks */,
+				E7FD05BEA11B49C2AE46C0A6 /* libRNI18n.a in Frameworks */,
+				7064E88402BC41A292618EF3 /* libRCTYouTube.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +446,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
-				70972C2186744639B6FAEBE8 /* libRNI18n-tvOS.a in Frameworks */,
+				8C9F432D7F7543E0BF40A212 /* libRNI18n-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,13 +503,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* mobiiliTests */ = {
+		00E356EF1AD99517003FC87E /* VantaaMobiiliTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* mobiiliTests.m */,
+				00E356F21AD99517003FC87E /* VantaaMobiiliTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = mobiiliTests;
+			path = VantaaMobiiliTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -563,7 +540,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* mobiili */ = {
+		13B07FAE1A68108700A75B9A /* VantaaMobiili */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -574,7 +551,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = mobiili;
+			name = VantaaMobiili;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -641,8 +618,8 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				5B10D8C774074B7F9D476F54 /* RNI18n.xcodeproj */,
-				E4FAFC841D0144EFA9B80751 /* RCTYouTube.xcodeproj */,
+				9DCD05A364E04E4C8DCA3806 /* RNI18n.xcodeproj */,
+				F5F13D72076E4AE786CF0884 /* RCTYouTube.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -659,13 +636,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* mobiili */,
+				13B07FAE1A68108700A75B9A /* VantaaMobiili */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* mobiiliTests */,
+				00E356EF1AD99517003FC87E /* VantaaMobiiliTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				D22C62CF77274A368DAC339C /* Resources */,
-				EA8D1D9121936546004A809B /* Recovered References */,
+				E5196E0EBB5E4E0CA7BD3612 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -675,10 +651,10 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* mobiili.app */,
-				00E356EE1AD99517003FC87E /* mobiiliTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* mobiili-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* mobiili-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* VantaaMobiili.app */,
+				00E356EE1AD99517003FC87E /* VantaaMobiiliTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* VantaaMobiili-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* VantaaMobiili-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -692,73 +668,46 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D22C62CF77274A368DAC339C /* Resources */ = {
-			isa = PBXGroup;
+		E5196E0EBB5E4E0CA7BD3612 /* Resources */ = {
+			isa = "PBXGroup";
 			children = (
-				2288FFCF5873496DBED946EB /* YTPlayerView-iframe-player.html */,
-				3193C465A97F49579125345F /* GT-Walsheim-Black-Oblique.otf */,
-				648B9A2EB35E41D7B01FA521 /* GT-Walsheim-Black.otf */,
-				63FE22AE55074910A9F5CE6A /* GT-Walsheim-Bold-Oblique.otf */,
-				33C9F616663747AC9067FB5B /* GT-Walsheim-Bold.otf */,
-				51DD3DADEAA74FE5A71F6240 /* GT-Walsheim-Light-Oblique.otf */,
-				FA5F213D15044D8C97EFE33F /* GT-Walsheim-Light.otf */,
-				2D7DD340A8D849D7A0AC7291 /* GT-Walsheim-Medium-Oblique.otf */,
-				0DE280BEFEFC4ACF910C7801 /* GT-Walsheim-Medium.otf */,
-				5E2DA2E02BFD409F802A162E /* GT-Walsheim-Regular-Oblique.otf */,
-				EB930EF510B6496BBFC75812 /* GT-Walsheim-Regular.otf */,
-				DFF420A64EF241E3B9668876 /* GT-Walsheim-Thin-Oblique.otf */,
-				F766094FBC1D42FA9D6B48D8 /* GT-Walsheim-Thin.otf */,
-				DDCADB03261C4779AC4612FD /* GT-Walsheim-Ultra-Bold-Oblique.otf */,
-				2F7DF325E488468D93D51F26 /* GT-Walsheim-Ultra-Bold.otf */,
-				B5BD552058A04437ACCEC5EB /* GT-Walsheim-Ultra-Light-Oblique.otf */,
-				C8AB63B402D24D4983DD364B /* GT-Walsheim-Ultra-Light.otf */,
-				753B35D684DC4985835339B5 /* OpenSans-Bold.ttf */,
-				DE90A7CB275447B58AC1AB69 /* OpenSans-BoldItalic.ttf */,
-				75801EF75F464620B0A6B784 /* OpenSans-ExtraBold.ttf */,
-				D7C76184A0D64705BD667780 /* OpenSans-ExtraBoldItalic.ttf */,
-				62C85119D8194972B9A49F1D /* OpenSans-Italic.ttf */,
-				F1EACE08473A45E99D81FD36 /* OpenSans-Light.ttf */,
-				90B046460D184CA6BA072EB5 /* OpenSans-LightItalic.ttf */,
-				EFBED09A74894B0DAF8F4933 /* OpenSans-Regular.ttf */,
-				B96E4CECAA284639B6CBFBA4 /* OpenSans-SemiBold.ttf */,
-				355D93335FA844C39B23EE4A /* OpenSans-SemiBoldItalic.ttf */,
+				A1AC9594715143BAA9067A60 /* GT-Walsheim-Black-Oblique.otf */,
+				906FC07C221A41A78A320691 /* GT-Walsheim-Black.otf */,
+				F714EB14406146F49FFA8BA3 /* GT-Walsheim-Bold-Oblique.otf */,
+				DB24B819648A4F69ABF76B8E /* GT-Walsheim-Bold.otf */,
+				3907E80180FF41108F192928 /* GT-Walsheim-Light-Oblique.otf */,
+				E255A4780F7744CEAD3204B4 /* GT-Walsheim-Light.otf */,
+				468E34B3149242C59619592D /* GT-Walsheim-Medium-Oblique.otf */,
+				7B013A583DE649B1A003736D /* GT-Walsheim-Medium.otf */,
+				06FE1F5B7DAF4C4490579087 /* GT-Walsheim-Regular-Oblique.otf */,
+				DFB128A1ABA64E2BB4292583 /* GT-Walsheim-Regular.otf */,
+				0BA3F18DA46446DA8B418449 /* GT-Walsheim-Thin-Oblique.otf */,
+				45C2711C0C924DCFB9814925 /* GT-Walsheim-Thin.otf */,
+				6641E63B34414CCFB2554B27 /* GT-Walsheim-Ultra-Bold-Oblique.otf */,
+				E6E7CE1E707A453FBDC71780 /* GT-Walsheim-Ultra-Bold.otf */,
+				DC96DEF6F54B4BD0AB69DF00 /* GT-Walsheim-Ultra-Light-Oblique.otf */,
+				9BAFED283FA1476588151BBC /* GT-Walsheim-Ultra-Light.otf */,
+				87A016EBE7FB4510B461C345 /* OpenSans-Bold.ttf */,
+				6417B13CCD35499E9C11979C /* OpenSans-BoldItalic.ttf */,
+				BBDE5A56BAAC4A7D9EA2B148 /* OpenSans-ExtraBold.ttf */,
+				6126E71E75A2434FA9A3268F /* OpenSans-ExtraBoldItalic.ttf */,
+				B57811404D3240D3975E6818 /* OpenSans-Italic.ttf */,
+				992BC5361947481EB389DE60 /* OpenSans-Light.ttf */,
+				E7086AF73BA1485284DB3393 /* OpenSans-LightItalic.ttf */,
+				0C196302F8C8433E909D7B65 /* OpenSans-Regular.ttf */,
+				9B17F480101E4E5A90B84303 /* OpenSans-SemiBold.ttf */,
+				E5B42426E13F4F9FB95E228F /* OpenSans-SemiBoldItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
-		};
-		EA8D1D9121936546004A809B /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				ECDDF7E9BB5A4AA692FF0AEE /* libRNI18n.a */,
-				AF87430809EA48C9867D7582 /* libRCTYouTube.a */,
-				BBFC3D34C7DD4BD0B63FF668 /* libRNI18n-tvOS.a */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		EA8D1DB72193654A004A809B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA8D1DC12193654A004A809B /* libRNI18n.a */,
-				EA8D1DC32193654A004A809B /* libRNI18n-tvOS.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EA8D1DB92193654A004A809B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EA8D1DBD2193654A004A809B /* libRCTYouTube.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* mobiiliTests */ = {
+		00E356ED1AD99517003FC87E /* VantaaMobiiliTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "mobiiliTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "VantaaMobiiliTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -769,14 +718,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = mobiiliTests;
-			productName = mobiiliTests;
-			productReference = 00E356EE1AD99517003FC87E /* mobiiliTests.xctest */;
+			name = VantaaMobiiliTests;
+			productName = VantaaMobiiliTests;
+			productReference = 00E356EE1AD99517003FC87E /* VantaaMobiiliTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* mobiili */ = {
+		13B07F861A680F5B00A75B9A /* VantaaMobiili */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "mobiili" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "VantaaMobiili" */;
 			buildPhases = (
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -787,14 +736,14 @@
 			);
 			dependencies = (
 			);
-			name = mobiili;
+			name = VantaaMobiili;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* mobiili.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* VantaaMobiili.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* mobiili-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* VantaaMobiili-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "mobiili-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "VantaaMobiili-tvOS" */;
 			buildPhases = (
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -805,14 +754,14 @@
 			);
 			dependencies = (
 			);
-			name = "mobiili-tvOS";
-			productName = "mobiili-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* mobiili-tvOS.app */;
+			name = "VantaaMobiili-tvOS";
+			productName = "VantaaMobiili-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* VantaaMobiili-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* mobiili-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* VantaaMobiili-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "mobiili-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "VantaaMobiili-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -823,9 +772,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "mobiili-tvOSTests";
-			productName = "mobiili-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* mobiili-tvOSTests.xctest */;
+			name = "VantaaMobiili-tvOSTests";
+			productName = "VantaaMobiili-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* VantaaMobiili-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -852,7 +801,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "mobiili" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "VantaaMobiili" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -909,24 +858,16 @@
 					ProjectRef = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
 				},
 				{
-					ProductGroup = EA8D1DB92193654A004A809B /* Products */;
-					ProjectRef = E4FAFC841D0144EFA9B80751 /* RCTYouTube.xcodeproj */;
-				},
-				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
-				},
-				{
-					ProductGroup = EA8D1DB72193654A004A809B /* Products */;
-					ProjectRef = 5B10D8C774074B7F9D476F54 /* RNI18n.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* mobiili */,
-				00E356ED1AD99517003FC87E /* mobiiliTests */,
-				2D02E47A1E0B4A5D006451C7 /* mobiili-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* mobiili-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* VantaaMobiili */,
+				00E356ED1AD99517003FC87E /* VantaaMobiiliTests */,
+				2D02E47A1E0B4A5D006451C7 /* VantaaMobiili-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* VantaaMobiili-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1191,27 +1132,6 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		EA8D1DBD2193654A004A809B /* libRCTYouTube.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRCTYouTube.a;
-			remoteRef = EA8D1DBC2193654A004A809B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EA8D1DC12193654A004A809B /* libRNI18n.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNI18n.a;
-			remoteRef = EA8D1DC02193654A004A809B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		EA8D1DC32193654A004A809B /* libRNI18n-tvOS.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libRNI18n-tvOS.a";
-			remoteRef = EA8D1DC22193654A004A809B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1228,33 +1148,32 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				CFCFEB1321AA42D8A7218A52 /* YTPlayerView-iframe-player.html in Resources */,
-				71539ACB7597422B91F68E60 /* GT-Walsheim-Black-Oblique.otf in Resources */,
-				81286E6DDC0C49A9B70754DD /* GT-Walsheim-Black.otf in Resources */,
-				B4B64A4E53574183AF39C147 /* GT-Walsheim-Bold-Oblique.otf in Resources */,
-				FB6C2860393A4A9A8944C85D /* GT-Walsheim-Bold.otf in Resources */,
-				8DC7FFF3B31A4713955B6EC6 /* GT-Walsheim-Light-Oblique.otf in Resources */,
-				9002E50E56DE46529053F44D /* GT-Walsheim-Light.otf in Resources */,
-				263BEA739073498286E6E126 /* GT-Walsheim-Medium-Oblique.otf in Resources */,
-				C070E79A519443CFA0CBB36A /* GT-Walsheim-Medium.otf in Resources */,
-				7AA03D7C062043C3AFD7F59F /* GT-Walsheim-Regular-Oblique.otf in Resources */,
-				FB1C7B89C37F4D2C99AFB798 /* GT-Walsheim-Regular.otf in Resources */,
-				3BCD0E5ACB064ABEB55E4DE9 /* GT-Walsheim-Thin-Oblique.otf in Resources */,
-				6ED408AE27DC44CD85B3081F /* GT-Walsheim-Thin.otf in Resources */,
-				4897AE91EFB9407798407B4A /* GT-Walsheim-Ultra-Bold-Oblique.otf in Resources */,
-				371A501C4FF34EAFBEDF83C0 /* GT-Walsheim-Ultra-Bold.otf in Resources */,
-				A4DBC9F9B8A7420E96CDACC4 /* GT-Walsheim-Ultra-Light-Oblique.otf in Resources */,
-				02F2B5C8463B4B4388D4F2FB /* GT-Walsheim-Ultra-Light.otf in Resources */,
-				71EB716A61FC4889A4EADC13 /* OpenSans-Bold.ttf in Resources */,
-				280FA609AFF54F388BCFFC29 /* OpenSans-BoldItalic.ttf in Resources */,
-				D950D838916C4DBDAC8788BE /* OpenSans-ExtraBold.ttf in Resources */,
-				8B75876F87914046A99D0685 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
-				D15FE548BC174091BBCCCAF6 /* OpenSans-Italic.ttf in Resources */,
-				2D6982AC0BA24A51A0EFFD75 /* OpenSans-Light.ttf in Resources */,
-				E3D9EA515F5545DB8601FDBE /* OpenSans-LightItalic.ttf in Resources */,
-				D45B4C5674CA44E785E0D1FE /* OpenSans-Regular.ttf in Resources */,
-				9E676755E28041FAB3E98631 /* OpenSans-SemiBold.ttf in Resources */,
-				D4D49B7F866A4F72B182669F /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				D957C675DF9C4E16B8F77A64 /* GT-Walsheim-Black-Oblique.otf in Resources */,
+				7C025FB70F6A4E5A84095912 /* GT-Walsheim-Black.otf in Resources */,
+				065A5129EAA54D75AD88EC3C /* GT-Walsheim-Bold-Oblique.otf in Resources */,
+				E573FB0977A64826BDD6FBDD /* GT-Walsheim-Bold.otf in Resources */,
+				1E2FCACBD86B434C9C396228 /* GT-Walsheim-Light-Oblique.otf in Resources */,
+				41AF77FF0EA94553B6235911 /* GT-Walsheim-Light.otf in Resources */,
+				7C41174F8CA842C78D24B9B5 /* GT-Walsheim-Medium-Oblique.otf in Resources */,
+				F8DFB59A28014623B4A2DBDF /* GT-Walsheim-Medium.otf in Resources */,
+				73E73E65B0424528B2F8DBF7 /* GT-Walsheim-Regular-Oblique.otf in Resources */,
+				64433C72BAF04006888354CA /* GT-Walsheim-Regular.otf in Resources */,
+				04CB42B0A72E4DF5B46BD87D /* GT-Walsheim-Thin-Oblique.otf in Resources */,
+				7A7B46502CAB4D2C93B0AE27 /* GT-Walsheim-Thin.otf in Resources */,
+				531F410E54A74D48AD7EAF1D /* GT-Walsheim-Ultra-Bold-Oblique.otf in Resources */,
+				4CC14686638D4942931C02DB /* GT-Walsheim-Ultra-Bold.otf in Resources */,
+				728365CFF30B4BEF8AE5F3DD /* GT-Walsheim-Ultra-Light-Oblique.otf in Resources */,
+				730A6597EC8149E6958E03F3 /* GT-Walsheim-Ultra-Light.otf in Resources */,
+				5C6374E32F05489DA405FD6B /* OpenSans-Bold.ttf in Resources */,
+				D76A237C81C84B8C8D7A9384 /* OpenSans-BoldItalic.ttf in Resources */,
+				BFE4CD858A3949C6990715F9 /* OpenSans-ExtraBold.ttf in Resources */,
+				6EC16EF3D0B3486AA2669281 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				62DE40A11BC94E4D9A6F8224 /* OpenSans-Italic.ttf in Resources */,
+				06B736D936714FD5B2494002 /* OpenSans-Light.ttf in Resources */,
+				9B6D723551994DFAA78C0386 /* OpenSans-LightItalic.ttf in Resources */,
+				114805187F3E4AACAC12081B /* OpenSans-Regular.ttf in Resources */,
+				B3AE4D5AEC9B40B79D20500E /* OpenSans-SemiBold.ttf in Resources */,
+				0579294453514B1FB9F3F986 /* OpenSans-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1311,7 +1230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* mobiiliTests.m in Sources */,
+				00E356F31AD99517003FC87E /* VantaaMobiiliTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1337,7 +1256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* mobiiliTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* VantaaMobiiliTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1346,12 +1265,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* mobiili */;
+			target = 13B07F861A680F5B00A75B9A /* VantaaMobiili */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* mobiili-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* VantaaMobiili-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1363,7 +1282,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = mobiili;
+			path = VantaaMobiili;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1377,27 +1296,27 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
-					"$(SRCROOT)/../node_modules/react-native-youtube/**",
-				);
-				INFOPLIST_FILE = mobiiliTests/Info.plist;
+				INFOPLIST_FILE = VantaaMobiiliTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobiili.app/mobiili";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VantaaMobiili.app/VantaaMobiili";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
+				);
 			};
 			name = Debug;
 		};
@@ -1406,27 +1325,27 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
-					"$(SRCROOT)/../node_modules/react-native-youtube/**",
-				);
-				INFOPLIST_FILE = mobiiliTests/Info.plist;
+				INFOPLIST_FILE = VantaaMobiiliTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobiili.app/mobiili";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VantaaMobiili.app/VantaaMobiili";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
+				);
 			};
 			name = Release;
 		};
@@ -1436,12 +1355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
-					"$(SRCROOT)/../node_modules/react-native-youtube/**",
-				);
-				INFOPLIST_FILE = mobiili/Info.plist;
+				INFOPLIST_FILE = VantaaMobiili/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1449,8 +1363,13 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = mobiili;
+				PRODUCT_NAME = VantaaMobiili;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
+				);
 			};
 			name = Debug;
 		};
@@ -1459,12 +1378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
-					"$(SRCROOT)/../node_modules/react-native-youtube/**",
-				);
-				INFOPLIST_FILE = mobiili/Info.plist;
+				INFOPLIST_FILE = VantaaMobiili/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1472,8 +1386,13 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = mobiili;
+				PRODUCT_NAME = VantaaMobiili;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
+				);
 			};
 			name = Release;
 		};
@@ -1489,28 +1408,28 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
-					"$(SRCROOT)/../node_modules/react-native-youtube/**",
-				);
-				INFOPLIST_FILE = "mobiili-tvOS/Info.plist";
+				INFOPLIST_FILE = "VantaaMobiili-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.VantaaMobiili-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.mobiili-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Debug;
 		};
@@ -1526,28 +1445,28 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
-					"$(SRCROOT)/../node_modules/react-native-youtube/**",
-				);
-				INFOPLIST_FILE = "mobiili-tvOS/Info.plist";
+				INFOPLIST_FILE = "VantaaMobiili-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.VantaaMobiili-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.mobiili-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
 			name = Release;
 		};
@@ -1562,28 +1481,28 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
-					"$(SRCROOT)/../node_modules/react-native-youtube/**",
-				);
-				INFOPLIST_FILE = "mobiili-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "VantaaMobiili-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.VantaaMobiili-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VantaaMobiili-tvOS.app/VantaaMobiili-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.mobiili-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobiili-tvOS.app/mobiili-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
 		};
@@ -1598,28 +1517,28 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
-					"$(SRCROOT)/../node_modules/react-native-youtube/**",
-				);
-				INFOPLIST_FILE = "mobiili-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "VantaaMobiili-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.VantaaMobiili-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VantaaMobiili-tvOS.app/VantaaMobiili-tvOS";
+				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-lc++",
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-i18n/ios",
+					"$(SRCROOT)/../node_modules/react-native-youtube/**",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.mobiili-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mobiili-tvOS.app/mobiili-tvOS";
-				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
 		};
@@ -1725,7 +1644,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "mobiiliTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "VantaaMobiiliTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1734,7 +1653,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "mobiili" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "VantaaMobiili" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1743,7 +1662,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "mobiili-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "VantaaMobiili-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -1752,7 +1671,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "mobiili-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "VantaaMobiili-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -1761,7 +1680,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "mobiili" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "VantaaMobiili" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

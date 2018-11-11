@@ -1,4 +1,4 @@
-package com.mobiili;
+package com.vantaamobiili;
 
 import android.app.Application;
 

@@ -148,7 +148,6 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-splash-screen')
     compile project(':react-native-youtube')
     compile project(':react-native-i18n')
     implementation fileTree(dir: "libs", include: ["*.jar"])

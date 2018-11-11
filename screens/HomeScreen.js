@@ -49,67 +49,74 @@ class HomeScreen extends React.Component {
   }
 
   componentWillMount = async () => {
-    const feeds = await getFeeds(this.props.filter);
-    this.props.changeFeeds(feeds);
+    try {
+      const feeds = await getFeeds(this.props.filter);
+      this.props.changeFeeds(feeds);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   keyExtractor = (item, index) => item.id.toString();
 
   handleFeedScroll = async (event) => {
-    const currentOffset = event.nativeEvent.contentOffset.y;
-    if ((currentOffset < 0 || currentOffset === 0) && this.state.fixScroll && !this.state.fetchInProgress) {
-      this.setState({ updateInProgress: true });
-      const feeds = await getFeeds(this.props.filter);
-      this.props.changeFeeds(feeds);
-      this.setState({ updateInProgress: false });
-    }
+    try {
+      const currentOffset = event.nativeEvent.contentOffset.y;
+      if ((currentOffset < 0 || currentOffset === 0) && this.state.fixScroll && !this.state.fetchInProgress) {
+        this.setState({ updateInProgress: true });
+        const feeds = await getFeeds(this.props.filter);
+        this.props.changeFeeds(feeds);
+        this.setState({ updateInProgress: false });
+      }
 
-    const fetchMore = event.nativeEvent.contentSize.height
-      <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
+      const fetchMore = event.nativeEvent.contentSize.height
+        <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
 
-    if (this.props.feeds && this.props.feeds.length > 0 && fetchMore && !this.state.fetchInProgress) {
-      this.setState({ fetchInProgress: true });
-      const skip = this.props.feeds[this.props.feeds.length - 1].id;
-      const filter = this.props.filter;
-      const moreFeeds = await getFeedsMoreFeeds(filter, skip);
-      const newFeeds = [...this.props.feeds, ...moreFeeds];
-      this.props.changeFeeds(newFeeds);
+      if (this.props.feeds && this.props.feeds.length > 0 && fetchMore && !this.state.fetchInProgress) {
+        this.setState({ fetchInProgress: true });
+        const skip = this.props.feeds[this.props.feeds.length - 1].id;
+        const filter = this.props.filter;
+        const moreFeeds = await getFeedsMoreFeeds(filter, skip);
+        const newFeeds = [...this.props.feeds, ...moreFeeds];
+        this.props.changeFeeds(newFeeds);
+        this.setState({ fetchInProgress: false });
+      }
+    } catch (error) {
       this.setState({ fetchInProgress: false });
     }
   }
 
   handleScrollEndDrag = (event) => {
-    const currentOffset = event.nativeEvent.contentOffset.y;
-    if (currentOffset > height - height / 3) {
-      this.myRef.getNode().scrollTo({
-        y: height,
-        animated: true,
-      });
-      this.setState({ fixScroll: true, enableScroll: false });
+    try {
+      const currentOffset = event.nativeEvent.contentOffset.y;
+      if (currentOffset > height - height / 3) {
+        this.myRef.getNode().scrollTo({
+          y: height,
+          animated: true,
+        });
+        this.setState({ fixScroll: true, enableScroll: false });
 
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 
   handleScroll = async (event) => {
+    try {
+      const fetchMore = event.nativeEvent.contentSize.height
+        <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
 
-    const fetchMore = event.nativeEvent.contentSize.height
-      <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
+      const currentOffset = event.nativeEvent.contentOffset.y;
+      const direction = currentOffset > this.state.offset ? 'up' : 'down';
 
-    const currentOffset = event.nativeEvent.contentOffset.y;
-    const direction = currentOffset > this.state.offset ? 'up' : 'down';
-
-    if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
-      this.setState({ fixScroll: true, scrollHeight: height, enableScroll: false });
+      if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
+        this.setState({ fixScroll: true, scrollHeight: height, enableScroll: false });
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
-
-  hideFeed = () => {
-    this.setState({
-      carouselHeight: height,
-      viewTop: 0
-    });
-  }
-
 
   render() {
     return (
@@ -132,6 +139,8 @@ class HomeScreen extends React.Component {
               style={{ width, height: this.state.scrollHeight }}
               ref="myInput"
               data={this.state.randomImages}
+              threshold={0}
+              useVelocityForIndex={true}
               onIndexChange={index =>
                 this.setState(() => ({ currentIndex: index }))
               }

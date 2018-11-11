@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
         fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
         fontSize: 10,
         color: '#3c8fde',
+        elevation: 5
     },
     activeButton: {
         backgroundColor: '#3c8fde',

@@ -12,9 +12,22 @@ export class ContactCard extends React.Component {
     constructor(props) {
         super(props);
     }
+
+    onPressHandler = (url) => {
+        if (url) {
+            Linking.canOpenURL(url).then(supported => {
+                if (!supported) {
+                    console.log('Can\'t handle url: ' + url);
+                } else {
+                    return Linking.openURL(url);
+                }
+            }).catch(err => console.error('An error occurred', err));
+        }
+    }
+
     render() {
         return (
-            <TouchableOpacity style={styles.section} onPress={() => Linking.openURL(this.props.link)}>
+            <TouchableOpacity style={styles.section} onPress={() => this.onPressHandler(this.props.link)}>
                 <View style={styles.sectionView}>
                     <Image style={{ padding: 5, marginTop: 10, }} source={this.props.imageUrl} />
                     <Text style={styles.text}>{this.props.text.toUpperCase()}</Text>

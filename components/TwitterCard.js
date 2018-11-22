@@ -15,6 +15,18 @@ export class TwitterCard extends React.Component {
         super(props);
     }
 
+    onPressHandler = (url) => {
+        if (url) {
+            Linking.canOpenURL(url).then(supported => {
+                if (!supported) {
+                    console.log('Can\'t handle url: ' + url);
+                } else {
+                    return Linking.openURL(url);
+                }
+            }).catch(err => console.error('An error occurred', err));
+        }
+    }
+
     render() {
         return (
             <View style={{
@@ -24,20 +36,24 @@ export class TwitterCard extends React.Component {
                 borderRadius: 10, backgroundColor: '#FFF', margin: 10, elevation: 10,
             }}>
 
-                <View style={{ paddingTop: 10, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
-                    <Image style={{ width: 50, borderRadius: 25, padding: 10 }}
-                        resizeMode='cover'
-                        source={{
-                            uri: this.props.item.author_thumbnail
-                        }} />
-                    <View style={{ flex: 1, padding: 5, }}>
-                        <Text style={[styles.walsheim, styles.walsheimBold, { flexWrap: 'wrap', }]}>{this.props.item.author}</Text>
-                        <Text style={[styles.walsheim, { flexWrap: 'wrap', }]}>@{this.props.item.author}</Text>
+                <TouchableOpacity onPress={() => this.onPressHandler(this.props.item.page_link)}>
+                    <View style={{ paddingTop: 10, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
+
+                        <Image style={{ width: 50, borderRadius: 25, padding: 10 }}
+                            resizeMode='cover'
+                            source={{
+                                uri: this.props.item.author_thumbnail
+                            }} />
+                        <View style={{ flex: 1, padding: 5, }}>
+                            <Text style={[styles.walsheim, styles.walsheimBold, { flexWrap: 'wrap', }]}>{this.props.item.author}</Text>
+                            <Text style={[styles.walsheim, { flexWrap: 'wrap', }]}>@{this.props.item.author}</Text>
+                        </View>
+                        <View style={[styles.source, styles.twitterActive,]}>
+                            <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
+                        </View>
+
                     </View>
-                    <View style={[styles.source, styles.twitterActive,]}>
-                        <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
-                    </View>
-                </View>
+                </TouchableOpacity>
 
                 <View style={[styles.walsheim, { flex: 1, padding: 5, textAlign: 'center' }]}>
 

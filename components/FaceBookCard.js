@@ -15,6 +15,18 @@ export class FaceBookCard extends React.Component {
         super(props);
     }
 
+    onPressHandler = (url) => {
+        if (url) {
+            Linking.canOpenURL(url).then(supported => {
+                if (!supported) {
+                    console.log('Can\'t handle url: ' + url);
+                } else {
+                    return Linking.openURL(url);
+                }
+            }).catch(err => console.error('An error occurred', err));
+        }
+    }
+
     render() {
         return (
             <View style={{
@@ -24,24 +36,27 @@ export class FaceBookCard extends React.Component {
                 borderRadius: 10, backgroundColor: '#FFF', margin: 10, elevation: 10,
             }}>
 
-                <View style={{ paddingTop: 10, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
-                    <Image style={{ width: 50, borderRadius: 25, padding: 10 }}
-                        resizeMode='cover'
-                        source={{
-                            uri: this.props.item.author_thumbnail
-                        }} />
-                    <View style={{ flex: 1, padding: 5, }}>
-                        <Text style={[styles.walsheim, styles.walsheimBold, { flexWrap: 'wrap', }]}>{this.props.item.author}</Text>
+
+                <TouchableOpacity onPress={() => this.onPressHandler(this.props.item.page_link)}>
+                    <View style={{ paddingTop: 10, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
+                        <Image style={{ width: 50, borderRadius: 25, padding: 10 }}
+                            resizeMode='cover'
+                            source={{
+                                uri: this.props.item.author_thumbnail
+                            }} />
+                        <View style={{ flex: 1, padding: 5, }}>
+                            <Text style={[styles.walsheim, styles.walsheimBold, { flexWrap: 'wrap', }]}>{this.props.item.author}</Text>
+                        </View>
+                        <View style={[styles.source, styles.facebookActive,]}>
+                            <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
+                        </View>
                     </View>
-                    <View style={[styles.source, styles.facebookActive,]}>
-                        <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
-                    </View>
-                </View>
+                </TouchableOpacity>
 
                 <View style={{ flex: 1, textAlign: 'center' }}>
                     {this.props.item.image_url ?
                         <Image style={{ flex: 1, width: '100%', marginTop: 10, height: 300 }}
-                            resizeMode='contain'
+                            resizeMode='stretch'
                             source={{
                                 uri: this.props.item.image_url
                             }} /> : null}
@@ -53,7 +68,9 @@ export class FaceBookCard extends React.Component {
 
                     </View>
 
-                    <Text style={[styles.walsheim, { padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }]}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                    <Text style={[styles.walsheim, { padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }]}>
+                        {format(this.props.item.pub_date, 'DD MMMM HH:mm')}
+                    </Text>
                 </View>
             </View>
         );

@@ -79,10 +79,7 @@ class SettingsScreen extends React.Component {
           <Text style={styles.header}>{strings('settings.header')}</Text>
           <Text style={styles.title}>{strings('settings.languageHeader')}</Text>
           <View style={styles.feedSection}>
-            <Button type='default'
-              active={this.state.language === 'en'}
-              text={strings('settings.langButtons.en')}
-              clicked={() => this.changeLanguageHandler('en')} />
+
             <Button type='default'
               active={this.state.language === 'fi'}
               text={strings('settings.langButtons.fi')}
@@ -91,6 +88,10 @@ class SettingsScreen extends React.Component {
               active={this.state.language === 'sv'}
               text={strings('settings.langButtons.sv')}
               clicked={() => this.changeLanguageHandler('sv')} />
+            <Button type='default'
+              active={this.state.language === 'en'}
+              text={strings('settings.langButtons.en')}
+              clicked={() => this.changeLanguageHandler('en')} />
           </View>
           <Text style={styles.title}>{strings('settings.feedHeader')}</Text>
           <View style={styles.feedSection}>

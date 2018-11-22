@@ -14,17 +14,27 @@ export class ServiceCard extends React.Component {
         super(props);
     }
     render() {
+
         return (
-            <TouchableOpacity style={styles.serviceCard} onPress={() => Linking.openURL(this.props.link)}>
-                <View
-                    resizeMode='cover'
-                    style={[styles.serviceImage, { backgroundColor: this.props.color ? this.props.color : '#F9EB61' }]}
-                >
-                    <View style={styles.serviceTextCard}>
-                        <Text style={styles.serviceText}>{this.props.text}</Text>
+            this.props.text ? (
+                <TouchableOpacity style={styles.serviceCard} onPress={() => Linking.openURL(this.props.link)}>
+                    <View
+                        resizeMode='cover'
+                        style={[styles.serviceImage]}
+                    >
+                        <View style={styles.serviceTextCard}>
+                            <Text style={styles.serviceText}>{this.props.text.toUpperCase()}</Text>
+                        </View>
                     </View>
-                </View>
-            </TouchableOpacity >);
+                </TouchableOpacity >)
+                : (
+                    <TouchableOpacity style={styles.serviceCardEmpty}>
+                        <View style={[styles.serviceImageEmpty]}>
+                        </View>
+                    </TouchableOpacity>
+                )
+
+        );
     }
 }
 const styles = StyleSheet.create({
@@ -56,29 +66,38 @@ const styles = StyleSheet.create({
         shadowOffset: { height: 0, width: 0 },
         elevation: 10
     },
+    serviceCardEmpty: {
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        margin: 10,
+    },
     serviceImage: {
         flex: 1,
         justifyContent: 'space-between',
-        height: 80,
+        height: 60,
+        backgroundColor: '#FFFFFF'
+
+    },
+    serviceImageEmpty: {
+        flex: 1,
+        justifyContent: 'space-between',
+        height: 60,
 
     },
     serviceTextCard: {
-        backgroundColor: 'rgba(255,255,255,0.4)',
-        height: 60,
-        marginTop: 20,
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1,
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
-        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Normal",
     },
     serviceText: {
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
-        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Normal",
+
     },
     walsheim: {
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Normal",
     },
     walsheimBold: {
         fontWeight: Platform.OS === 'ios' ? "bold" : "100",

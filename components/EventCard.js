@@ -16,6 +16,18 @@ export class EventCard extends React.Component {
         super(props);
     }
 
+    onPressHandler = (url) => {
+        if (url) {
+            Linking.canOpenURL(url).then(supported => {
+                if (!supported) {
+                    console.log('Can\'t handle url: ' + url);
+                } else {
+                    return Linking.openURL(url);
+                }
+            }).catch(err => console.error('An error occurred', err));
+        }
+    }
+
     render() {
         return (
             <View style={{
@@ -24,28 +36,30 @@ export class EventCard extends React.Component {
                 shadowOffset: { height: 0, width: 0 },
                 borderRadius: 10, backgroundColor: '#FFF', margin: 10, elevation: 10,
             }}>
-
-                <ImageBackground style={{
-                    flex: 1, height: 250,
-                    flexDirection: 'row',
-                    justifyContent: 'flex-end',
-                }}
-                    resizeMode='stretch'
-                    source={{
-                        uri: this.props.item.image_url
+                <TouchableOpacity onPress={() => this.onPressHandler(this.props.item.page_link)}>
+                    <ImageBackground style={{
+                        flex: 1, height: 250,
+                        flexDirection: 'row',
+                        justifyContent: 'flex-end',
                     }}
-                >
-                    <View style={[styles.source, styles.eventsActive]}>
-                        <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
-                    </View>
-                </ImageBackground>
+                        resizeMode='stretch'
+                        source={{
+                            uri: this.props.item.image_url
+                        }}
+                    >
+                        <View style={[styles.source, styles.eventsActive]}>
+                            <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
+                        </View>
+                    </ImageBackground>
 
+                </TouchableOpacity>
                 <View style={{ flex: 1, padding: 5, textAlign: 'center' }}>
+                    <TouchableOpacity onPress={() => this.onPressHandler(this.props.item.page_link)}>
+                        <View style={{ flex: 1, flexDirection: 'row', padding: 10, }}>
+                            <Text style={[styles.walsheim, { flex: 1, flexWrap: 'wrap', fontWeight: 'bold' }]}>{this.props.item.title}</Text>
 
-                    <View style={{ flex: 1, flexDirection: 'row', padding: 10, }}>
-                        <Text style={[styles.walsheim, { flex: 1, flexWrap: 'wrap', fontWeight: 'bold' }]}>{this.props.item.title}</Text>
-
-                    </View>
+                        </View>
+                    </TouchableOpacity>
                     <Text style={[styles.walsheim, { padding: 10, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }]}>
                         {format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
                 </View>

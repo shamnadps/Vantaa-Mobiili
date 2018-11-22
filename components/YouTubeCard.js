@@ -40,6 +40,18 @@ export class YouTubeCard extends React.Component {
         this.setState({ appState: nextAppState });
     }
 
+    onPressHandler = (url) => {
+        if (url) {
+            Linking.canOpenURL(url).then(supported => {
+                if (!supported) {
+                    console.log('Can\'t handle url: ' + url);
+                } else {
+                    return Linking.openURL(url);
+                }
+            }).catch(err => console.error('An error occurred', err));
+        }
+    }
+
     render() {
         return (
             <View style={{
@@ -48,21 +60,21 @@ export class YouTubeCard extends React.Component {
                 shadowOffset: { height: 0, width: 0 },
                 borderRadius: 10, backgroundColor: '#FFF', margin: 10, elevation: 10,
             }}>
-
-                <View style={{ paddingTop: 10, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
-                    <Image style={{ width: 50, padding: 10 }}
-                        resizeMode='cover'
-                        source={{
-                            uri: this.props.item.author_thumbnail
-                        }} />
-                    <View style={{ flex: 1, padding: 5, }}>
-                        <Text style={[styles.walsheim, styles.walsheimBold, { flexWrap: 'wrap', }]}>{this.props.item.author}</Text>
-                    </View>
-                    <View style={[styles.source, styles.youtubeActive,]}>
-                        <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
-                    </View>
-                </View >
-
+                <TouchableOpacity onPress={() => this.onPressHandler(this.props.item.page_link)}>
+                    <View style={{ paddingTop: 10, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
+                        <Image style={{ width: 50, padding: 10 }}
+                            resizeMode='cover'
+                            source={{
+                                uri: this.props.item.author_thumbnail
+                            }} />
+                        <View style={{ flex: 1, padding: 5, }}>
+                            <Text style={[styles.walsheim, styles.walsheimBold, { flexWrap: 'wrap', }]}>{this.props.item.author}</Text>
+                        </View>
+                        <View style={[styles.source, styles.youtubeActive,]}>
+                            <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
+                        </View>
+                    </View >
+                </TouchableOpacity>
                 <View style={{ flex: 1, textAlign: 'center' }}>
                     {/* <Image style={{ flex: 1, width: '100%', marginTop: 10, height: 400 }}
                         resizeMode='stretch'
@@ -71,7 +83,7 @@ export class YouTubeCard extends React.Component {
                         }} /> */}
                     {this.state.appState == 'active' &&
                         <WebView
-                            style={{ flex: 1, height: 300, }}
+                            style={{ flex: 1, height: 300, marginTop: 10 }}
                             javaScriptEnabled={true}
                             source={{ uri: 'https://www.youtube.com/embed/' + this.props.item.video_id + '?rel=0&autoplay=0&showinfo=0&controls=0' }} />
                     }

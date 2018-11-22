@@ -44,7 +44,7 @@ class LinksScreen extends React.Component {
             <ContactCard
               imageUrl={require('../assets/images/chat-icon.png')}
               text={strings('resources.chat')}
-              link={''} />
+            />
             <ContactCard
               imageUrl={require('../assets/images/contact-icon.png')}
               text={strings('resources.contact')}
@@ -69,37 +69,23 @@ class LinksScreen extends React.Component {
           </View>
           <View style={styles.serviceSection}>
             <ServiceCard
-              text={strings('resources.services.sivistysvantaa')}
-              color='#f2a6db'
-              link={'http://www.sivistysvantaa.fi/sivistysvantaa/index.html'}
-            />
-            <ServiceCard
-              text={strings('resources.services.jumppaliput')}
-              color='#c2a6e3'
-              link={'https://jumppaliput.vantaa.fi/app/'}
-            />
-          </View>
-          <View style={styles.serviceSection}>
-            <ServiceCard
-              text={strings('resources.services.lasten')}
-              color='#d9d9d6'
-              link={'https://kulttuuriliput.vantaa.fi/app/consumer'}
-            />
-            <ServiceCard
               text={strings('resources.services.tapahtumat')}
               link={'http://www.vantaa.fi/tapahtumienvantaa'}
             />
-          </View>
-          <View style={styles.serviceSection}>
             <ServiceCard
               text={strings('resources.services.matkailu')}
               color='#84ccf8'
               link={'https://www.visitvantaa.fi'}
             />
+          </View>
+          <View style={styles.serviceSection}>
             <ServiceCard
               text={strings('resources.services.asiointi')}
               color='#ffa3b5'
               link={'http://www.vantaa.fi/asioi_verkossa'}
+            />
+            <ServiceCard
+
             />
           </View>
         </View>

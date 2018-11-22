@@ -15,6 +15,18 @@ export class VantaaCard extends React.Component {
         super(props);
     }
 
+    onPressHandler = (url) => {
+        if (url) {
+            Linking.canOpenURL(url).then(supported => {
+                if (!supported) {
+                    console.log('Can\'t handle url: ' + url);
+                } else {
+                    return Linking.openURL(url);
+                }
+            }).catch(err => console.error('An error occurred', err));
+        }
+    }
+
     render() {
         return (
             <View style={{
@@ -32,9 +44,11 @@ export class VantaaCard extends React.Component {
                     alignItems: 'flex-end',
                 }}>
 
-                    <View style={[styles.source, styles.activeButton,]}>
-                        <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
-                    </View>
+                    <TouchableOpacity onPress={() => this.onPressHandler(this.props.item.page_link)}>
+                        <View style={[styles.source, styles.activeButton,]}>
+                            <Text style={[styles.walsheim, { flex: 1, textAlign: 'center', margin: 0, color: '#FFF' }]}>{this.props.item.source}</Text>
+                        </View>
+                    </TouchableOpacity>
                 </View>
                 <View style={{ paddingTop: 0, flex: 1, flexDirection: 'row', paddingLeft: 10, textAlign: 'center', }}>
 

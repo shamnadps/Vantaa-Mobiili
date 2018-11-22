@@ -6,9 +6,11 @@ import {
     TouchableOpacity,
     View,
     Linking,
-    Platform
+    Platform,
+    Clipboard,
 } from 'react-native';
 import { format } from 'date-fns';
+import Toast from 'react-native-simple-toast';
 
 export class TwitterCard extends React.Component {
     constructor(props) {
@@ -25,6 +27,11 @@ export class TwitterCard extends React.Component {
                 }
             }).catch(err => console.error('An error occurred', err));
         }
+    }
+
+    onCopyPressed = (url) => {
+        Clipboard.setString(url);
+        Toast.showWithGravity('Copied to clipboard.', Toast.SHORT, Toast.CENTER)
     }
 
     render() {
@@ -61,7 +68,19 @@ export class TwitterCard extends React.Component {
                         <Text style={[styles.walsheim, { flex: 1, flexWrap: 'wrap', }]}>{this.props.item.description}</Text>
 
                     </View>
-                    <Text style={[styles.walsheim, { padding: 5, opacity: 0.8, flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }]}>{format(this.props.item.pub_date, 'DD MMMM HH:mm')}</Text>
+                    <View style={{ flex: 1, flexDirection: 'row' }}>
+                        <Text style={[styles.walsheim, { padding: 10, opacity: 0.8, width: '90%', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'flex-end' }]}>
+                            {format(this.props.item.pub_date, 'DD MMMM HH:mm')}
+                        </Text>
+                        <TouchableOpacity onPress={() => this.onCopyPressed(this.props.item.page_link)}>
+                            <View style={[{ padding: 10, marginRight: 10, alignItems: 'flex-end', justifyContent: 'flex-end' }]}>
+                                <Image
+                                    resizeMode='contain'
+                                    source={
+                                        require('../assets/images/copy_icon.png')} />
+                            </View>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </View>
         );

@@ -57,6 +57,7 @@
 		7C41174F8CA842C78D24B9B5 /* GT-Walsheim-Medium-Oblique.otf in Resources */ = {isa = PBXBuildFile; fileRef = 468E34B3149242C59619592D /* GT-Walsheim-Medium-Oblique.otf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		8C9F432D7F7543E0BF40A212 /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE360B2AF0B2429893193F69 /* libRNI18n-tvOS.a */; };
+		8E20794DFC31408FABB1C289 /* libLRDRCTSimpleToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4D1BF644664A9E9EA49E2C /* libLRDRCTSimpleToast.a */; };
 		9B6D723551994DFAA78C0386 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7086AF73BA1485284DB3393 /* OpenSans-LightItalic.ttf */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B3AE4D5AEC9B40B79D20500E /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B17F480101E4E5A90B84303 /* OpenSans-SemiBold.ttf */; };
@@ -66,7 +67,6 @@
 		E573FB0977A64826BDD6FBDD /* GT-Walsheim-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DB24B819648A4F69ABF76B8E /* GT-Walsheim-Bold.otf */; };
 		E7FD05BEA11B49C2AE46C0A6 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BC474C7F3E14482B71FF46A /* libRNI18n.a */; };
 		F8DFB59A28014623B4A2DBDF /* GT-Walsheim-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B013A583DE649B1A003736D /* GT-Walsheim-Medium.otf */; };
-		8E20794DFC31408FABB1C289 /* libLRDRCTSimpleToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E4D1BF644664A9E9EA49E2C /* libLRDRCTSimpleToast.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -343,6 +343,13 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
+		EABC094C21A6C8CE004FD5E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4DAFA2CEDB14539A15FA34A /* LRDRCTSimpleToast.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 15209BEF1D250F63000D0F44;
+			remoteInfo = LRDRCTSimpleToast;
+		};
 		EAC5BCD72198489A00D330DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F5F13D72076E4AE786CF0884 /* RCTYouTube.xcodeproj */;
@@ -402,6 +409,7 @@
 		6641E63B34414CCFB2554B27 /* GT-Walsheim-Ultra-Bold-Oblique.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GT-Walsheim-Ultra-Bold-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Bold-Oblique.otf"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7B013A583DE649B1A003736D /* GT-Walsheim-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GT-Walsheim-Medium.otf"; path = "../assets/fonts/GT-Walsheim-Medium.otf"; sourceTree = "<group>"; };
+		7E4D1BF644664A9E9EA49E2C /* libLRDRCTSimpleToast.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLRDRCTSimpleToast.a; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		87A016EBE7FB4510B461C345 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		906FC07C221A41A78A320691 /* GT-Walsheim-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GT-Walsheim-Black.otf"; path = "../assets/fonts/GT-Walsheim-Black.otf"; sourceTree = "<group>"; };
@@ -410,6 +418,7 @@
 		9BAFED283FA1476588151BBC /* GT-Walsheim-Ultra-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GT-Walsheim-Ultra-Light.otf"; path = "../assets/fonts/GT-Walsheim-Ultra-Light.otf"; sourceTree = "<group>"; };
 		9DCD05A364E04E4C8DCA3806 /* RNI18n.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNI18n.xcodeproj; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; };
 		A1AC9594715143BAA9067A60 /* GT-Walsheim-Black-Oblique.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GT-Walsheim-Black-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Black-Oblique.otf"; sourceTree = "<group>"; };
+		A4DAFA2CEDB14539A15FA34A /* LRDRCTSimpleToast.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = LRDRCTSimpleToast.xcodeproj; path = "../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		B57811404D3240D3975E6818 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Italic.ttf"; path = "../assets/fonts/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
 		BBDE5A56BAAC4A7D9EA2B148 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-ExtraBold.ttf"; path = "../assets/fonts/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -424,8 +433,6 @@
 		F5F13D72076E4AE786CF0884 /* RCTYouTube.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTYouTube.xcodeproj; path = "../node_modules/react-native-youtube/RCTYouTube.xcodeproj"; sourceTree = "<group>"; };
 		F714EB14406146F49FFA8BA3 /* GT-Walsheim-Bold-Oblique.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GT-Walsheim-Bold-Oblique.otf"; path = "../assets/fonts/GT-Walsheim-Bold-Oblique.otf"; sourceTree = "<group>"; };
 		F978F3C809814E0FA4D72503 /* libRCTYouTube.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTYouTube.a; sourceTree = "<group>"; };
-		A4DAFA2CEDB14539A15FA34A /* LRDRCTSimpleToast.xcodeproj */ = {isa = PBXFileReference; name = "LRDRCTSimpleToast.xcodeproj"; path = "../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		7E4D1BF644664A9E9EA49E2C /* libLRDRCTSimpleToast.a */ = {isa = PBXFileReference; name = "libLRDRCTSimpleToast.a"; path = "libLRDRCTSimpleToast.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -728,13 +735,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		EABC094921A6C8CB004FD5E2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EABC094D21A6C8CE004FD5E2 /* libLRDRCTSimpleToast.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EAC5BCAC2198489600D330DF /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
 				2BC474C7F3E14482B71FF46A /* libRNI18n.a */,
 				F978F3C809814E0FA4D72503 /* libRCTYouTube.a */,
 				CE360B2AF0B2429893193F69 /* libRNI18n-tvOS.a */,
-				3917F311C5914643BA28BA0C /* libSplashScreen.a */,
+				7E4D1BF644664A9E9EA49E2C /* libLRDRCTSimpleToast.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -867,6 +882,10 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = EABC094921A6C8CB004FD5E2 /* Products */;
+					ProjectRef = A4DAFA2CEDB14539A15FA34A /* LRDRCTSimpleToast.xcodeproj */;
+				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -1192,6 +1211,13 @@
 			fileType = archive.ar;
 			path = libRCTBlob.a;
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EABC094D21A6C8CE004FD5E2 /* libLRDRCTSimpleToast.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLRDRCTSimpleToast.a;
+			remoteRef = EABC094C21A6C8CE004FD5E2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		EAC5BCD82198489A00D330DF /* libRCTYouTube.a */ = {

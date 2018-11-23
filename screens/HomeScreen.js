@@ -12,7 +12,7 @@ import {
   Animated,
   FlatList
 } from 'react-native';
-import { Header } from 'react-navigation';
+import { Header, NavigationEvents } from 'react-navigation';
 import { strings } from '../locales/i18';
 import { DateHeader } from '../components/DateHeader';
 import { connect } from 'react-redux';
@@ -23,14 +23,26 @@ const { height, width } = Dimensions.get('window');
 import SideSwipe from 'react-native-sideswipe';
 import { images, facts, getRandomFacts, getRandomImages } from '../constants/facts';
 import NavBar from '../navigation/MainTabNavigator';
+import Toast from 'react-native-simple-toast';
+import Carousel from 'react-native-looped-carousel';
 
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    header: null,
+
+  static navigationOptions = () => {
+    return {
+      header: null,
+      tabBarOnPress({ navigation, defaultHandler }) {
+        navigation.state.params.onTabFocus();
+        defaultHandler();
+      }
+    };
   };
 
   constructor(props) {
     super(props);
+    props.navigation.setParams({
+      onTabFocus: this.handleTabFocus
+    });
     this.state = {
       top: 0,
       enableScroll: true,
@@ -44,8 +56,27 @@ class HomeScreen extends React.Component {
       randomImages: getRandomImages(),
       randomFacts: getRandomFacts(),
       updateInProgress: false,
-
+      showNews: false,
+      size: { width, height }
     }
+  }
+
+  handleTabFocus = () => {
+    const bringNewsToTop = this.state.showNews;
+    this.setState({
+      showNews: !bringNewsToTop,
+    });
+
+    if (bringNewsToTop) {
+      this.setState({ fixScroll: false, });
+    }
+
+    this.myRef.getNode().scrollTo({
+      y: bringNewsToTop ? 0 : height,
+      animated: true,
+    });
+
+
   }
 
   componentWillMount = async () => {
@@ -109,7 +140,7 @@ class HomeScreen extends React.Component {
 
       const currentOffset = event.nativeEvent.contentOffset.y;
       const direction = currentOffset > this.state.offset ? 'up' : 'down';
-
+      console.log('is scrollable', !this.state.fixScroll);
       if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
         this.setState({ fixScroll: true, scrollHeight: height, enableScroll: false });
       }
@@ -121,6 +152,7 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+
         <View
           resizeMode='stretch'
           style={styles.serviceImage}
@@ -134,25 +166,20 @@ class HomeScreen extends React.Component {
             onScrollEndDrag={this.handleScrollEndDrag.bind(this)}
             ref={c => (this.myRef = c)}>
 
-            <SideSwipe
-              index={this.state.currentIndex}
-              style={{ width, height: this.state.scrollHeight }}
-              ref="myInput"
-              data={this.state.randomImages}
-              threshold={0}
-              useVelocityForIndex={true}
-              onIndexChange={index =>
-                this.setState(() => ({ currentIndex: index }))
-              }
-              renderItem={({ itemIndex, currentIndex, item, animatedValue }) => (
+            <Carousel
+              delay={2000}
+              style={[this.state.size, { zIndex: 1, }]}
+
+            >
 
 
+              {this.state.randomImages.map((item, key) => (
                 <ImageBackground
                   resizeMode='cover'
-                  style={{ flex: 1, width, height }}
+                  style={{ flex: 1, width, height, }}
                   source={item}
+                  key={key}
                 >
-
                   <View style={{
                     flex: 1,
                     justifyContent: 'flex-end',
@@ -161,17 +188,18 @@ class HomeScreen extends React.Component {
                     height: this.state.carouselHeight,
 
                   }}>
-                    <Text style={styles.facts}>{this.state.randomFacts[itemIndex]}</Text>
+                    <Text style={styles.facts}>{this.state.randomFacts[key]}</Text>
                   </View>
 
                 </ImageBackground>
-              )}
-
-            />
+              ))
+              }
+            </Carousel>
             <View style={{
 
               padding: 10,
-              position: 'absolute'
+              position: 'absolute',
+              zIndex: 100,
             }}>
               <DateHeader />
               <Text style={styles.header}>{strings('newsfeed.header').toUpperCase()}</Text>
@@ -272,7 +300,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     padding: 10,
     backgroundColor: 'rgba(255,255,255,0.1)',
-    textAlign: 'center'
+    textAlign: 'center',
   },
   contentContainer: { flexGrow: 1, },
   serviceImage: {

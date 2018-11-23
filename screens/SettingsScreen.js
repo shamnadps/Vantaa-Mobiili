@@ -18,6 +18,7 @@ import { changeLanguage, changeFilter, changeFeeds, getFeeds } from '../redux/re
 class SettingsScreen extends React.Component {
   static navigationOptions = {
     header: null,
+
   };
 
   state = {

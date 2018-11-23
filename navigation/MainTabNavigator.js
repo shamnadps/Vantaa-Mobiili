@@ -19,34 +19,22 @@ class BottomContainer extends React.Component {
   }
 
   TabNav = () => {
-    const HomeStack = createStackNavigator({
-      Home: HomeScreen,
-    });
-
-    const LinksStack = createStackNavigator({
-      Links: LinksScreen,
-
-    });
-
-    const SettingsStack = createStackNavigator({
-      Settings: SettingsScreen,
-
-    });
-    HomeStack.navigationOptions = {
-      tabBarLabel: strings('navigation.news'),
-    };
-
-    LinksStack.navigationOptions = {
-      tabBarLabel: strings('navigation.links'),
-    };
-
-    SettingsStack.navigationOptions = {
-      tabBarLabel: strings('navigation.settings'),
-    };
     const MaterialTopTabNavigatorMain = createMaterialTopTabNavigator({
-      HomeStack,
-      LinksStack,
-      SettingsStack,
+      Home: {
+        screen: HomeScreen, navigationOptions: {
+          tabBarLabel: strings('navigation.news'),
+        }
+      },
+      Links: {
+        screen: LinksScreen, navigationOptions: {
+          tabBarLabel: strings('navigation.links'),
+        }
+      },
+      Settings: {
+        screen: SettingsScreen, navigationOptions: {
+          tabBarLabel: strings('navigation.settings'),
+        }
+      },
     }, {
         tabBarPosition: 'bottom',
         swipeEnabled: false,
@@ -69,7 +57,8 @@ class BottomContainer extends React.Component {
             top: 0,
           }
         },
-        initialRouteName: 'HomeStack'
+        initialRouteName: 'Home',
+        lazy: false
       }
     );
     return <MaterialTopTabNavigatorMain />;

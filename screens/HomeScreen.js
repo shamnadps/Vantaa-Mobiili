@@ -62,21 +62,11 @@ class HomeScreen extends React.Component {
   }
 
   handleTabFocus = () => {
-    const bringNewsToTop = this.state.showNews;
-    this.setState({
-      showNews: !bringNewsToTop,
-    });
-
-    if (bringNewsToTop) {
-      this.setState({ fixScroll: false, });
-    }
 
     this.myRef.getNode().scrollTo({
-      y: bringNewsToTop ? 0 : height,
+      y: height,
       animated: true,
     });
-
-
   }
 
   componentWillMount = async () => {
@@ -140,7 +130,6 @@ class HomeScreen extends React.Component {
 
       const currentOffset = event.nativeEvent.contentOffset.y;
       const direction = currentOffset > this.state.offset ? 'up' : 'down';
-      console.log('is scrollable', !this.state.fixScroll);
       if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
         this.setState({ fixScroll: true, scrollHeight: height, enableScroll: false });
       }

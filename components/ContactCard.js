@@ -40,9 +40,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-
-        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Normal",
     },
     section: {
         flex: 1,
@@ -57,15 +55,13 @@ const styles = StyleSheet.create({
         shadowRadius: 3,
         shadowOffset: { height: 0, width: 0 },
         elevation: 20,
-        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Normal",
     },
     sectionView: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Normal",
     },
     text: {
         marginTop: 10,
@@ -73,8 +69,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         textAlign: 'center',
-        fontWeight: Platform.OS === 'ios' ? "bold" : "100",
-        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Bold",
+        fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Normal",
         padding: 5,
 
     },

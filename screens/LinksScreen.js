@@ -37,7 +37,7 @@ class LinksScreen extends React.Component {
             style={{ position: 'absolute', width, height: height + 300 }}
           />
 
-          <Text style={styles.header}>{strings('resources.header')}</Text>
+          <Text style={styles.header}>{strings('resources.header').toUpperCase()}</Text>
 
           <Text style={styles.contact}>{strings('resources.contactHeader')}</Text>
           <View style={styles.contactSection}>
@@ -58,34 +58,32 @@ class LinksScreen extends React.Component {
           <Text style={styles.services}>{strings('resources.serviceHeader')}</Text>
           <View style={styles.serviceSection}>
             <ServiceCard
-              text={strings('resources.services.vantaa')}
-              link={'http://www.vantaa.fi'}
+              text={strings('resources.services.vantaa.title')}
+              link={strings('resources.services.vantaa.link')}
             />
             <ServiceCard
-              text={strings('resources.services.palvelukartta')}
-              color='#87Dbe8'
-              link={'http://kartta.vantaa.fi'}
-            />
-          </View>
-          <View style={styles.serviceSection}>
-            <ServiceCard
-              text={strings('resources.services.tapahtumat')}
-              link={'http://www.vantaa.fi/tapahtumienvantaa'}
-            />
-            <ServiceCard
-              text={strings('resources.services.matkailu')}
-              color='#84ccf8'
-              link={'https://www.visitvantaa.fi'}
+              text={strings('resources.services.työpaikat.title')}
+              link={strings('resources.services.työpaikat.link')}
             />
           </View>
           <View style={styles.serviceSection}>
             <ServiceCard
-              text={strings('resources.services.asiointi')}
-              color='#ffa3b5'
-              link={'http://www.vantaa.fi/asioi_verkossa'}
+              text={strings('resources.services.palvelukartta.title')}
+              link={strings('resources.services.palvelukartta.link')}
             />
             <ServiceCard
-
+              text={strings('resources.services.tapahtumat.title')}
+              link={strings('resources.services.tapahtumat.link')}
+            />
+          </View>
+          <View style={styles.serviceSection}>
+            <ServiceCard
+              text={strings('resources.services.matkailu.title')}
+              link={strings('resources.services.matkailu.link')}
+            />
+            <ServiceCard
+              text={strings('resources.services.asiointi.title')}
+              link={strings('resources.services.asiointi.link')}
             />
           </View>
         </View>

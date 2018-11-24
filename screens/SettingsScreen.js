@@ -77,36 +77,36 @@ class SettingsScreen extends React.Component {
         <View style={styles.getStartedContainer}>
 
 
-          <Text style={styles.header}>{strings('settings.header')}</Text>
+          <Text style={styles.header}>{strings('settings.header').toUpperCase()}</Text>
           <Text style={styles.title}>{strings('settings.languageHeader')}</Text>
           <View style={styles.feedSection}>
 
             <Button type='default'
               active={this.state.language === 'fi'}
-              text={strings('settings.langButtons.fi')}
+              text={strings('settings.langButtons.fi').toUpperCase()}
               clicked={() => this.changeLanguageHandler('fi')} />
             <Button type='default'
               active={this.state.language === 'sv'}
-              text={strings('settings.langButtons.sv')}
+              text={strings('settings.langButtons.sv').toUpperCase()}
               clicked={() => this.changeLanguageHandler('sv')} />
             <Button type='default'
               active={this.state.language === 'en'}
-              text={strings('settings.langButtons.en')}
+              text={strings('settings.langButtons.en').toUpperCase()}
               clicked={() => this.changeLanguageHandler('en')} />
           </View>
           <Text style={styles.title}>{strings('settings.feedHeader')}</Text>
           <View style={styles.feedSection}>
-            <Button type='facebook' active={this.state.filter.includes('FACEBOOK')} text='FACEBOOK' clicked={() => this.changeFeeds('FACEBOOK')} />
-            <Button type='twitter' active={this.state.filter.includes('TWITTER')} text='TWITTER' clicked={() => this.changeFeeds('TWITTER')} />
-            <Button type='youtube' active={this.state.filter.includes('YOUTUBE')} text='YOUTUBE' clicked={() => this.changeFeeds('YOUTUBE')} />
+            <Button active={this.state.filter.includes('FACEBOOK')} text='FACEBOOK' clicked={() => this.changeFeeds('FACEBOOK')} />
+            <Button active={this.state.filter.includes('TWITTER')} text='TWITTER' clicked={() => this.changeFeeds('TWITTER')} />
+            <Button active={this.state.filter.includes('YOUTUBE')} text='YOUTUBE' clicked={() => this.changeFeeds('YOUTUBE')} />
           </View>
           <View style={styles.feedSection}>
-            <Button type='instagram' active={this.state.filter.includes('INSTAGRAM')} text='INSTAGRAM' clicked={() => this.changeFeeds('INSTAGRAM')} />
-            <Button type='vantaa' active={this.state.filter.includes('VANTAA')} text='VANTAA' clicked={() => this.changeFeeds('VANTAA')} />
-            <Button type='sivitysvantaa' active={this.state.filter.includes('SIVITYSVANTAA')} text='SIVITYSVANTAA' clicked={() => this.changeFeeds('SIVITYSVANTAA')} />
+            <Button active={this.state.filter.includes('INSTAGRAM')} text='INSTAGRAM' clicked={() => this.changeFeeds('INSTAGRAM')} />
+            <Button active={this.state.filter.includes('VANTAA')} text='VANTAA' clicked={() => this.changeFeeds('VANTAA')} />
+            <Button active={this.state.filter.includes('SIVITYSVANTAA')} text='SIVITYSVANTAA' clicked={() => this.changeFeeds('SIVITYSVANTAA')} />
           </View>
           <View style={styles.feedSection}>
-            <Button type='events' active={this.state.filter.includes('EVENTS')} text='EVENTS' clicked={() => this.changeFeeds('EVENTS')} />
+            <Button active={this.state.filter.includes('EVENTS')} text='EVENTS' clicked={() => this.changeFeeds('EVENTS')} />
           </View>
 
           {/* <Text style={styles.title}>{strings('settings.notificationsHeader')}</Text>

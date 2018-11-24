@@ -50,18 +50,18 @@ export function changeFilter(filter) {
     };
 }
 
-export async function getFeeds(filter) {
+export async function getFeeds(filter, language) {
     try {
-        const feeds = await axios.get('https://vantaa-black-panther.herokuapp.com/api/feeds?type=' + filter.join(','));
+        const feeds = await axios.get('https://mobiili.vantaa.fi/api/feeds?type=' + filter.join(',') + '&lang=' + language);
         return feeds.data;
     } catch (error) {
         console.log('Failed to get feeds', error);
     }
 }
 
-export async function getFeedsMoreFeeds(filter, skip) {
+export async function getFeedsMoreFeeds(filter, skip, language) {
     try {
-        const feeds = await axios.get('https://vantaa-black-panther.herokuapp.com/api/feeds?type=' + filter.join(',') + '&skip=' + skip);
+        const feeds = await axios.get('https://mobiili.vantaa.fi/api/feeds?type=' + filter.join(',') + '&skip=' + skip + '&lang=' + language);
         return feeds.data;
     } catch (error) {
         console.log('Failed to get feeds', error);

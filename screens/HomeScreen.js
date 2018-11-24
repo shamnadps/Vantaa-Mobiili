@@ -71,7 +71,7 @@ class HomeScreen extends React.Component {
 
   componentWillMount = async () => {
     try {
-      const feeds = await getFeeds(this.props.filter);
+      const feeds = await getFeeds(this.props.filter, this.props.language);
       this.props.changeFeeds(feeds);
     } catch (error) {
       console.log(error);
@@ -85,7 +85,7 @@ class HomeScreen extends React.Component {
       const currentOffset = event.nativeEvent.contentOffset.y;
       if ((currentOffset < 0 || currentOffset === 0) && this.state.fixScroll && !this.state.fetchInProgress) {
         this.setState({ updateInProgress: true });
-        const feeds = await getFeeds(this.props.filter);
+        const feeds = await getFeeds(this.props.filter, this.props.language);
         this.props.changeFeeds(feeds);
         this.setState({ updateInProgress: false });
       }
@@ -97,7 +97,7 @@ class HomeScreen extends React.Component {
         this.setState({ fetchInProgress: true });
         const skip = this.props.feeds[this.props.feeds.length - 1].id;
         const filter = this.props.filter;
-        const moreFeeds = await getFeedsMoreFeeds(filter, skip);
+        const moreFeeds = await getFeedsMoreFeeds(filter, skip, this.props.language);
         const newFeeds = [...this.props.feeds, ...moreFeeds];
         this.props.changeFeeds(newFeeds);
         this.setState({ fetchInProgress: false });

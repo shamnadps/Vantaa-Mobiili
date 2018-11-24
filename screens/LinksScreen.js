@@ -104,8 +104,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(LinksScreen);
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     backgroundColor: '#fff',
+  },
+  contentContainer: {
+    flexGrow: 1,
   },
   header: {
     flex: 1,
@@ -139,6 +142,7 @@ const styles = StyleSheet.create({
 
   },
   serviceSection: {
+    flexGrow: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
   },

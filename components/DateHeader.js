@@ -7,6 +7,12 @@ import {
     Platform,
 } from 'react-native';
 import { format } from 'date-fns';
+import { getCurrentLocale } from '../locales/i18';
+
+import en from 'date-fns/locale/en';
+import fi from 'date-fns/locale/fi';
+import sv from 'date-fns/locale/sv';
+const locales = { en, fi, sv };
 
 export class DateHeader extends React.Component {
     constructor(props) {
@@ -15,7 +21,7 @@ export class DateHeader extends React.Component {
 
     render() {
         return (
-            <Text style={styles.contact}>{format(new Date(), 'dddd, MMMM DD')}</Text>
+            <Text style={styles.contact}>{format(new Date(), 'dddd, MMMM DD', { locale: locales[getCurrentLocale()] }).toUpperCase()}</Text>
         );
     }
 }

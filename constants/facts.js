@@ -41,27 +41,27 @@ export const images = [
 ];
 
 export const getRandomFacts = () => {
-    const first = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
-    let second = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    const first = Math.floor(Math.random() * facts.length);
+    let second = Math.floor(Math.random() * facts.length);
     while (second === first) {
-        second = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+        second = Math.floor(Math.random() * facts.length);
     }
-    let third = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    let third = Math.floor(Math.random() * facts.length);
     while (third === first || third === second) {
-        third = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+        third = Math.floor(Math.random() * facts.length);
     }
     return [facts[first], facts[second], facts[third]];
 }
 
 export const getRandomImages = () => {
-    let first = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
-    let second = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    let first = Math.floor(Math.random() * images.length);
+    let second = Math.floor(Math.random() * images.length);
     while (second === first) {
-        second = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+        second = Math.floor(Math.random() * images.length);
     }
-    let third = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+    let third = Math.floor(Math.random() * images.length);
     while (third === first || third === second) {
-        third = Math.floor(Math.random() * (facts.length - 0 + 1) + 0);
+        third = Math.floor(Math.random() * images.length);
     }
     return [images[first], images[second], images[third]];
 }

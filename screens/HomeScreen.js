@@ -10,7 +10,7 @@ import {
   ImageBackground,
   Dimensions,
   Animated,
-  FlatList
+  FlatList,
 } from 'react-native';
 import { Header, NavigationEvents } from 'react-navigation';
 import { strings } from '../locales/i18';
@@ -25,6 +25,7 @@ import { images, facts, getRandomFacts, getRandomImages } from '../constants/fac
 import NavBar from '../navigation/MainTabNavigator';
 import Toast from 'react-native-simple-toast';
 import Carousel from 'react-native-looped-carousel';
+import LinearGradient from 'react-native-linear-gradient';
 
 class HomeScreen extends React.Component {
 
@@ -158,10 +159,7 @@ class HomeScreen extends React.Component {
             <Carousel
               delay={2000}
               style={[this.state.size, { zIndex: 1, }]}
-
             >
-
-
               {this.state.randomImages.map((item, key) => (
                 <ImageBackground
                   resizeMode='cover'
@@ -177,22 +175,31 @@ class HomeScreen extends React.Component {
                     height: this.state.carouselHeight,
 
                   }}>
-                    <Text style={styles.facts}>{this.state.randomFacts[key]}</Text>
+                    <View style={styles.factsBg}>
+                      <Text style={styles.facts}>{this.state.randomFacts[key]}</Text>
+                    </View>
                   </View>
 
                 </ImageBackground>
               ))
               }
             </Carousel>
-            <View style={{
+
+            <LinearGradient style={{
 
               padding: 10,
               position: 'absolute',
               zIndex: 100,
-            }}>
+              width,
+              paddingBottom: 20
+            }}
+              locations={[0.5, 1]}
+              colors={['#66424242', '#66000000']}>
               <DateHeader />
               <Text style={styles.header}>{strings('newsfeed.header').toUpperCase()}</Text>
-            </View>
+            </LinearGradient>
+
+
 
             <Animated.ScrollView
               scrollEnabled={!this.state.enableScroll}
@@ -269,6 +276,9 @@ const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);
 
 const styles = StyleSheet.create({
+  linearGradient: {
+    flex: 1
+  },
   container: {
     flex: 12,
     backgroundColor: '#fff',
@@ -283,13 +293,16 @@ const styles = StyleSheet.create({
   },
   facts: {
     color: '#FFFFFF',
+
+  },
+  factsBg: {
+    color: '#FFFFFF',
     fontFamily: Platform.OS === 'ios' ? "GT Walsheim" : "GT-Walsheim-Regular",
     marginBottom: 100,
-    marginLeft: 10,
-    marginRight: 10,
     padding: 10,
-    backgroundColor: 'rgba(255,255,255,0.1)',
-    textAlign: 'center',
+    width: '95%',
+    backgroundColor: 'rgba(0, 0, 0,0.1)',
+    textAlign: 'left',
   },
   contentContainer: { flexGrow: 1, },
   serviceImage: {

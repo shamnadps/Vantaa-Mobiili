@@ -44,6 +44,18 @@ class HomeScreen extends React.Component {
     props.navigation.setParams({
       onTabFocus: this.handleTabFocus
     });
+    props.navigation.addListener(
+      'didBlur',
+      payload => {
+        this.setState({ didBlur: true });
+      }
+    );
+    props.navigation.addListener(
+      'didFocus',
+      payload => {
+        this.setState({ didFocus: true });
+      }
+    );
     this.state = {
       top: 0,
       enableScroll: true,
@@ -61,23 +73,29 @@ class HomeScreen extends React.Component {
       size: { width, height },
       beginDrag: false,
       endDrag: false,
+      didBlur: false,
+      didFocus: false,
     }
   }
 
   handleTabFocus = () => {
 
-    this.myRef.getNode().scrollTo({
-      y: this.state.showNews ? height : 0,
-      animated: true,
-    });
-    if (this.state.showNews) {
-      this.myFeeds.getNode().scrollTo({
-        y: 0,
+    if (!this.state.didBlur && this.state.didFocus) {
+      this.myRef.getNode().scrollTo({
+        y: this.state.showNews ? height : 0,
         animated: true,
       });
-      this.setState({ fixScroll: true, showNews: false, enableScroll: false });
+      if (this.state.showNews) {
+        this.myFeeds.getNode().scrollTo({
+          y: 0,
+          animated: true,
+        });
+        this.setState({ fixScroll: true, showNews: false, enableScroll: false });
+      } else {
+        this.setState({ fixScroll: false, showNews: true, enableScroll: true });
+      }
     } else {
-      this.setState({ fixScroll: false, showNews: true, enableScroll: true });
+      this.setState({ didBlur: false, didFocus: false });
     }
   }
 

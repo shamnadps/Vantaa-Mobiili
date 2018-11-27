@@ -57,20 +57,31 @@ class HomeScreen extends React.Component {
       randomImages: getRandomImages(),
       randomFacts: getRandomFacts(),
       updateInProgress: false,
-      showNews: false,
-      size: { width, height }
+      showNews: true,
+      size: { width, height },
+      beginDrag: false,
+      endDrag: false,
     }
   }
 
   handleTabFocus = () => {
 
     this.myRef.getNode().scrollTo({
-      y: height,
+      y: this.state.showNews ? height : 0,
       animated: true,
     });
+    if (this.state.showNews) {
+      this.myFeeds.getNode().scrollTo({
+        y: 0,
+        animated: true,
+      });
+      this.setState({ fixScroll: true, showNews: false, enableScroll: false });
+    } else {
+      this.setState({ fixScroll: false, showNews: true, enableScroll: true });
+    }
   }
 
-  componentWillMount = async () => {
+  componentDidMount = async () => {
     try {
       const feeds = await getFeeds(this.props.filter, this.props.language);
       this.props.changeFeeds(feeds);
@@ -110,6 +121,7 @@ class HomeScreen extends React.Component {
 
   handleScrollEndDrag = (event) => {
     try {
+
       const currentOffset = event.nativeEvent.contentOffset.y;
       if (currentOffset > height - height / 3) {
         this.myRef.getNode().scrollTo({
@@ -117,25 +129,38 @@ class HomeScreen extends React.Component {
           animated: true,
         });
         this.setState({ fixScroll: true, enableScroll: false });
+      }
+      if (currentOffset < height / 4) {
+        this.myRef.getNode().scrollTo({
+          y: 0,
+          animated: true,
+        });
 
+        this.setState({ fixScroll: false, enableScroll: true });
       }
     } catch (error) {
       console.log(error);
     }
   }
 
-  handleScroll = async (event) => {
-    try {
-      const fetchMore = event.nativeEvent.contentSize.height
-        <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
+  handleScrollBeginDrag = (event) => {
+    this.setState({ beginDrag: true });
+  }
 
-      const currentOffset = event.nativeEvent.contentOffset.y;
-      const direction = currentOffset > this.state.offset ? 'up' : 'down';
-      if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
-        this.setState({ fixScroll: true, scrollHeight: height, enableScroll: false });
+  handleScroll = async (event) => {
+    if (this.state.beginDrag) {
+      try {
+        const fetchMore = event.nativeEvent.contentSize.height
+          <= (event.nativeEvent.contentOffset.y + event.nativeEvent.layoutMeasurement.height + 400);
+
+        const currentOffset = event.nativeEvent.contentOffset.y;
+        const direction = currentOffset > this.state.offset ? 'up' : 'down';
+        if (currentOffset >= height - 20 && direction === 'up' && !this.state.fixScroll) {
+          this.setState({ fixScroll: true, beginDrag: false, showNews: false, enableScroll: false });
+        }
+      } catch (error) {
+        console.log(error);
       }
-    } catch (error) {
-      console.log(error);
     }
   }
 
@@ -154,6 +179,7 @@ class HomeScreen extends React.Component {
             contentContainerStyle={[{ height: height * 2 }]}
             scrollEventThrottle={1}
             onScrollEndDrag={this.handleScrollEndDrag.bind(this)}
+            onScrollBeginDrag={this.handleScrollBeginDrag.bind(this)}
             ref={c => (this.myRef = c)}>
 
             <Carousel
@@ -205,8 +231,9 @@ class HomeScreen extends React.Component {
               scrollEnabled={!this.state.enableScroll}
               onScrollEndDrag={this.handleFeedScroll.bind(this)}
               scrollEventThrottle={1}
+              bounces={!this.state.enableScroll}
               contentContainerStyle={[styles.contentContainer, { minHeight: height, },]}
-
+              ref={c => (this.myFeeds = c)}
             >
               {this.props.feeds && this.props.feeds.length > 0 ?
 

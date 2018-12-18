@@ -259,7 +259,7 @@ class HomeScreen extends React.Component {
                   {this.state.updateInProgress ? <View
                     style={{ height: 50, justifyContent: 'center', alignItems: 'center', flex: 1 }}
                   >
-                    <Text style={{ textAlign: 'center', justifyContent: 'center', alignItems: 'center', }}>Getting updates. Please wait...</Text>
+                    <Text style={{ textAlign: 'center', justifyContent: 'center', alignItems: 'center', }}>{strings('getting_updates')}</Text>
                   </View> : null}
                   <FlatList
 
@@ -290,7 +290,7 @@ class HomeScreen extends React.Component {
                       justifyContent: 'center',
                       alignItems: 'center',
                       textAlign: 'center'
-                    }}>Loading feeds... Please wait.</Text>
+                    }}>{strings('loading_feeds')}</Text>
                   </ImageBackground>
                 </View>
 

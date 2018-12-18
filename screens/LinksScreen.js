@@ -43,16 +43,16 @@ class LinksScreen extends React.Component {
           <View style={styles.contactSection}>
             <ContactCard
               imageUrl={require('../assets/images/chat-icon.png')}
-              text={strings('resources.chat')}
-            />
+              text={strings('resources.contacts.chat.title')}
+              link={strings('resources.contacts.chat.link')} />
             <ContactCard
               imageUrl={require('../assets/images/contact-icon.png')}
-              text={strings('resources.contact')}
-              link={'http://www.vantaa.fi/hallinto_ja_talous/tietoa_vantaasta/yhteystiedot'} />
+              text={strings('resources.contacts.contact.title')}
+              link={strings('resources.contacts.contact.link')} />
             <ContactCard
               imageUrl={require('../assets/images/feedback-icon.png')}
-              text={strings('resources.feedback')}
-              link={'https://asiointi.vantaa.fi/anna-palautetta#/'} />
+              text={strings('resources.contacts.feedback.title')}
+              link={strings('resources.contacts.feedback.link')} />
           </View>
 
           <Text style={styles.services}>{strings('resources.serviceHeader')}</Text>

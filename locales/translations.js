@@ -1,6 +1,8 @@
 export const translations = {
     en: {
         locale: 'en',
+        getting_updates: 'Getting updates. Please wait...',
+        loading_feeds: 'Loading feeds... Please wait.',
         navigation: {
             news: 'News',
             links: 'Resources',
@@ -13,9 +15,20 @@ export const translations = {
             header: 'How can we help?',
             contactHeader: 'Contact us',
             serviceHeader: 'Services',
-            chat: 'chat',
-            contact: 'contact us',
-            feedback: 'give feedback',
+            contacts: {
+                chat: {
+                    title: 'chat',
+                    link: 'http://www.vantaa.fi/hallinto_ja_talous/tietoa_vantaasta/vantaa-info',
+                },
+                contact: {
+                    title: 'contact us',
+                    link: 'http://www.vantaa.fi/hallinto_ja_talous/tietoa_vantaasta/yhteystiedot',
+                },
+                feedback: {
+                    title: 'give feedback',
+                    link: 'https://asiointi.vantaa.fi/anna-palautetta',
+                },
+            },
             services: {
                 vantaa: {
                     title: 'Vantaa.fi',
@@ -75,6 +88,8 @@ export const translations = {
     },
     fi: {
         locale: 'fi',
+        getting_updates: 'Saadaksesi päivitykset. Odota...',
+        loading_feeds: 'Ladataan syötteitä ... Odota hetki.',
         navigation: {
             news: 'Uutiset',
             links: 'Palvelut',
@@ -87,9 +102,20 @@ export const translations = {
             header: 'Voimmeko auttaa?',
             contactHeader: 'Ota yhteyttä',
             serviceHeader: 'Palvelut',
-            chat: 'Kysy neuvoa',
-            contact: 'Ota yhteyttä',
-            feedback: 'Anna palautetta',
+            contacts: {
+                chat: {
+                    title: 'Kysy neuvoa',
+                    link: 'http://www.vantaa.fi/hallinto_ja_talous/tietoa_vantaasta/vantaa-info',
+                },
+                contact: {
+                    title: 'Ota yhteyttä',
+                    link: 'http://www.vantaa.fi/hallinto_ja_talous/tietoa_vantaasta/yhteystiedot',
+                },
+                feedback: {
+                    title: 'Anna palautetta',
+                    link: 'https://asiointi.vantaa.fi/anna-palautetta',
+                },
+            },
             services: {
                 vantaa: {
                     title: 'Vantaa.fi',
@@ -148,6 +174,8 @@ export const translations = {
     },
     sv: {
         locale: 'sv',
+        getting_updates: 'Få uppdateringar. Vänta...',
+        loading_feeds: 'Laddar inmatningar ... Vänta.',
         navigation: {
             news: 'Nyheter',
             links: 'Tjänster',
@@ -160,8 +188,22 @@ export const translations = {
             header: 'Kan vi hjälpa dig?',
             contactHeader: 'Kontakta Oss',
             serviceHeader: 'Tjänster',
+            contacts: {
+                chat: {
+                    title: 'chat',
+                    link: 'http://www.vantaa.fi/hallinto_ja_talous/tietoa_vantaasta/vantaa-info',
+                },
+                contact: {
+                    title: 'Kontakta Oss',
+                    link: 'http://www.vanda.fi/forvaltning_och_ekonomi/information_om_vanda/kontaktuppgifter',
+                },
+                feedback: {
+                    title: 'Ge respons',
+                    link: 'https://asiointi.vantaa.fi/anna-palautetta',
+                },
+            },
             chat: 'chat',
-            contact: 'Kontakt Oss',
+            contact: 'Kontakta Oss',
             feedback: 'Ge respons',
             services: {
                 vantaa: {
